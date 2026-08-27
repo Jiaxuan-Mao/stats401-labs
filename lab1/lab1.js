@@ -98,14 +98,26 @@ d3.csv("../data/students.csv", d => {
     const chartHeight = 450;
 
     const margin = {
-        top: 30,
+        top: 40,
         right: 20,
-        bottom: 80,
+        bottom: 100,
         left: 20
     };
 
-    const barBottom = 350;
+    const barBottom = 320;
     const barScale = 3;
+
+
+    // ----------------------------------------
+    // Chart Title
+    // ----------------------------------------
+
+    svg.append("text")
+        .attr("x", margin.left)
+        .attr("y", 25)
+        .attr("text-anchor", "start")
+        .attr("font-weight", "bold")
+        .attr("font-size", "18px");
 
 
     // ----------------------------------------
@@ -125,7 +137,7 @@ d3.csv("../data/students.csv", d => {
         .attr("height", d => {
             return d.score * barScale;
         })
-        .attr("fill", "#F8C8DC");
+        .attr("fill", "#fba7e4");
 
 
     // ----------------------------------------
@@ -139,7 +151,7 @@ d3.csv("../data/students.csv", d => {
         .attr("x", (d, i) => {
             return margin.left + i * 80 + 27.5;
         })
-        .attr("y", 380)
+        .attr("y", 350)
         .attr("text-anchor", "middle")
         .text(d => d.name);
 
@@ -148,6 +160,7 @@ d3.csv("../data/students.csv", d => {
     // Student Scores
     // ----------------------------------------
 
+    // Scores are displayed BELOW the student names.
     svg.selectAll(".student-score")
         .data(data)
         .join("text")
@@ -155,22 +168,9 @@ d3.csv("../data/students.csv", d => {
         .attr("x", (d, i) => {
             return margin.left + i * 80 + 27.5;
         })
-        .attr("y", d => {
-            return barBottom - d.score * barScale - 10;
-        })
+        .attr("y", 375)
         .attr("text-anchor", "middle")
         .text(d => d.score);
-
-
-    // ----------------------------------------
-    // Chart Title
-    // ----------------------------------------
-
-    svg.append("text")
-        .attr("x", chartWidth / 2)
-        .attr("y", 20)
-        .attr("text-anchor", "middle")
-        .text("Student Scores");
 
 
 }).catch(error => {
