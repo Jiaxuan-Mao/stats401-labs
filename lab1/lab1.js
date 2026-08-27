@@ -137,7 +137,23 @@ d3.csv("../data/students.csv", d => {
         .attr("height", d => {
             return d.score * barScale;
         })
-        .attr("fill", "#fba7e4");
+        .attr("fill", "#ffb1ea");
+
+
+    // ----------------------------------------
+    // Student Scores
+    // ----------------------------------------
+
+    svg.selectAll(".student-score")
+        .data(data)
+        .join("text")
+        .attr("class", "student-score")
+        .attr("x", (d, i) => {
+            return margin.left + i * 80 + 27.5;
+        })
+        .attr("y", 350)
+        .attr("text-anchor", "middle")
+        .text(d => d.score);
 
 
     // ----------------------------------------
@@ -151,29 +167,10 @@ d3.csv("../data/students.csv", d => {
         .attr("x", (d, i) => {
             return margin.left + i * 80 + 27.5;
         })
-        .attr("y", 350)
-        .attr("text-anchor", "middle")
-        .text(d => d.name);
-
-
-    // ----------------------------------------
-    // Student Scores
-    // ----------------------------------------
-
-    // Scores are displayed BELOW the student names.
-    svg.selectAll(".student-score")
-        .data(data)
-        .join("text")
-        .attr("class", "student-score")
-        .attr("x", (d, i) => {
-            return margin.left + i * 80 + 27.5;
-        })
         .attr("y", 375)
         .attr("text-anchor", "middle")
-        .text(d => d.score);
-
-
-}).catch(error => {
+        .text(d => d.name);
+        }).catch(error => {
 
     console.error("Error loading student data:", error);
 
