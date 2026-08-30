@@ -57,3 +57,51 @@ p {
     background: #2b2a2b;
     color: rgb(254, 171, 205);
 }
+
+
+/* ----------------------------------------
+Lab 2
+---------------------------------------- */
+
+.tooltip {
+position: absolute;
+background: white;
+border: 1px solid #aaa;
+padding: 8px 10px;
+border-radius: 4px;
+pointer-events: none;
+opacity: 0;
+font-size: 14px;
+}
+
+.axis-label {
+font-size: 14px;
+font-weight: bold;
+}
+
+.chart-title {
+font-size: 18px;
+font-weight: bold;
+}
+
+.city-label {
+font-size: 11px;
+}
+
+.legend-title {
+font-size: 14px;
+font-weight: bold;
+}
+
+.legend-item text,
+.population-item text {
+font-size: 13px;
+}
+
+.city-point {
+stroke-width: 1px;
+}
+
+.city-point:hover {
+cursor: pointer;
+}

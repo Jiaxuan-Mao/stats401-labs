@@ -1,22 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 2</title>
-    <link rel="stylesheet" href="../css/style.css">
+
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Lab 2 - Multivariate Visualization</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
-    <h1>Lab 2</h1>
 
-    <p>
-        Lab 2 will be added here.
-    </p>
+<h1>STATS 401: Data Acquisition and Visualization</h1>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+<h2>Lab 2: Multivariate Visualization with D3</h2>
+
+<p>
+    This visualization explores population, temperature,
+    development level, and region across different cities.
+</p>
+
+<div id="chart"></div>
+
+<div id="tooltip" class="tooltip"></div>
+
+<h2>Design Justification</h2>
+
+
+<h3>1. Visual Channels</h3>
+
+<p>
+    This visualization represents four dimensions of the city dataset using
+    different visual channels. Population is represented by circle size,
+    temperature by vertical position, development level by color, and region
+    by horizontal grouping.
+</p>
+
+<h3>2. Why These Mappings?</h3>
+
+<p>
+    I chose these mappings based on the types and characteristics of the
+    attributes. Temperature is an interval attribute, so the y-axis provides
+    a clear way to represent and compare its numerical values. Region is a
+    nominal attribute, so I use categorical groups on the x-axis rather than
+    a continuous numerical scale. Population is a ratio attribute, but I use
+    circle size because the y-axis is already used for temperature; using
+    another quantitative variable on the same axis would make the
+    visualization confusing. Development level is an ordinal attribute, so
+    I use a light-to-dark color scale to show its ordered levels while keeping
+    them within the same visual category.
+</p>
+
+<h3>3. What Should Viewers Notice?</h3>
+
+<p>
+    I hope viewers can explore each city by hovering over its circle to see
+    detailed information and notice relationships among the variables, such
+    as darker circles tend to be larger, suggesting that cities with higher development levels tend to have larger populations.
+</p>
+
+<a href="../index.html" class="back-home">
+    ← Back to Home
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+<script src="lab2.js"></script>
+
 </body>
+
 </html>
