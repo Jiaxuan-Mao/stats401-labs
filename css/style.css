@@ -105,3 +105,76 @@ stroke-width: 1px;
 .city-point:hover {
 cursor: pointer;
 }
+
+/* ----------------------------------------
+Lab 3
+---------------------------------------- */
+
+.lab3-table-wrap {
+    max-height: 540px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+#data-table {
+    width: 100%;
+    min-width: 1640px;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+#data-table th,
+#data-table td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+    overflow-wrap: anywhere;
+}
+
+#data-table th {
+    position: sticky;
+    top: 0;
+    background: #f7d6e5;
+    cursor: pointer;
+}
+
+#data-table th:first-child {
+    width: 70px;
+}
+
+#data-table th:nth-child(2),
+#data-table th:nth-child(5) {
+    width: 190px;
+}
+
+#data-table th:hover,
+#data-table th:focus-visible {
+    background: #e76f9a;
+}
+
+#data-table th[aria-sort="ascending"],
+#data-table th[aria-sort="descending"] {
+    background: #a91d55;
+    color: white;
+}
+
+#data-table tbody tr:nth-child(even) {
+    background: #fff7fa;
+}
+
+#data-table tbody tr:hover {
+    background: #fde3ec;
+}
+
+#data-table a {
+    color: #a91d55;
+}
+
+#table-status.error {
+    color: #a91d55;
+    font-weight: bold;
+}
