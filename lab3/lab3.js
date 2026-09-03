@@ -51,8 +51,7 @@ d3.csv("../data/lab3_data.csv?v=tvmaze", function(d) {
         "runtime_minutes",
         "rating",
         "network",
-        "country",
-        "show_url"
+        "country"
     ];
 
     const columnLabels = {
@@ -66,8 +65,7 @@ d3.csv("../data/lab3_data.csv?v=tvmaze", function(d) {
         runtime_minutes: "Runtime (min)",
         rating: "Rating (0–10)",
         network: "Network / Platform",
-        country: "Network Country",
-        show_url: "Details URL"
+        country: "Network Country"
     };
 
     const table = d3.select("#data-table");
@@ -134,15 +132,15 @@ d3.csv("../data/lab3_data.csv?v=tvmaze", function(d) {
                 const element = d3.select(this);
                 element.text("");
 
-                // Link directly to the details URL supplied by TVmaze.
-                if (cell.column === "name" || cell.column === "show_url") {
+                // Link the show name directly to the TVmaze details page.
+                if (cell.column === "name") {
 
                     element.append("a")
                         .attr("href", cell.url)
                         .attr("target", "_blank")
                         .attr("rel", "noopener noreferrer")
                         .attr("title", "View " + cell.name + " on TVmaze")
-                        .text(cell.column === "name" ? cell.value : "View show");
+                        .text(cell.value);
 
                 } else {
                     element.text(
@@ -218,7 +216,7 @@ d3.csv("../data/lab3_data.csv?v=tvmaze", function(d) {
         .text(data.length.toLocaleString("en-US"));
 
     status.text(
-        data.length.toLocaleString("en-US") + " records loaded."
+        data.length.toLocaleString("en-US") + " unique shows loaded."
     );
 
     const missingSummary = columns

@@ -3,95 +3,98 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lab 3 - Web Data Acquisition</title>
     <link rel="stylesheet" href="../css/style.css?v=tvmaze">
 </head>
 
 <body>
+
 <h1>STATS 401: Data Acquisition and Visualization</h1>
 
 <h2>Lab 3: Web Data Acquisition with Python</h2>
 
+<h3>1. Dataset Description</h3>
+
 <p>
-    This dataset contains 2,000 television shows from
-    <a href="https://www.tvmaze.com/">TVmaze</a>, collected on September 2, 2026.
-    Each record has 12 fields: show ID, name, show type, language, genres,
-    status, premiere date, runtime, rating, network or streaming platform,
-    network country, and a show details URL.
+    This dataset contains 2,000 television shows collected from
+    <a href="https://www.tvmaze.com/">TVmaze</a> on September 2, 2026.
+    Each record contains information such as the show's name, type,
+    language, genres, status, premiere date, runtime, rating, network,
+    and country.
 </p>
 
-<p>Records loaded: <span id="record-count">Loading...</span></p>
+
+<h3>2. Data Source and Acquisition</h3>
 
 <p>
-    Click a column heading to sort in ascending order.
-    Click the same heading again to sort in descending order.
-    Scroll horizontally to explore all 12 columns.
+    I used the
+    <a href="https://www.tvmaze.com/api#show-index">TVmaze Show Index API</a>. 
+    Python and the <code>requests</code> library
+    were used to retrieve JSON data. The script uses pagination to collect
+    2,000 unique shows and pauses for one second between requests.
 </p>
 
 <p>
-    Click a show name or its View show link to open the TVmaze details page
-    in a new tab. Missing values are displayed as N/A and sort last in both
-    directions. Ratings and runtimes are sorted numerically, not as text.
+    Basic error handling is included through request retries, rate-limit
+    handling, response validation, and duplicate ID removal. And the collected
+    data is flattened and saved as <code>data/lab3_data.csv</code>.
 </p>
 
-<p id="table-status" role="status">Loading the CSV dataset...</p>
-
-<div class="lab3-table-wrap" tabindex="0" aria-label="Scrollable television show records">
-    <table id="data-table" aria-label="Acquired television show records">
-        <thead></thead>
-        <tbody></tbody>
-    </table>
-</div>
-
-<h2>Data Acquisition</h2>
-
-<h3>1. Source and Method</h3>
+<h3>3. Dataset Attributes</h3>
 
 <p>
-    I used the <a href="https://www.tvmaze.com/api#show-index">TVmaze show index API</a>
-    rather than HTML scraping. My Python script uses requests to retrieve JSON,
-    flattens nested attributes, joins multiple genres with a vertical bar,
-    and saves 12 columns in data/lab3_data.csv. This is the first 2,000 unique
-    shows encountered in API index order, not a random sample or a top-rated list.
+    The CSV contains 12 fields:<br>
+    <code>id</code>, <code>name</code>, <code>type</code>, and <code>language</code>;<br>
+    <code>genres</code>, <code>status</code>, <code>premiered</code>, and
+    <code>runtime_minutes</code>;<br>
+    <code>rating</code>, <code>network</code>, <code>country</code>, and
+    <code>show_url</code>.
 </p>
 
-<h3>2. Pagination and Error Handling</h3>
-
 <p>
-    The script starts at page 0 and advances automatically. Each page has up to
-    250 shows; deleted entries mean some pages are shorter. This collection used
-    9 pages, with a one-second delay between requests. The script retries temporary
-    errors, pauses after rate-limit responses, checks IDs and numeric ranges,
-    removes duplicate IDs, and saves only after collecting 2,000 unique records.
-    Existing output files are protected from accidental overwriting.
-</p>
-
-<h3>3. Attribute Meaning and Data Quality</h3>
-
-<p>
-    Runtime is measured in minutes and the TVmaze average rating is on a 0–10
-    scale. Network / Platform uses the broadcast network when available,
-    otherwise the streaming platform. Network Country describes that platform's
-    country, not necessarily the show's production country; global platforms can
-    have no country listed. Missing source values remain blank in the CSV,
-    rather than being replaced with zero. Ratings and show status may change.
+    Runtime is measured in minutes, and rating is on a 0–10 scale.
+    Shows omitted from the TVmaze index are not included in the CSV, which
+    is why the ID sequence contains gaps. For the 2,000 included shows,
+    unavailable field values are retained as missing and displayed as N/A
+    rather than replaced with zero.
+    network records the available broadcast network or streaming platform provided by the source.
 </p>
 
 <p id="quality-summary"></p>
 
-<h3>4. Source Credit and Responsible Use</h3>
+<h3>4. Interactive Table</h3>
 
 <p>
-    Data source: <a href="https://www.tvmaze.com/">TVmaze</a>.
-    The selected and flattened dataset is shared under
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>,
-    the same license as the source API data. Changes are limited to selecting
-    records, renaming columns, and flattening nested fields. The public API
-    permits this use with attribution and ShareAlike. Requests are sequential
-    and rate-limited; no login restrictions are bypassed or private data collected.
+    Click a column heading to sort the data in ascending order.
+    Click the same heading again to sort in descending order.
+    Missing values are displayed as N/A and sorted last.
+    Ratings and runtimes are sorted numerically. Click a show name
+    to open its TVmaze details page in a new tab.
+</p>
+
+<p id="table-status" role="status">Loading the CSV dataset...</p>
+
+<div class="lab3-table-wrap" tabindex="0"
+     aria-label="Scrollable television show records">
+
+    <table id="data-table" aria-label="Acquired television show records">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<h3>5. Source Credit</h3>
+
+<p>
+    Data source is 
+    <a href="https://www.tvmaze.com/">TVmaze</a>.
+    And the data is credited under
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+    CC BY-SA 4.0</a>. Data was collected through sequential,
+    rate-limited API.
 </p>
 
 <a href="../index.html" class="back-home">
