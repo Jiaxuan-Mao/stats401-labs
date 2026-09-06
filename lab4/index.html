@@ -4,19 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 4</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Lab 4 - Cleaning Web Data for Visualization</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../css/style.css?v=lab4">
 </head>
 
 <body>
-    <h1>Lab 4</h1>
+    <main>
+        <h1>STATS 401: Data Acquisition and Visualization</h1>
+        <h2>Lab 4: Cleaning Web Data for Visualization</h2>
 
-    <p>
-        Lab 4 will be added here.
-    </p>
+        <p class="lab4-lead">
+            This project cleans public airline tweets, estimates sentiment with a
+            RoBERTa model, and compares the resulting sentiment distributions
+            across six U.S. airlines.
+        </p>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+        <section class="lab4-summary" aria-labelledby="dataset-heading">
+            <div>
+                <h3 id="dataset-heading">Dataset</h3>
+                <p>
+                    The raw data are the
+                    <a href="https://www.kaggle.com/crowdflower/twitter-airline-sentiment">
+                        Twitter US Airline Sentiment dataset</a>, originally collected
+                    by Crowdflower in February 2015 and shared under
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        CC BY-NC-SA 4.0</a>.
+                </p>
+            </div>
+
+            <dl class="lab4-metrics" aria-label="Dataset summary">
+                <div>
+                    <dt>Raw rows</dt>
+                    <dd id="raw-count">Loading…</dd>
+                </div>
+                <div>
+                    <dt>Clean tweets</dt>
+                    <dd id="clean-count">Loading…</dd>
+                </div>
+                <div>
+                    <dt>Airlines</dt>
+                    <dd id="airline-count">Loading…</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section aria-labelledby="chart-heading">
+            <p>
+                Each bar represents all cleaned tweets about one airline. Bar segments
+                show the percentage classified as negative, neutral, or positive.
+            </p>
+
+            <div class="lab4-legend" aria-label="Sentiment color legend"></div>
+            <p id="chart-status" class="lab4-status" role="status">
+                Loading the cleaned data…
+            </p>
+            <div id="lab4-chart" class="lab4-chart" tabindex="0"
+                 aria-label="Scrollable airline sentiment chart"
+                 aria-live="polite"></div>
+            <div id="lab4-tooltip" class="lab4-tooltip" role="tooltip"></div>
+
+            <div class="lab4-table-wrap" tabindex="0"
+                 aria-label="Scrollable airline sentiment summary">
+                <table id="lab4-table">
+                    <caption>Sentiment percentages and tweet totals by airline</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Airline</th>
+                            <th scope="col">Negative</th>
+                            <th scope="col">Neutral</th>
+                            <th scope="col">Positive</th>
+                            <th scope="col">Tweets</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="lab4-analysis" aria-labelledby="analysis-heading">
+            <h3 id="analysis-heading">Analysis</h3>
+            <p>
+                I used the Twitter US Airline Sentiment dataset, which contains
+                14,640 tweets about six U.S. airlines from February 2015. I removed
+                duplicate rows and repeated tweet IDs, leaving 14,485 unique tweets.
+                I also checked dates and retweet counts and standardized text
+                formatting. For TF-IDF, I used NLTK tokenization, stop-word removal,
+                and lemmatization. I used RoBERTa to estimate sentiment from lightly
+                normalized tweet text, without using the original sentiment labels.
+            </p>
+            <p>
+                I chose these mappings based on the types and characteristics of
+                the attributes. Airline is a nominal attribute, so I use separate
+                horizontal bars to represent the six airlines. Sentiment is
+                categorical, so I use different colors to distinguish negative,
+                neutral, and positive tweets. Since the number of tweets differs
+                across airlines, I use a 100% stacked bar chart to compare sentiment
+                proportions directly.
+            </p>
+            <p>
+                US Airways has the largest negative share at 64.7%, while Virgin
+                America has the largest positive share at 38.3%. Delta has a more
+                balanced distribution. These patterns describe the sampled tweets
+                from February 2015, and the sentiment classifications are model
+                estimates rather than verified judgments.
+            </p>
+        </section>
+
+        <section aria-labelledby="repro-heading">
+            <h3 id="repro-heading">Cleaning and reproducibility</h3>
+            <p>
+                The complete transformation is documented in
+                <a href="clean_tweets.py"><code>clean_tweets.py</code></a>.
+                You can also inspect the
+                <a href="../data/lab4_raw_tweets.csv">raw CSV</a>,
+                <a href="../data/lab4_clean_tweets.csv">cleaned CSV</a>, and
+                <a href="../data/lab4_tfidf_terms.csv">top TF-IDF terms</a>.
+            </p>
+        </section>
+
+        <a href="../index.html" class="back-home">← Back to Home</a>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="lab4.js?v=lab4"></script>
 </body>
 </html>
