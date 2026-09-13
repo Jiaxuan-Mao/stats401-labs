@@ -393,10 +393,77 @@ Lab 5 — scoped to preserve earlier lab pages
 .lab5-page .lab5-boundaries text { font-size: 13px; fill: #37333b; font-weight: bold; }
 .lab5-page .lab5-cell { shape-rendering: crispEdges; cursor: pointer; }
 .lab5-page .lab5-cell:focus-visible { outline: none; stroke: #15141a; stroke-width: 2px; }
-.lab5-page .lab5-legends { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 18px 0; font-size: 13px; }
-.lab5-page .lab5-legend-group { display: flex; flex-direction: column; }
-.lab5-page .lab5-legend-group > strong { max-width: 200px; margin-bottom: 5px; line-height: 1.5; }
-.lab5-page .lab5-legend-item { display: flex; align-items: center; gap: 5px; }
+.lab5-page .lab5-legends {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1.25fr;
+    column-gap: 42px;
+    row-gap: 30px;
+    margin: 24px 0 32px;
+    font-size: 14px;
+    align-items: start;
+}
+
+.lab5-page .lab5-legend-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lab5-page .lab5-legend-group > strong {
+    display: block;
+    min-height: 42px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+.lab5-page .lab5-legend-item {
+    display: grid;
+    grid-template-columns: 72px auto;
+    align-items: center;
+    min-height: 48px;
+    column-gap: 8px;
+}
+
+.lab5-page .lab5-legend-item svg {
+    display: block;
+    justify-self: start;
+    overflow: visible;
+}
+
+/* Node-link legend:
+   row 1 = District | Station type | Passengers/day
+   row 2 = Service  | Travel time
+*/
+.lab5-page #lab5-node-legend .lab5-legend-group:nth-child(4) {
+    grid-column: 1;
+}
+
+.lab5-page #lab5-node-legend .lab5-legend-group:nth-child(5) {
+    grid-column: 2;
+}
+
+/* Keep the matrix legend compact */
+.lab5-page #lab5-matrix-legend {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: start;
+}
+
+/* Responsive layout */
+@media (max-width: 760px) {
+    .lab5-page .lab5-legends {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lab5-page #lab5-node-legend .lab5-legend-group:nth-child(4),
+    .lab5-page #lab5-node-legend .lab5-legend-group:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .lab5-page #lab5-matrix-legend {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 .lab5-page .lab5-findings { padding-left: 24px; }
 .lab5-page .lab5-findings strong { display: block; }
 .lab5-page #lab5-tooltip { position: fixed; z-index: 10; max-width: min(320px, calc(100vw - 40px)); padding: 10px 12px; border: 1px solid #777; border-radius: 4px; background: white; color: #27212c; box-shadow: 0 3px 12px #0002; pointer-events: none; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
