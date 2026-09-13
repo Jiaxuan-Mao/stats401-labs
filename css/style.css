@@ -372,3 +372,32 @@ Lab 4
     padding-top: 4px;
     border-top: 1px solid #ddd;
 }
+
+/* ----------------------------------------
+Lab 5 — scoped to preserve earlier lab pages
+---------------------------------------- */
+.lab5-page .lab5-scroll { overflow-x: auto; max-width: 100%; overscroll-behavior-inline: contain; }
+.lab5-page .lab5-scroll > svg { display: block; }
+.lab5-page #chart { margin-top: 14px; background: #fcfafc; }
+.lab5-page #chart > svg { width: 100%; min-width: 900px; height: auto; }
+.lab5-page #matrix > svg { min-width: 1020px; }
+.lab5-page #lab5-status.error { color: #a91d55; font-weight: bold; }
+.lab5-page .lab5-node { cursor: grab; touch-action: none; }
+.lab5-page .lab5-node:active { cursor: grabbing; }
+.lab5-page .lab5-node:focus-visible { outline: none; stroke: #16151c; stroke-width: 3px; }
+.lab5-page .lab5-route-hit { pointer-events: stroke; cursor: pointer; }
+.lab5-page .lab5-labels { font-size: 12px; fill: #27212c; pointer-events: none; paint-order: stroke; stroke: #fcfafc; stroke-width: 3px; }
+.lab5-page .lab5-matrix-label { font-size: 12px; font-weight: bold; }
+.lab5-page .lab5-boundaries { pointer-events: none; }
+.lab5-page .lab5-boundaries line { stroke: #aaa6af; stroke-width: 1px; }
+.lab5-page .lab5-boundaries text { font-size: 13px; fill: #37333b; font-weight: bold; }
+.lab5-page .lab5-cell { shape-rendering: crispEdges; cursor: pointer; }
+.lab5-page .lab5-cell:focus-visible { outline: none; stroke: #15141a; stroke-width: 2px; }
+.lab5-page .lab5-legends { display: flex; flex-wrap: wrap; gap: 14px 28px; margin: 18px 0; font-size: 13px; }
+.lab5-page .lab5-legend-group { display: flex; flex-direction: column; }
+.lab5-page .lab5-legend-group > strong { max-width: 200px; margin-bottom: 5px; line-height: 1.5; }
+.lab5-page .lab5-legend-item { display: flex; align-items: center; gap: 5px; }
+.lab5-page .lab5-findings { padding-left: 24px; }
+.lab5-page .lab5-findings strong { display: block; }
+.lab5-page #lab5-tooltip { position: fixed; z-index: 10; max-width: min(320px, calc(100vw - 40px)); padding: 10px 12px; border: 1px solid #777; border-radius: 4px; background: white; color: #27212c; box-shadow: 0 3px 12px #0002; pointer-events: none; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.lab5-page .lab5-scroll:focus-visible { outline: 2px solid #a91d55; outline-offset: 3px; }

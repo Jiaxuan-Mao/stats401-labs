@@ -1,0 +1,8 @@
+{
+  "lab4/clean_tweets.py": "bbddebe3635c47e96ba96eb00e4b5b2b7807373c1d90c2cfa40812f5b22ced7d",
+  "data/lab4_clean_tweets.csv": "bff9430e10c16d2a6953a1ca5a4ad2c162dc2064e1c1c494084eb3cf606d8dd3",
+  "data/lab4_cleaning_report.json": "c5496cf4c73b49db0f283af7b3461a4d19182155b4e6106cdbd39f8f328868c4",
+  "data/lab4_sentiment_by_airline.csv": "dfa7d530990e7fead515590874c4d251e0dacb76094952c8f035f7fa8f00e2ac",
+  "data/lab4_tfidf_terms.csv": "88339055f5dab7d2439fc32cb6f9572282638e8988ab0f326e01753205f3c75a",
+  "data/lab4_raw_tweets.csv": "ea94b23f41892b290dec3330bb8cf9cb6b8bc669eaae5f3a84c40f7b0de8f15e"
+}

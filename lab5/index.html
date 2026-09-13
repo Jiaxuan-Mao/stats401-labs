@@ -4,19 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 5</title>
+    <title>Lab 5 — Interactive Network Visualization</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
-    <h1>Lab 5</h1>
-
-    <p>
-        Lab 5 will be added here.
+<body class="lab5-page">
+    <h1>STATS 401: Data Acquisition and Visualization</h1>
+    <h2>Lab 5: Interactive Network Visualization</h2>
+    <h2>1. Dataset Description</h2>
+    <p>This dataset contains a synthetic urban transit network with 50 stations
+        and 50 direct connections across Central, North, South, East, and West.
+        Connections are undirected.</p>
+    <p id="lab5-status" role="status">Loading the two assignment CSV files…</p>
+    <p class="lab5-source">Source files:
+        <a href="../data/lab5_assignment_stations.csv">Stations CSV</a> ·
+        <a href="../data/lab5_assignment_routes.csv">Routes CSV</a>
     </p>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+    <h2>2. Node-Link Visualization</h2>
+    <p>Drag a station to explore its connections. Hover, tap, or keyboard-focus a station
+        or route for details. Station IDs identify the nodes; full names appear in tooltips.
+        Positions are a simulated layout. Line length does not represent geography or travel time.</p>
+    <div id="chart" class="lab5-scroll" tabindex="0" aria-label="Node-link diagram; scroll horizontally on small screens"></div>
+    <div id="lab5-node-legend" class="lab5-legends"></div>
+
+    <h2>3. Node-Link Design Description</h2>
+    <p class="lab5-design">District uses categorical color, passenger volume increases symbol area,
+        and station type uses shape. These separate location, usage, and function.
+        Thicker routes mean longer travel times; line patterns distinguish services.
+        Dragging separates crowded stations, highlighting traces neighbors, and tooltips give exact values.</p>
+
+    <h2>4. Adjacency Matrix</h2>
+    <p>Both axes list station IDs. Colored cells show direct connections; gray means no connection.
+        The diagonal is marked separately. Each undirected route appears twice, symmetrically.
+        Hover, tap, or focus a colored cell to inspect it. Small screens can scroll the matrix.</p>
+    <div id="matrix" class="lab5-scroll" tabindex="0" aria-label="Adjacency matrix; scroll horizontally on small screens"></div>
+    <div id="lab5-matrix-legend" class="lab5-legends"></div>
+
+    <h2>5. Matrix Design Description</h2>
+    <p class="lab5-design">Both axes share district-first ordering. Colored labels and district
+        boundaries reveal between-district connections. Cell hue identifies service; opacity
+        increases with travel time. Gray cells mean no connection. I leave passenger size and
+        station shape in the node-link view to keep the matrix readable.</p>
+
+    <h2>6. Network Questions and Findings</h2>
+    <ol class="lab5-findings">
+        <li><p><strong>Central stations?</strong> The node-link view is most useful, but answers only partially.
+            Hovering highlights neighbors; comparing tooltip counts reveals 14 stations, including s7 and s23,
+            tied at degree three, without establishing overall centrality.</p></li>
+        <li><p><strong>Strongly connected districts?</strong> The matrix is most useful and answers this well:
+            counting colored cells within district blocks shows South–East leads with 11 links;
+            Central–North and East–West each have nine. All districts have ten stations.</p></li>
+        <li><p><strong>Transfer / terminal topology?</strong> The node-link view works best and answers this well:
+            diamonds mark Transfers, squares mark Terminals, and highlighted links show s23 and s7 branching,
+            s50 as a leaf, and s43, s46, and s49 isolated.</p></li>
+        <li><p><strong>High passenger volume?</strong> The node-link view works best and answers this well:
+            larger symbols identify s50, s49, and s48 as busiest; tooltips confirm 9,850, 9,677,
+            and 9,504 passengers/day, respectively. The latter two are isolated.</p></li>
+        <li><p><strong>Longest direct trips?</strong> The node-link view works best and answers this well:
+            thicker links and tooltips identify s7–s31 (16 minutes), s18–s34 (15), and s29–s50 (14)
+            as longest. All are Express.</p></li>
+        <li><p><strong>Concentrated route types?</strong> The matrix is most useful, but answers only partially:
+            cell colors within district blocks show services across several districts and both within-Central
+            links as Shuttle. Sparse counts limit concentration claims.</p></li>
+    </ol>
+    <a href="../index.html" class="back-home">← Back to Home</a>
+    <div id="lab5-tooltip" role="tooltip" hidden></div>
+    <noscript><p>Enable JavaScript to load the CSV files and interactive visualizations.</p></noscript>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="lab5.js"></script>
 </body>
 </html>
