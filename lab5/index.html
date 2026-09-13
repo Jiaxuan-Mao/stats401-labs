@@ -49,59 +49,60 @@
 
     <h2>6. Network Questions and Findings</h2>
     <ol class="lab5-findings">
+
     <li>
         <p><strong>Which stations appear central in the network?</strong>
-            The node-link view is most useful because hovering highlights each station's
-            direct neighbors, making degree and branching structure easy to inspect.
-            Based on this view, s7 and s23 appear central, each with three direct connections.
+            This question is answered partially by the node-link view. Hover highlighting
+            reveals each station's direct neighbors and branching structure, making degree
+            easy to inspect. Based on this view, s7 and s23 appear central, each with three
+            direct connections, although this does not establish overall network centrality.
         </p>
     </li>
 
     <li>
-        <p><strong>Which districts are strongly connected?</strong>
-            The adjacency matrix is most useful because district-first ordering creates
-            visible blocks, making connections between districts easier to compare.
-            The South–East district pair has the most connections with 11 links,
-            while Central–North and East–West each have nine.
+        <p><strong>Which districts are strongly connected to one another?</strong>
+            This question is answered well by the adjacency matrix. District-first ordering
+            creates visible blocks, making connections between districts easier to compare.
+            The South–East district pair has the most connections with 11 links, while
+            Central–North and East–West each have nine.
         </p>
     </li>
 
     <li>
-        <p><strong>What does the network show about transfer and terminal stations?</strong>
-            The node-link view is most useful because station type is encoded by shape
-            and highlighting reveals each station's connections.
-            The view shows s7 and s23 as branching Transfer stations, s50 as a Terminal
-            with one connection, and s43, s46, and s49 as isolated stations.
+        <p><strong>Where are transfer or terminal stations located in the topology?</strong>
+            This question is answered well by the node-link view. Station type is encoded
+            by shape, while highlighting reveals each station's local topology. The view
+            shows s7 and s23 as branching Transfer stations, s50 as a Terminal with one
+            connection, and s43, s46, and s49 as isolated stations.
         </p>
     </li>
 
     <li>
         <p><strong>Which stations have high passenger volume?</strong>
-            The node-link view is most useful because passenger volume is encoded by
-            symbol area, while tooltips provide exact values.
-            s50, s49, and s48 have the highest passenger volumes, with 9,850,
-            9,677, and 9,504 passengers per day, respectively.
-            s49 and s48 are isolated despite their high passenger volumes.
+            This question is answered well by the node-link view. Passenger volume is
+            encoded by symbol area, and tooltips provide exact values. s50, s49, and s48
+            have the highest passenger volumes, with 9,850, 9,677, and 9,504 passengers
+            per day, respectively.
         </p>
     </li>
 
     <li>
-        <p><strong>Which direct trips are the longest?</strong>
-            Both visualizations are useful for this question.
-            In the node-link view, thicker links represent longer travel times,
-            while in the matrix, darker cells represent longer trips; tooltips
-            provide the exact values in both views.
-            The longest trips are s7–s31 at 16 minutes, s18–s34 at 15 minutes,
+        <p><strong>Where are the longest direct travel-time connections?</strong>
+            This question is answered well by both visualizations. In the node-link view,
+            thicker links represent longer travel times, while in the matrix, darker cells
+            represent longer trips; tooltips provide the exact values in both views.
+            The longest connections are s7–s31 at 16 minutes, s18–s34 at 15 minutes,
             and s29–s50 at 14 minutes. All three are Express routes.
         </p>
     </li>
 
     <li>
-        <p><strong>Are particular route types concentrated in certain districts?</strong>
-            The adjacency matrix is most useful because cell hue encodes service type
-            and district-first ordering groups connections into district blocks.
-            Route types appear across several districts rather than being strongly
-            concentrated in one area, although both within-Central connections are Shuttle routes.
+        <p><strong>Are particular route types concentrated in particular parts of the network?</strong>
+            This question is answered partially by the adjacency matrix. Cell hue encodes
+            service type, and district-first ordering groups connections into district blocks,
+            making regional patterns easier to compare. Route types appear across several
+            districts rather than being strongly concentrated in one area, although both
+            within-Central connections are Shuttle routes.
         </p>
     </li>
     </ol>
