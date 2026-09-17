@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 6</title>
+    <title>Lab 6 — GDP Hierarchy with Two Treemaps</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<body class="lab6-page">
+    <h1>STATS 401: Data Acquisition and Visualization</h1>
+    <h2>Lab 6: GDP Hierarchy with Two Treemaps</h2>
 
-<body>
-    <h1>Lab 6</h1>
-
-    <p>
-        Lab 6 will be added here.
+    <h2>1. Dataset</h2>
+    <p>The provided synthetic dataset contains 27 countries in 15 areas across six
+        continents.
+        The hierarchy is <strong>World → Continent → Area → Country</strong>.
+        These values are for visualization practice, not current economic statistics.</p>
+    <p id="lab6-status" role="status">Loading the GDP hierarchy…</p>
+    <p>Source files:
+        <a href="../data/lab6_assignment_gdp.csv">Original CSV</a> ·
+        <a href="../data/lab6_assignment_gdp.json">Hierarchical JSON</a> ·
+        <a href="convert_hierarchy.py">Python conversion</a>
     </p>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+    <h2>2. Treemap A — Squarify</h2>
+    <div id="treemap-squarify" class="lab6-chart" tabindex="0"
+         aria-label="Squarify treemap; scroll horizontally on small screens"></div>
+    <div class="lab6-legend" aria-label="Squarify visual encodings"></div>
+    <p>Hover, tap, or keyboard-focus a country for its full path and exact values.
+        Scroll horizontally to see the full chart and external labels.</p>
+
+    <h2>3. Treemap B — SliceDice</h2>
+    <div id="treemap-slicedice" class="lab6-chart" tabindex="0"
+         aria-label="SliceDice treemap; scroll horizontally on small screens"></div>
+    <div class="lab6-legend" aria-label="SliceDice visual encodings"></div>
+    <p>Hover, tap, or keyboard-focus a country for its full path and exact values.
+        Scroll horizontally to see the full chart and external labels.</p>
+
+    <h2>4. Design Description</h2>
+    <div id="lab6-design">
+        <p>I use rectangle area for GDP because GDP is a positive quantitative variable
+            and treemaps support part-to-whole comparison. Color represents the direction
+            of change: teal for Increase, gray for Unchanged, and pink for Decrease.
+            The neutral middle category separates the two directions without implying
+            a measured growth rate. Both charts use the same legend. Nested boundaries
+            and headings identify continents and areas, while country labels and tooltips
+            provide names, full hierarchy paths, GDP values, and status.</p>
+        <p>The first treemap uses Squarify, which favors compact rectangles that are
+            often easier to compare and label. The second uses SliceDice, which alternates horizontal and vertical
+            subdivision across hierarchy levels, making the layered structure apparent
+            but often producing thin strips. Labels wrap or rotate; very thin countries use external labels and guide lines. Both retain the same hierarchy, descending
+            value order, and canvas dimensions, so the comparison focuses on segmentation.
+            Small countries remain harder to label, and padding and heading space affect
+            visible area proportions; tooltips provide exact values. The data are synthetic,
+            so the charts illustrate visualization design rather than real economic trends.</p>
+    </div>
+    <a href="../index.html" class="back-home">← Back to Home</a>
+    <div id="lab6-tooltip" role="tooltip" hidden></div>
+    <noscript><p>Enable JavaScript to display the treemaps.</p></noscript>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="lab6.js"></script>
 </body>
 </html>

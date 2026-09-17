@@ -468,3 +468,25 @@ Lab 5 — scoped to preserve earlier lab pages
 .lab5-page .lab5-findings strong { display: block; }
 .lab5-page #lab5-tooltip { position: fixed; z-index: 10; max-width: min(320px, calc(100vw - 40px)); padding: 10px 12px; border: 1px solid #777; border-radius: 4px; background: white; color: #27212c; box-shadow: 0 3px 12px #0002; pointer-events: none; font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
 .lab5-page .lab5-scroll:focus-visible { outline: 2px solid #a91d55; outline-offset: 3px; }
+
+/* ----------------------------------------
+Lab 6 — styles apply only to the Lab 6 page
+---------------------------------------- */
+.lab6-page .lab6-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin: 24px 0; }
+.lab6-page .lab6-legend-item { display: inline-flex; align-items: center; gap: 8px; }
+.lab6-page .lab6-swatch { width: 18px; height: 18px; border: 1px solid #555; }
+.lab6-page .lab6-chart { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.lab6-page .lab6-chart svg { display: block; width: 100%; min-width: 1155px; height: auto; }
+.lab6-page .lab6-heading { fill: #27212c; pointer-events: none; }
+.lab6-page .lab6-depth-1 { font-size: 14px; font-weight: bold; }
+.lab6-page .lab6-depth-2 { font-size: 11px; }
+.lab6-page .lab6-cell { cursor: help; }
+.lab6-page .lab6-cell rect { stroke: white; stroke-width: 1px; }
+.lab6-page .lab6-cell text { pointer-events: none; fill: #19171a; }
+.lab6-page .lab6-country-label { font-size: 12px; font-weight: bold; }
+.lab6-page .lab6-value-label { font-size: 11px; }
+.lab6-page .lab6-cell:hover rect, .lab6-page .lab6-cell:focus rect { stroke: #19171a; stroke-width: 2px; }
+.lab6-page .lab6-cell:focus { outline: none; }
+.lab6-page .lab6-chart:focus-visible { outline: 2px solid #a91d55; outline-offset: 3px; }
+.lab6-page #lab6-status.error { color: #a91d55; font-weight: bold; }
+.lab6-page #lab6-tooltip { position: fixed; z-index: 10; max-width: min(300px, calc(100vw - 40px)); padding: 10px 12px; border: 1px solid #777; border-radius: 4px; background: white; color: #27212c; box-shadow: 0 3px 12px #0002; pointer-events: none; font-size: 14px; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
