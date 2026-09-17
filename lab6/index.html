@@ -39,21 +39,19 @@
 
     <h2>4. Design Description</h2>
     <div id="lab6-design">
-        <p>I use rectangle area for GDP because GDP is a positive quantitative variable
-            and treemaps support part-to-whole comparison. Color represents the direction
-            of change: teal for Increase, gray for Unchanged, and pink for Decrease.
-            The neutral middle category separates the two directions without implying
-            a measured growth rate. Both charts use the same legend. Nested boundaries
-            and headings identify continents and areas, while country labels and tooltips
-            provide names, full hierarchy paths, GDP values, and status.</p>
-        <p>The first treemap uses Squarify, which favors compact rectangles that are
-            often easier to compare and label. The second uses SliceDice, which alternates horizontal and vertical
-            subdivision across hierarchy levels, making the layered structure apparent
-            but often producing thin strips. Labels wrap or rotate; very thin countries use external labels and guide lines. Both retain the same hierarchy, descending
-            value order, and canvas dimensions, so the comparison focuses on segmentation.
-            Small countries remain harder to label, and padding and heading space affect
-            visible area proportions; tooltips provide exact values. The data are synthetic,
-            so the charts illustrate visualization design rather than real economic trends.</p>
+        <p>I use rectangle area to represent GDP because GDP is a positive quantitative variable.
+            This helps compare each country's contribution to the total GDP of the listed countries.
+            I use color to show the direction of change: teal represents Increase, gray represents Unchanged,
+            and pink represents Decrease. Since the data only show the direction rather than the exact growth rate,
+            I use three categories instead of a continuous color scale. Both charts use the same legend.
+            Nested boundaries and headings show continent and area groups, while country labels and tooltips provide details.</p>
+        <p>The first treemap uses Squarify, which favors compact rectangles that are easier to compare and label.
+            The second uses SliceDice, which alternates the direction of subdivision across hierarchy levels.
+            This highlights the hierarchy but can create long, thin rectangles.
+            I wrap or rotate labels and use external labels with guide lines for very small countries.
+            Both treemaps use the same hierarchy, value order, and chart size.
+            Small countries remain difficult to label, and padding and headings affect visible area proportions.
+            Tooltips therefore provide exact values.</p>
     </div>
     <a href="../index.html" class="back-home">← Back to Home</a>
     <div id="lab6-tooltip" role="tooltip" hidden></div>
