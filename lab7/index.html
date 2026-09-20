@@ -50,20 +50,30 @@
     <h2>Temporal-network questions</h2>
     <ol class="lab7-findings">
         <li><strong>How does overall connectivity change across the 60 days?</strong>
-            Connectivity fluctuates rather than increasing every day. Average daily relationships rise from 5.50 in days 1–20 to 5.60 in days 21–40 and 7.25 in days 41–60. Day 1 has 3 relationships and 6 active companies; day 60 has 9 and 12. The overview shows these fluctuations, while the network reveals that even day 60 still has separate connected groups.</li>
+            Overall connectivity increases over time, although it fluctuates from day to day. 
+            Early in the animation, the network is relatively sparse and many companies are isolated. 
+            Later, more relationships appear and more companies become connected. For example, Day 1 has only 3 active relationships, while Day 60 has 9. The overview line chart makes this overall change easier to see.</li>
         <li><strong>Which companies become more central or commercially active?</strong>
-            Fusion Electronics (c06) becomes prominent in days 21–40: its mean daily incident value rises from $18,605.86 to $52,680.52. In days 41–60, Ion Systems (c09) and Cedar Retail (c03) lead at $54,827.50 and $45,090.51 per day. Their larger circles indicate commercial activity; tooltips show current neighbor counts. High transaction value is not the same as every definition of network centrality.</li>
+            Different companies become more commercially active at different times. 
+            Fusion Electronics (c06) becomes especially prominent around the middle of the 60-day period, while Ion Systems (c09) and Cedar Retail (c03) become more active later. 
+            Their circles become larger because node size represents daily incident transaction value. Hovering over the nodes also helps compare their activity and connections on a specific day.</li>
         <li><strong>When are relatively separate clusters visible?</strong>
             Early snapshots are fragmented. Day 1 has three disconnected pairs and six isolated companies. On day 6, c01/c02/c03/c04/c06 form one connected group and c07/c08/c09/c10/c11 form another; c05 and c12 are isolated. Pause on these days and trace the links. Stable positions aid tracking, but spatial proximity alone does not establish a connected cluster.</li>
         <li><strong>Which relationships appear, disappear, or strengthen?</strong>
-            Cedar Retail–Keystone Materials (c03–c11) first appears on day 41, whereas Granite Wholesale–Harbor Shipping (c07–c08) last appears on day 40. Ion Systems–Juniper Stores (c09–c10) is absent during days 21–40, then returns: its mean amount on active days increases from $12,679.95 in days 1–20 to $20,189.10 in days 41–60. Fades expose appearance/disappearance; thicker links and tooltips reveal the larger amounts.</li>
+            Several relationships appear and disappear during the animation. 
+            For example, the Cedar Retail–Keystone Materials (c03–c11) relationship appears later in the period, while Granite Wholesale–Harbor Shipping (c07–c08) disappears after Day 40. 
+            Some recurring relationships also become stronger, such as Ion Systems–Juniper Stores (c09–c10), which returns later with thicker links. 
+            The fade transitions make appearance and disappearance visible, while link width and tooltips help show changes in transaction amount.</li>
         <li><strong>Does the network become more cross-regional?</strong>
-            Overall, yes, although daily values vary. Cross-region relationships account for 70/110 (63.6%) of daily relationship records in days 1–20, 71/112 (63.4%) in days 21–40, and 105/145 (72.4%) in days 41–60. These are record shares, not dollar shares or shares of unique pairs across a period. Links joining differently colored nodes show cross-region activity; the daily summary provides the exact count.</li>
+            The network becomes somewhat more cross-regional toward the end of the 60 days. Early and middle frames contain a mix of within-region and cross-region relationships, while later frames show more links connecting nodes of different colors. Because node color represents region, these cross-regional relationships can be identified directly in the network. The daily summary also helps confirm the number of cross-region links.</li>
     </ol>
     <p class="lab7-hint">For the comparisons above, the 60 days are divided into three equal 20-day periods. Mean daily company values include inactive days as zero. Relationship-strength means include only days when that pair is active.</p>
 
     <h2>Design and implementation</h2>
-    <p>I adapted the practice's CSV/date parsing, time-based line chart, frame function, D3 interval, and Play/Pause/Reset/slider event handlers. Each frame filters transactions by day and calculates company activity with <code>filter()</code> and <code>d3.sum()</code>. A keyed D3 join updates the links. The same company objects and one force simulation persist across frames, with gentle restarts and anchors from an initial layout to preserve the mental map. Transaction rows are copied before <code>forceLink</code> changes endpoint IDs into node objects. The fixed overview supports comparisons that would otherwise depend on remembering earlier animation frames.</p>
+    <p>I adapted the CSV and date parsing, line chart, animation, and Play/Pause/Reset/slider controls from the practice. 
+        For each day, I use `filter()` to select the transactions and `d3.sum()` to calculate each company's daily activity. 
+        I use a keyed D3 join to update the links as transactions appear or disappear. The same nodes and force simulation are kept across the animation so the positions stay relatively stable and the network is easier to follow. 
+        I also added a fixed overview line chart to show the number of active relationships over all 60 days, which makes it easier to compare changes across time.</p>
     <a class="back-home" href="../index.html">Back to home</a>
 </body>
 </html>
