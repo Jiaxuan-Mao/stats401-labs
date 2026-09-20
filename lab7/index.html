@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 7</title>
+    <title>Lab 7 — Temporal Commercial Network</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+    <script src="lab7.js" defer></script>
 </head>
+<body class="lab7-page">
+    <h1>Lab 7: Temporal Commercial Network</h1>
+    <p>How do commercial relationships change over 60 days? Follow the same 12 companies from January 1 to March 1, 2026. Each frame shows only that day's undirected relationships.</p>
+    <h2>Dataset</h2>
+    <p>The <a href="https://github.com/hiilab/stats-401/blob/main/Lab7.md">course assignment</a> provides
+        <a href="../data/lab7_assignment_companies.csv">company data</a> and
+        <a href="../data/lab7_assignment_transactions_60days.csv">daily transaction data</a>.
+        These companies and transactions are fabricated for visualization practice.</p>
+    <p id="lab7-status" role="status">Loading assignment data…</p>
 
-<body>
-    <h1>Lab 7</h1>
+    <h2>Daily network</h2>
+    <div class="lab7-controls">
+        <button id="play" disabled>Play</button>
+        <button id="pause" disabled>Pause</button>
+        <button id="reset" disabled>Reset</button>
+        <span id="play-state" role="status">Paused</span>
+    </div>
+    <p id="current-date" class="lab7-current" aria-live="polite">Day 1 / 60</p>
+    <div class="lab7-slider-row">
+        <label for="time-slider">Choose day</label>
+        <input id="time-slider" type="range" min="1" max="60" step="1" value="1" disabled>
+    </div>
+    <p id="daily-summary">Daily statistics will appear here.</p>
+    <p class="lab7-hint">Pause or move the slider to inspect a day. Hover, tap, or Tab to a company or link for exact values. All companies remain visible, including inactive ones. Positions are simulated, not geographic; follow the links to identify connected groups.</p>
+    <div id="network" class="lab7-scroll" tabindex="0" aria-label="Network chart; scroll horizontally on a narrow screen"></div>
+    <div id="lab7-tooltip" role="tooltip" hidden></div>
 
-    <p>
-        Lab 7 will be added here.
-    </p>
+    <div class="lab7-legend">
+        <div><h3>Node color → region</h3><div id="region-key" class="lab7-keys"></div></div>
+        <div><h3>Link color → transaction type</h3><div id="type-key" class="lab7-keys"></div></div>
+        <div><h3>Node size → daily incident value (USD)</h3><div id="size-key"></div></div>
+        <div><h3>Link width → daily amount (USD)</h3><div id="width-key"></div></div>
+    </div>
+    <p class="lab7-hint">Both size scales stay fixed across all 60 days. Node radius uses a square-root scale with a visible minimum for $0, so area is not strictly proportional to value. Incident value sums a company's connected amounts; each relationship is counted once in the daily network total. New links fade in and inactive links fade out over 350 ms.</p>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+    <h2>60-day connectivity overview</h2>
+    <p>The line shows the number of active relationships each day. The marker follows the selected day; the overview stays fixed while the network changes.</p>
+    <div id="overview" class="lab7-scroll" tabindex="0" aria-label="Daily relationship counts; scroll horizontally on a narrow screen"></div>
+
+    <h2>Temporal-network questions</h2>
+    <ol class="lab7-findings">
+        <li><strong>How does overall connectivity change across the 60 days?</strong>
+            Connectivity fluctuates rather than increasing every day. Average daily relationships rise from 5.50 in days 1–20 to 5.60 in days 21–40 and 7.25 in days 41–60. Day 1 has 3 relationships and 6 active companies; day 60 has 9 and 12. The overview shows these fluctuations, while the network reveals that even day 60 still has separate connected groups.</li>
+        <li><strong>Which companies become more central or commercially active?</strong>
+            Fusion Electronics (c06) becomes prominent in days 21–40: its mean daily incident value rises from $18,605.86 to $52,680.52. In days 41–60, Ion Systems (c09) and Cedar Retail (c03) lead at $54,827.50 and $45,090.51 per day. Their larger circles indicate commercial activity; tooltips show current neighbor counts. High transaction value is not the same as every definition of network centrality.</li>
+        <li><strong>When are relatively separate clusters visible?</strong>
+            Early snapshots are fragmented. Day 1 has three disconnected pairs and six isolated companies. On day 6, c01/c02/c03/c04/c06 form one connected group and c07/c08/c09/c10/c11 form another; c05 and c12 are isolated. Pause on these days and trace the links. Stable positions aid tracking, but spatial proximity alone does not establish a connected cluster.</li>
+        <li><strong>Which relationships appear, disappear, or strengthen?</strong>
+            Cedar Retail–Keystone Materials (c03–c11) first appears on day 41, whereas Granite Wholesale–Harbor Shipping (c07–c08) last appears on day 40. Ion Systems–Juniper Stores (c09–c10) is absent during days 21–40, then returns: its mean amount on active days increases from $12,679.95 in days 1–20 to $20,189.10 in days 41–60. Fades expose appearance/disappearance; thicker links and tooltips reveal the larger amounts.</li>
+        <li><strong>Does the network become more cross-regional?</strong>
+            Overall, yes, although daily values vary. Cross-region relationships account for 70/110 (63.6%) of daily relationship records in days 1–20, 71/112 (63.4%) in days 21–40, and 105/145 (72.4%) in days 41–60. These are record shares, not dollar shares or shares of unique pairs across a period. Links joining differently colored nodes show cross-region activity; the daily summary provides the exact count.</li>
+    </ol>
+    <p class="lab7-hint">For the comparisons above, the 60 days are divided into three equal 20-day periods. Mean daily company values include inactive days as zero. Relationship-strength means include only days when that pair is active.</p>
+
+    <h2>Design and implementation</h2>
+    <p>I adapted the practice's CSV/date parsing, time-based line chart, frame function, D3 interval, and Play/Pause/Reset/slider event handlers. Each frame filters transactions by day and calculates company activity with <code>filter()</code> and <code>d3.sum()</code>. A keyed D3 join updates the links. The same company objects and one force simulation persist across frames, with gentle restarts and anchors from an initial layout to preserve the mental map. Transaction rows are copied before <code>forceLink</code> changes endpoint IDs into node objects. The fixed overview supports comparisons that would otherwise depend on remembering earlier animation frames.</p>
+    <a class="back-home" href="../index.html">Back to home</a>
 </body>
 </html>

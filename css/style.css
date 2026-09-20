@@ -490,3 +490,35 @@ Lab 6 — styles apply only to the Lab 6 page
 .lab6-page .lab6-chart:focus-visible { outline: 2px solid #a91d55; outline-offset: 3px; }
 .lab6-page #lab6-status.error { color: #a91d55; font-weight: bold; }
 .lab6-page #lab6-tooltip { position: fixed; z-index: 10; max-width: min(300px, calc(100vw - 40px)); padding: 10px 12px; border: 1px solid #777; border-radius: 4px; background: white; color: #27212c; box-shadow: 0 3px 12px #0002; pointer-events: none; font-size: 14px; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
+
+/* Lab 7 — scoped temporal-network styles */
+.lab7-page .lab7-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.lab7-page button { font: inherit; padding: 8px 18px; border: 1px solid #a85076; border-radius: 5px; background: #fde3ec; color: #27212c; cursor: pointer; }
+.lab7-page button:hover { background: #f6cadd; }
+.lab7-page button:disabled { opacity: 0.5; cursor: wait; }
+.lab7-page .lab7-current { font-size: 22px; font-weight: bold; margin-bottom: 12px; }
+.lab7-page .lab7-slider-row { display: flex; align-items: center; gap: 15px; }
+.lab7-page #time-slider { flex: 1; min-width: 0; accent-color: #a33b6c; }
+.lab7-page #daily-summary { padding: 12px 16px; background: #fdf0f5; border-left: 3px solid #a33b6c; }
+.lab7-page .lab7-hint { font-size: 14px; color: #514b52; }
+.lab7-page .lab7-scroll { overflow-x: auto; border: 1px solid #e5dce1; border-radius: 5px; background: #fff; }
+.lab7-page .lab7-scroll svg { display: block; }
+.lab7-page .lab7-labels { font-size: 12px; font-weight: 600; pointer-events: none; fill: #29232c; }
+.lab7-page .lab7-labels text { paint-order: stroke; stroke: white; stroke-width: 3px; stroke-linejoin: round; }
+.lab7-page .lab7-node, .lab7-page .lab7-link-hit { cursor: help; }
+.lab7-page .lab7-node:focus { outline: none; stroke: #27212c; stroke-width: 3px; }
+.lab7-page .lab7-link-hit:focus { outline: none; stroke: #27212c; stroke-opacity: 0.15; }
+.lab7-page #lab7-tooltip { position: fixed; z-index: 10; max-width: min(340px, calc(100vw - 40px)); box-sizing: border-box; padding: 10px 12px; background: #fff; border: 1px solid #9e6680; border-radius: 5px; box-shadow: 0 3px 14px #0002; white-space: pre-line; line-height: 1.5; font-size: 14px; pointer-events: none; }
+.lab7-page .lab7-legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 25px; }
+.lab7-page .lab7-legend h3 { font-size: 15px; margin-bottom: 10px; }
+.lab7-page .lab7-keys { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.lab7-page .lab7-key-item { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; }
+.lab7-page .lab7-legend svg { max-width: 100%; font-size: 12px; }
+.lab7-page .lab7-findings { padding-left: 24px; line-height: 1.7; }
+.lab7-page .lab7-findings li { margin: 0 0 18px; }
+.lab7-page .lab7-findings strong { display: block; }
+.lab7-page .error { color: #a51c32; }
+@media (max-width: 700px) {
+    .lab7-page .lab7-legend { grid-template-columns: 1fr; }
+    .lab7-page .lab7-current { font-size: 19px; }
+}
