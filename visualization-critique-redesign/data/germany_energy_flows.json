@@ -1,0 +1,4426 @@
+{
+  "meta": {
+    "title": "Germany energy flow",
+    "country": "Germany",
+    "unit": "TJ",
+    "source": "Eurostat complete energy balances (nrg_bal_c)",
+    "generated": "2026-09-26"
+  },
+  "years": [
+    {
+      "year": 2019,
+      "nodes": [
+        {
+          "id": "source:production",
+          "label": "Primary production",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:imports",
+          "label": "Imports",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:stock_draw",
+          "label": "Stock draw",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:other",
+          "label": "Recovered & recycled",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "use:industry",
+          "label": "Industry",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:transport",
+          "label": "Transport",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:households",
+          "label": "Residential",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:services",
+          "label": "Commercial & public services",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_final",
+          "label": "Other final consumption",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:non_energy",
+          "label": "Non-energy use",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:exports",
+          "label": "Exports",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_energy",
+          "label": "Other energy flows",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "adjustment:source",
+          "label": "Balancing inflow",
+          "stage": 0,
+          "kind": "adjustment"
+        },
+        {
+          "id": "transform:power",
+          "label": "Power & heat plants",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:refineries",
+          "label": "Refineries",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:other",
+          "label": "Other transformation",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "carrier:solid:supply",
+          "label": "Solid fossil fuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:solid:available",
+          "label": "Solid fossil fuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:gas:supply",
+          "label": "Natural gas",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:gas:available",
+          "label": "Natural gas",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:oil:supply",
+          "label": "Oil products",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:oil:available",
+          "label": "Oil products",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:renewables:supply",
+          "label": "Renewables & biofuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:renewables:available",
+          "label": "Renewables & biofuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:waste:supply",
+          "label": "Non-renewable waste",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:waste:available",
+          "label": "Non-renewable waste",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:nuclear:supply",
+          "label": "Nuclear heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:nuclear:available",
+          "label": "Nuclear heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:electricity:supply",
+          "label": "Electricity",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:electricity:available",
+          "label": "Electricity",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:heat:supply",
+          "label": "Heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "heat",
+          "color": "#D45353"
+        },
+        {
+          "id": "carrier:heat:available",
+          "label": "Heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "heat",
+          "color": "#D45353"
+        }
+      ],
+      "links": [
+        {
+          "source": "source:production",
+          "target": "carrier:solid:supply",
+          "value": 1189899.973,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:solid:supply",
+          "value": 1179756.624,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:solid:supply",
+          "value": 57258.024,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:supply",
+          "value": 73907.199,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:power",
+          "value": 1625207.094,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:other",
+          "value": 875614.726,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:solid:available",
+          "value": 379242.951,
+          "carrier": "solid",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:industry",
+          "value": 128697.847,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:households",
+          "value": 14460.716,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:services",
+          "value": 76.988,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:non_energy",
+          "value": 16254.846,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:exports",
+          "value": 62836.529,
+          "carrier": "solid",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 83008.825,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 73907.2,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:gas:supply",
+          "value": 183113.851,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:gas:supply",
+          "value": 3168238.441,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "use:other_energy",
+          "value": 185276.951,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "transform:power",
+          "value": 771801.305,
+          "carrier": "gas",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "carrier:gas:available",
+          "value": 2394274.036,
+          "carrier": "gas",
+          "kind": "direct"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 3108.652,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:industry",
+          "value": 815408.513,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:transport",
+          "value": 32793.518,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:households",
+          "value": 936985.828,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:services",
+          "value": 396403.464,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_final",
+          "value": 10788.3,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:non_energy",
+          "value": 143659.35,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 61343.715,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:oil:supply",
+          "value": 134532.449,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:oil:supply",
+          "value": 5449738.261,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:other",
+          "target": "carrier:oil:supply",
+          "value": 19509.607,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "use:other_energy",
+          "value": 29973.545,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:power",
+          "value": 45195.397,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:refineries",
+          "value": 5213630.028,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:other",
+          "value": 13124.005,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "carrier:oil:available",
+          "value": 301857.342,
+          "carrier": "oil",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "carrier:oil:available",
+          "value": 5111414.949,
+          "carrier": "oil",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:industry",
+          "value": 137636.191,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:transport",
+          "value": 2167103.657,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:households",
+          "value": 496927.118,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:services",
+          "value": 140023.118,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_final",
+          "value": 91649.855,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:non_energy",
+          "value": 746350.925,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:exports",
+          "value": 912150.334,
+          "carrier": "oil",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_energy",
+          "value": 721431.093,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:renewables:supply",
+          "value": 1912894.954,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:renewables:supply",
+          "value": 98156.963,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:power",
+          "value": 1176770.062,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:other",
+          "value": 122478.458,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "carrier:renewables:available",
+          "value": 711803.397,
+          "carrier": "renewables",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:renewables:available",
+          "value": 122148.458,
+          "carrier": "renewables",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:industry",
+          "value": 114889.653,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:transport",
+          "value": 112163.114,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:households",
+          "value": 347573.102,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:services",
+          "value": 90179.67,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_final",
+          "value": 32236.138,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:exports",
+          "value": 113824.178,
+          "carrier": "renewables",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_energy",
+          "value": 23086.0,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:waste:supply",
+          "value": 177859.0,
+          "carrier": "waste",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "transform:power",
+          "value": 124377.0,
+          "carrier": "waste",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "carrier:waste:available",
+          "value": 53482.0,
+          "carrier": "waste",
+          "kind": "direct"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:industry",
+          "value": 53328.0,
+          "carrier": "waste",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:other_energy",
+          "value": 154.0,
+          "carrier": "waste",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:nuclear:supply",
+          "value": 809392.176,
+          "carrier": "nuclear",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:nuclear:supply",
+          "target": "transform:power",
+          "value": 809392.176,
+          "carrier": "nuclear",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:electricity:supply",
+          "value": 144453.6,
+          "carrier": "electricity",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "transform:power",
+          "value": 29448.0,
+          "carrier": "electricity",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "carrier:electricity:available",
+          "value": 115005.6,
+          "carrier": "electricity",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:electricity:available",
+          "value": 2184901.2,
+          "carrier": "electricity",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:industry",
+          "value": 803761.2,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:transport",
+          "value": 41778.0,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:households",
+          "value": 455540.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:services",
+          "value": 467906.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_final",
+          "value": 18468.0,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:exports",
+          "value": 262054.8,
+          "carrier": "electricity",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_energy",
+          "value": 250398.0,
+          "carrier": "electricity",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:heat:available",
+          "value": 457928.0,
+          "carrier": "heat",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:industry",
+          "value": 179213.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:households",
+          "value": 166098.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:services",
+          "value": 58194.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:other_energy",
+          "value": 54423.0,
+          "carrier": "heat",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "use:other_energy",
+          "value": 1939361.834,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "use:other_energy",
+          "value": 102215.079,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:other",
+          "target": "use:other_energy",
+          "value": 509825.78,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        }
+      ],
+      "carriers": [
+        {
+          "id": "solid",
+          "code": "C0000X0350-0370",
+          "label": "Solid fossil fuels",
+          "color": "#5B6573"
+        },
+        {
+          "id": "gas",
+          "code": "G3000",
+          "label": "Natural gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "oil",
+          "code": "O4000XBIO",
+          "label": "Oil products",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "renewables",
+          "code": "RA000",
+          "label": "Renewables & biofuels",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "waste",
+          "code": "W6100_6220",
+          "label": "Non-renewable waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "nuclear",
+          "code": "N900H",
+          "label": "Nuclear heat",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "electricity",
+          "code": "E7000",
+          "label": "Electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "heat",
+          "code": "H8000",
+          "label": "Heat",
+          "color": "#D45353"
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "nodes": [
+        {
+          "id": "source:production",
+          "label": "Primary production",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:imports",
+          "label": "Imports",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:stock_draw",
+          "label": "Stock draw",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:other",
+          "label": "Recovered & recycled",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "use:industry",
+          "label": "Industry",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:transport",
+          "label": "Transport",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:households",
+          "label": "Residential",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:services",
+          "label": "Commercial & public services",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_final",
+          "label": "Other final consumption",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:non_energy",
+          "label": "Non-energy use",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:exports",
+          "label": "Exports",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_energy",
+          "label": "Other energy flows",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "adjustment:source",
+          "label": "Balancing inflow",
+          "stage": 0,
+          "kind": "adjustment"
+        },
+        {
+          "id": "transform:power",
+          "label": "Power & heat plants",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:refineries",
+          "label": "Refineries",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:other",
+          "label": "Other transformation",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "carrier:solid:supply",
+          "label": "Solid fossil fuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:solid:available",
+          "label": "Solid fossil fuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:gas:supply",
+          "label": "Natural gas",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:gas:available",
+          "label": "Natural gas",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:oil:supply",
+          "label": "Oil products",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:oil:available",
+          "label": "Oil products",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:renewables:supply",
+          "label": "Renewables & biofuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:renewables:available",
+          "label": "Renewables & biofuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:waste:supply",
+          "label": "Non-renewable waste",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:waste:available",
+          "label": "Non-renewable waste",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:nuclear:supply",
+          "label": "Nuclear heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:nuclear:available",
+          "label": "Nuclear heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:electricity:supply",
+          "label": "Electricity",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:electricity:available",
+          "label": "Electricity",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:heat:supply",
+          "label": "Heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "heat",
+          "color": "#D45353"
+        },
+        {
+          "id": "carrier:heat:available",
+          "label": "Heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "heat",
+          "color": "#D45353"
+        }
+      ],
+      "links": [
+        {
+          "source": "source:production",
+          "target": "carrier:solid:supply",
+          "value": 979199.962,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:solid:supply",
+          "value": 882990.985,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:solid:supply",
+          "value": 66628.676,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:supply",
+          "value": 124959.006,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:power",
+          "value": 1285469.101,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:other",
+          "value": 768309.528,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:solid:available",
+          "value": 336246.218,
+          "carrier": "solid",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:available",
+          "value": 19708.912,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:industry",
+          "value": 136637.979,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:households",
+          "value": 13217.978,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:services",
+          "value": 52.618,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:non_energy",
+          "value": 15628.314,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:exports",
+          "value": 59204.008,
+          "carrier": "solid",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 6255.228,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 124959.005,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:gas:supply",
+          "value": 168763.227,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:gas:supply",
+          "value": 2783045.527,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:gas:supply",
+          "value": 171541.943,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "transform:power",
+          "value": 809417.695,
+          "carrier": "gas",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "carrier:gas:available",
+          "value": 2313933.002,
+          "carrier": "gas",
+          "kind": "direct"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 59630.394,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:industry",
+          "value": 822816.883,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:transport",
+          "value": 19803.629,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:households",
+          "value": 910447.651,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:services",
+          "value": 416377.537,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_final",
+          "value": 10369.8,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:non_energy",
+          "value": 119225.047,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 74522.849,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:oil:supply",
+          "value": 130270.059,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:oil:supply",
+          "value": 4996776.657,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:other",
+          "target": "carrier:oil:supply",
+          "value": 18522.89,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "use:other_energy",
+          "value": 2976.617,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:power",
+          "value": 46699.112,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:refineries",
+          "value": 4962369.907,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:other",
+          "value": 11793.947,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "carrier:oil:available",
+          "value": 121730.023,
+          "carrier": "oil",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "carrier:oil:available",
+          "value": 4857870.351,
+          "carrier": "oil",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:industry",
+          "value": 144182.773,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:transport",
+          "value": 1933799.219,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:households",
+          "value": 545641.757,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:services",
+          "value": 114999.27,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_final",
+          "value": 91530.026,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:non_energy",
+          "value": 759186.137,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:exports",
+          "value": 922948.728,
+          "carrier": "oil",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_energy",
+          "value": 467312.464,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:renewables:supply",
+          "value": 1950782.781,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:renewables:supply",
+          "value": 145978.16,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:power",
+          "value": 1225666.913,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:other",
+          "value": 147028.233,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "carrier:renewables:available",
+          "value": 724065.795,
+          "carrier": "renewables",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:renewables:available",
+          "value": 145299.568,
+          "carrier": "renewables",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:renewables:available",
+          "value": 918.096,
+          "carrier": "renewables",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:industry",
+          "value": 115348.624,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:transport",
+          "value": 140184.454,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:households",
+          "value": 337688.399,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:services",
+          "value": 91116.932,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_final",
+          "value": 34294.274,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:exports",
+          "value": 127879.776,
+          "carrier": "renewables",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_energy",
+          "value": 23771.0,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:waste:supply",
+          "value": 175976.0,
+          "carrier": "waste",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "transform:power",
+          "value": 121577.0,
+          "carrier": "waste",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "carrier:waste:available",
+          "value": 54399.0,
+          "carrier": "waste",
+          "kind": "direct"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:industry",
+          "value": 54275.0,
+          "carrier": "waste",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:other_energy",
+          "value": 124.0,
+          "carrier": "waste",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:nuclear:supply",
+          "value": 694037.462,
+          "carrier": "nuclear",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:nuclear:supply",
+          "target": "transform:power",
+          "value": 694037.462,
+          "carrier": "nuclear",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:electricity:supply",
+          "value": 172270.8,
+          "carrier": "electricity",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "transform:power",
+          "value": 31942.8,
+          "carrier": "electricity",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "carrier:electricity:available",
+          "value": 140328.0,
+          "carrier": "electricity",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:electricity:available",
+          "value": 2071663.2,
+          "carrier": "electricity",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:industry",
+          "value": 761864.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:transport",
+          "value": 41522.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:households",
+          "value": 458733.6,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:services",
+          "value": 456746.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_final",
+          "value": 17150.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:exports",
+          "value": 240775.2,
+          "carrier": "electricity",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_energy",
+          "value": 235198.8,
+          "carrier": "electricity",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:heat:available",
+          "value": 425534.0,
+          "carrier": "heat",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:industry",
+          "value": 168026.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:households",
+          "value": 161768.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:services",
+          "value": 44531.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:other_energy",
+          "value": 51209.0,
+          "carrier": "heat",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "use:other_energy",
+          "value": 1717612.883,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "use:other_energy",
+          "value": 104499.556,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:other",
+          "target": "use:other_energy",
+          "value": 445585.922,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        }
+      ],
+      "carriers": [
+        {
+          "id": "solid",
+          "code": "C0000X0350-0370",
+          "label": "Solid fossil fuels",
+          "color": "#5B6573"
+        },
+        {
+          "id": "gas",
+          "code": "G3000",
+          "label": "Natural gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "oil",
+          "code": "O4000XBIO",
+          "label": "Oil products",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "renewables",
+          "code": "RA000",
+          "label": "Renewables & biofuels",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "waste",
+          "code": "W6100_6220",
+          "label": "Non-renewable waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "nuclear",
+          "code": "N900H",
+          "label": "Nuclear heat",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "electricity",
+          "code": "E7000",
+          "label": "Electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "heat",
+          "code": "H8000",
+          "label": "Heat",
+          "color": "#D45353"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "nodes": [
+        {
+          "id": "source:production",
+          "label": "Primary production",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:imports",
+          "label": "Imports",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:stock_draw",
+          "label": "Stock draw",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:other",
+          "label": "Recovered & recycled",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "use:industry",
+          "label": "Industry",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:transport",
+          "label": "Transport",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:households",
+          "label": "Residential",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:services",
+          "label": "Commercial & public services",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_final",
+          "label": "Other final consumption",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:non_energy",
+          "label": "Non-energy use",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:exports",
+          "label": "Exports",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_energy",
+          "label": "Other energy flows",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "adjustment:source",
+          "label": "Balancing inflow",
+          "stage": 0,
+          "kind": "adjustment"
+        },
+        {
+          "id": "transform:power",
+          "label": "Power & heat plants",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:refineries",
+          "label": "Refineries",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:other",
+          "label": "Other transformation",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "carrier:solid:supply",
+          "label": "Solid fossil fuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:solid:available",
+          "label": "Solid fossil fuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:gas:supply",
+          "label": "Natural gas",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:gas:available",
+          "label": "Natural gas",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:oil:supply",
+          "label": "Oil products",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:oil:available",
+          "label": "Oil products",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:renewables:supply",
+          "label": "Renewables & biofuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:renewables:available",
+          "label": "Renewables & biofuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:waste:supply",
+          "label": "Non-renewable waste",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:waste:available",
+          "label": "Non-renewable waste",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:nuclear:supply",
+          "label": "Nuclear heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:nuclear:available",
+          "label": "Nuclear heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:electricity:supply",
+          "label": "Electricity",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:electricity:available",
+          "label": "Electricity",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:heat:supply",
+          "label": "Heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "heat",
+          "color": "#D45353"
+        },
+        {
+          "id": "carrier:heat:available",
+          "label": "Heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "heat",
+          "color": "#D45353"
+        }
+      ],
+      "links": [
+        {
+          "source": "source:production",
+          "target": "carrier:solid:supply",
+          "value": 1153200.0,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:solid:supply",
+          "value": 1149213.737,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:solid:supply",
+          "value": 25408.255,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:supply",
+          "value": 69117.99,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:power",
+          "value": 1547035.88,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:other",
+          "value": 849904.102,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:solid:available",
+          "value": 351032.102,
+          "carrier": "solid",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:industry",
+          "value": 118463.678,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:households",
+          "value": 14574.796,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:services",
+          "value": 33.291,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:non_energy",
+          "value": 15513.169,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:exports",
+          "value": 70489.873,
+          "carrier": "solid",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 62839.304,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 69117.991,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:gas:supply",
+          "value": 161911.314,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:gas:supply",
+          "value": 2930470.984,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:gas:supply",
+          "value": 139062.776,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "transform:power",
+          "value": 825062.41,
+          "carrier": "gas",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "carrier:gas:available",
+          "value": 2406382.664,
+          "carrier": "gas",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:gas:available",
+          "value": 33548.513,
+          "carrier": "gas",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 132120.569,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:industry",
+          "value": 857959.689,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:transport",
+          "value": 23293.286,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:households",
+          "value": 1052064.28,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:services",
+          "value": 448666.882,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_final",
+          "value": 10736.407,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:non_energy",
+          "value": 120779.101,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 58552.102,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 0.001,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:oil:supply",
+          "value": 124582.78,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:oil:supply",
+          "value": 5025372.43,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:oil:supply",
+          "value": 40220.34,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:other",
+          "target": "carrier:oil:supply",
+          "value": 19861.014,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:power",
+          "value": 44380.29,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:refineries",
+          "value": 4991069.355,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:other",
+          "value": 9345.261,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "carrier:oil:available",
+          "value": 165241.658,
+          "carrier": "oil",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "carrier:oil:available",
+          "value": 4879150.748,
+          "carrier": "oil",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:industry",
+          "value": 141949.96,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:transport",
+          "value": 1898825.98,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:households",
+          "value": 330926.153,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:services",
+          "value": 167804.172,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_final",
+          "value": 93250.977,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:non_energy",
+          "value": 841914.816,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:exports",
+          "value": 1058161.674,
+          "carrier": "oil",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_energy",
+          "value": 511558.674,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:renewables:supply",
+          "value": 1976331.091,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:renewables:supply",
+          "value": 115492.493,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:power",
+          "value": 1159271.019,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:other",
+          "value": 167523.925,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "carrier:renewables:available",
+          "value": 765028.64,
+          "carrier": "renewables",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:renewables:available",
+          "value": 130829.925,
+          "carrier": "renewables",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:renewables:available",
+          "value": 373.732,
+          "carrier": "renewables",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:industry",
+          "value": 118479.704,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:transport",
+          "value": 120885.388,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:households",
+          "value": 381885.064,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:services",
+          "value": 96898.733,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_final",
+          "value": 34990.788,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:exports",
+          "value": 122105.62,
+          "carrier": "renewables",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_energy",
+          "value": 20987.0,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:waste:supply",
+          "value": 178798.0,
+          "carrier": "waste",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "transform:power",
+          "value": 124607.0,
+          "carrier": "waste",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "carrier:waste:available",
+          "value": 54191.0,
+          "carrier": "waste",
+          "kind": "direct"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:industry",
+          "value": 54073.0,
+          "carrier": "waste",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:other_energy",
+          "value": 118.0,
+          "carrier": "waste",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:nuclear:supply",
+          "value": 743935.31,
+          "carrier": "nuclear",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:nuclear:supply",
+          "target": "transform:power",
+          "value": 743935.31,
+          "carrier": "nuclear",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:electricity:supply",
+          "value": 186231.6,
+          "carrier": "electricity",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "transform:power",
+          "value": 29367.0,
+          "carrier": "electricity",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "carrier:electricity:available",
+          "value": 156864.6,
+          "carrier": "electricity",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:electricity:available",
+          "value": 2134077.12,
+          "carrier": "electricity",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:industry",
+          "value": 789580.8,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:transport",
+          "value": 46324.8,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:households",
+          "value": 473400.0,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:services",
+          "value": 471018.6,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_final",
+          "value": 18730.8,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:exports",
+          "value": 253101.6,
+          "carrier": "electricity",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_energy",
+          "value": 238785.12,
+          "carrier": "electricity",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:heat:available",
+          "value": 469619.0,
+          "carrier": "heat",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:industry",
+          "value": 177817.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:households",
+          "value": 161768.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:services",
+          "value": 72172.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:other_energy",
+          "value": 57862.0,
+          "carrier": "heat",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "use:other_energy",
+          "value": 1869962.789,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "use:other_energy",
+          "value": 111918.607,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:other",
+          "target": "use:other_energy",
+          "value": 511362.748,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        }
+      ],
+      "carriers": [
+        {
+          "id": "solid",
+          "code": "C0000X0350-0370",
+          "label": "Solid fossil fuels",
+          "color": "#5B6573"
+        },
+        {
+          "id": "gas",
+          "code": "G3000",
+          "label": "Natural gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "oil",
+          "code": "O4000XBIO",
+          "label": "Oil products",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "renewables",
+          "code": "RA000",
+          "label": "Renewables & biofuels",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "waste",
+          "code": "W6100_6220",
+          "label": "Non-renewable waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "nuclear",
+          "code": "N900H",
+          "label": "Nuclear heat",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "electricity",
+          "code": "E7000",
+          "label": "Electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "heat",
+          "code": "H8000",
+          "label": "Heat",
+          "color": "#D45353"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "nodes": [
+        {
+          "id": "source:production",
+          "label": "Primary production",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:imports",
+          "label": "Imports",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:stock_draw",
+          "label": "Stock draw",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:other",
+          "label": "Recovered & recycled",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "use:industry",
+          "label": "Industry",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:transport",
+          "label": "Transport",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:households",
+          "label": "Residential",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:services",
+          "label": "Commercial & public services",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_final",
+          "label": "Other final consumption",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:non_energy",
+          "label": "Non-energy use",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:exports",
+          "label": "Exports",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_energy",
+          "label": "Other energy flows",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "adjustment:source",
+          "label": "Balancing inflow",
+          "stage": 0,
+          "kind": "adjustment"
+        },
+        {
+          "id": "transform:power",
+          "label": "Power & heat plants",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:refineries",
+          "label": "Refineries",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:other",
+          "label": "Other transformation",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "carrier:solid:supply",
+          "label": "Solid fossil fuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:solid:available",
+          "label": "Solid fossil fuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:gas:supply",
+          "label": "Natural gas",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:gas:available",
+          "label": "Natural gas",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:oil:supply",
+          "label": "Oil products",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:oil:available",
+          "label": "Oil products",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:renewables:supply",
+          "label": "Renewables & biofuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:renewables:available",
+          "label": "Renewables & biofuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:waste:supply",
+          "label": "Non-renewable waste",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:waste:available",
+          "label": "Non-renewable waste",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:nuclear:supply",
+          "label": "Nuclear heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:nuclear:available",
+          "label": "Nuclear heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:electricity:supply",
+          "label": "Electricity",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:electricity:available",
+          "label": "Electricity",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:heat:supply",
+          "label": "Heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "heat",
+          "color": "#D45353"
+        },
+        {
+          "id": "carrier:heat:available",
+          "label": "Heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "heat",
+          "color": "#D45353"
+        }
+      ],
+      "links": [
+        {
+          "source": "source:production",
+          "target": "carrier:solid:supply",
+          "value": 1192838.386,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:solid:supply",
+          "value": 1249181.545,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:supply",
+          "value": 74105.976,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "use:other_energy",
+          "value": 37919.055,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:power",
+          "value": 1672640.144,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:other",
+          "value": 805566.708,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:solid:available",
+          "value": 349652.741,
+          "carrier": "solid",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:industry",
+          "value": 138007.951,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:households",
+          "value": 12482.801,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:services",
+          "value": 38.257,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:non_energy",
+          "value": 14655.95,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:exports",
+          "value": 75309.746,
+          "carrier": "solid",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 35052.062,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 74105.974,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:gas:supply",
+          "value": 151228.409,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:gas:supply",
+          "value": 2960055.435,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "use:other_energy",
+          "value": 316042.256,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "transform:power",
+          "value": 726426.909,
+          "carrier": "gas",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "carrier:gas:available",
+          "value": 2068814.679,
+          "carrier": "gas",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:gas:available",
+          "value": 32914.0,
+          "carrier": "gas",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 85529.426,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:industry",
+          "value": 754045.479,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:transport",
+          "value": 35581.743,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:households",
+          "value": 894742.162,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:services",
+          "value": 382614.281,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_final",
+          "value": 14713.162,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:non_energy",
+          "value": 74442.601,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 31118.676,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 0.001,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:oil:supply",
+          "value": 118969.784,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:oil:supply",
+          "value": 5266953.12,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:other",
+          "target": "carrier:oil:supply",
+          "value": 19656.556,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "use:other_energy",
+          "value": 6989.954,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:power",
+          "value": 50724.864,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:refineries",
+          "value": 5240179.946,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:other",
+          "value": 9526.174,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "carrier:oil:available",
+          "value": 98158.522,
+          "carrier": "oil",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "carrier:oil:available",
+          "value": 5136317.09,
+          "carrier": "oil",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:industry",
+          "value": 155796.277,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:transport",
+          "value": 1909234.493,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:households",
+          "value": 451680.102,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:services",
+          "value": 77532.276,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_final",
+          "value": 93099.465,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:non_energy",
+          "value": 729207.665,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:exports",
+          "value": 1144208.933,
+          "carrier": "oil",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_energy",
+          "value": 673716.401,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:renewables:supply",
+          "value": 2060572.509,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:renewables:supply",
+          "value": 116325.947,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "use:other_energy",
+          "value": 3872.224,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:power",
+          "value": 1216211.137,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:other",
+          "value": 161742.969,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "carrier:renewables:available",
+          "value": 795072.126,
+          "carrier": "renewables",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:renewables:available",
+          "value": 128506.58,
+          "carrier": "renewables",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:renewables:available",
+          "value": 6203.381,
+          "carrier": "renewables",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:industry",
+          "value": 121432.466,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:transport",
+          "value": 123498.458,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:households",
+          "value": 418432.774,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:services",
+          "value": 91448.42,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_final",
+          "value": 34699.694,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:exports",
+          "value": 119678.275,
+          "carrier": "renewables",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_energy",
+          "value": 20592.0,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:waste:supply",
+          "value": 171260.0,
+          "carrier": "waste",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "transform:power",
+          "value": 118717.0,
+          "carrier": "waste",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "carrier:waste:available",
+          "value": 52543.0,
+          "carrier": "waste",
+          "kind": "direct"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:industry",
+          "value": 51894.0,
+          "carrier": "waste",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:other_energy",
+          "value": 649.0,
+          "carrier": "waste",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:nuclear:supply",
+          "value": 374216.184,
+          "carrier": "nuclear",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:nuclear:supply",
+          "target": "transform:power",
+          "value": 374216.184,
+          "carrier": "nuclear",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:electricity:supply",
+          "value": 177591.6,
+          "carrier": "electricity",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "transform:power",
+          "value": 32497.2,
+          "carrier": "electricity",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "carrier:electricity:available",
+          "value": 145094.4,
+          "carrier": "electricity",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:electricity:available",
+          "value": 2084212.854,
+          "carrier": "electricity",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:electricity:available",
+          "value": 3.6,
+          "carrier": "electricity",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:industry",
+          "value": 742086.0,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:transport",
+          "value": 55472.069,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:households",
+          "value": 482889.6,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:services",
+          "value": 421412.731,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_final",
+          "value": 16059.6,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:exports",
+          "value": 275713.2,
+          "carrier": "electricity",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_energy",
+          "value": 235677.654,
+          "carrier": "electricity",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:heat:available",
+          "value": 429271.426,
+          "carrier": "heat",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:industry",
+          "value": 165973.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:households",
+          "value": 144453.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:services",
+          "value": 62865.126,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:other_energy",
+          "value": 55980.3,
+          "carrier": "heat",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "use:other_energy",
+          "value": 1677949.158,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "use:other_energy",
+          "value": 103862.856,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:other",
+          "target": "use:other_energy",
+          "value": 465762.53,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        }
+      ],
+      "carriers": [
+        {
+          "id": "solid",
+          "code": "C0000X0350-0370",
+          "label": "Solid fossil fuels",
+          "color": "#5B6573"
+        },
+        {
+          "id": "gas",
+          "code": "G3000",
+          "label": "Natural gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "oil",
+          "code": "O4000XBIO",
+          "label": "Oil products",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "renewables",
+          "code": "RA000",
+          "label": "Renewables & biofuels",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "waste",
+          "code": "W6100_6220",
+          "label": "Non-renewable waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "nuclear",
+          "code": "N900H",
+          "label": "Nuclear heat",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "electricity",
+          "code": "E7000",
+          "label": "Electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "heat",
+          "code": "H8000",
+          "label": "Heat",
+          "color": "#D45353"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "nodes": [
+        {
+          "id": "source:production",
+          "label": "Primary production",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:imports",
+          "label": "Imports",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:stock_draw",
+          "label": "Stock draw",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "source:other",
+          "label": "Recovered & recycled",
+          "stage": 0,
+          "kind": "source"
+        },
+        {
+          "id": "use:industry",
+          "label": "Industry",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:transport",
+          "label": "Transport",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:households",
+          "label": "Residential",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:services",
+          "label": "Commercial & public services",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_final",
+          "label": "Other final consumption",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:non_energy",
+          "label": "Non-energy use",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:exports",
+          "label": "Exports",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "use:other_energy",
+          "label": "Other energy flows",
+          "stage": 4,
+          "kind": "sink"
+        },
+        {
+          "id": "adjustment:source",
+          "label": "Balancing inflow",
+          "stage": 0,
+          "kind": "adjustment"
+        },
+        {
+          "id": "transform:power",
+          "label": "Power & heat plants",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:refineries",
+          "label": "Refineries",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "transform:other",
+          "label": "Other transformation",
+          "stage": 2,
+          "kind": "transformation"
+        },
+        {
+          "id": "carrier:solid:supply",
+          "label": "Solid fossil fuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:solid:available",
+          "label": "Solid fossil fuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "solid",
+          "color": "#5B6573"
+        },
+        {
+          "id": "carrier:gas:supply",
+          "label": "Natural gas",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:gas:available",
+          "label": "Natural gas",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "carrier:oil:supply",
+          "label": "Oil products",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:oil:available",
+          "label": "Oil products",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "oil",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "carrier:renewables:supply",
+          "label": "Renewables & biofuels",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:renewables:available",
+          "label": "Renewables & biofuels",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "renewables",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "carrier:waste:supply",
+          "label": "Non-renewable waste",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:waste:available",
+          "label": "Non-renewable waste",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "carrier:nuclear:supply",
+          "label": "Nuclear heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:nuclear:available",
+          "label": "Nuclear heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "nuclear",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "carrier:electricity:supply",
+          "label": "Electricity",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:electricity:available",
+          "label": "Electricity",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "carrier:heat:supply",
+          "label": "Heat",
+          "stage": 1,
+          "kind": "carrier_supply",
+          "carrier": "heat",
+          "color": "#D45353"
+        },
+        {
+          "id": "carrier:heat:available",
+          "label": "Heat",
+          "stage": 3,
+          "kind": "carrier_available",
+          "carrier": "heat",
+          "color": "#D45353"
+        }
+      ],
+      "links": [
+        {
+          "source": "source:production",
+          "target": "carrier:solid:supply",
+          "value": 916128.643,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:solid:supply",
+          "value": 915602.759,
+          "carrier": "solid",
+          "kind": "source"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:supply",
+          "value": 148794.232,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "use:other_energy",
+          "value": 15826.372,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:power",
+          "value": 1192816.427,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:solid:supply",
+          "target": "transform:other",
+          "value": 771882.835,
+          "carrier": "solid",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:solid:available",
+          "value": 324827.3,
+          "carrier": "solid",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:solid:available",
+          "value": 12701.218,
+          "carrier": "solid",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:industry",
+          "value": 97705.923,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:households",
+          "value": 11716.008,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:services",
+          "value": 917.28,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:non_energy",
+          "value": 13736.385,
+          "carrier": "solid",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:exports",
+          "value": 59308.476,
+          "carrier": "solid",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 5350.214,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "carrier:solid:available",
+          "target": "use:other_energy",
+          "value": 148794.232,
+          "carrier": "solid",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:gas:supply",
+          "value": 134163.715,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:gas:supply",
+          "value": 2512084.864,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:gas:supply",
+          "value": 35882.414,
+          "carrier": "gas",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "transform:power",
+          "value": 756505.335,
+          "carrier": "gas",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:gas:supply",
+          "target": "carrier:gas:available",
+          "value": 1925625.658,
+          "carrier": "gas",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:gas:available",
+          "value": 40015.0,
+          "carrier": "gas",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 56990.233,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:industry",
+          "value": 712401.862,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:transport",
+          "value": 32623.81,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:households",
+          "value": 810967.001,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:services",
+          "value": 342834.269,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_final",
+          "value": 13844.109,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:non_energy",
+          "value": 75242.818,
+          "carrier": "gas",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:gas:available",
+          "target": "use:other_energy",
+          "value": 34717.023,
+          "carrier": "gas",
+          "kind": "other_energy"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:gas:available",
+          "value": 0.001,
+          "carrier": "gas",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:oil:supply",
+          "value": 114323.548,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:oil:supply",
+          "value": 4806581.339,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:oil:supply",
+          "value": 40596.734,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "source:other",
+          "target": "carrier:oil:supply",
+          "value": 27813.371,
+          "carrier": "oil",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:power",
+          "value": 52224.163,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:refineries",
+          "value": 4688736.699,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "transform:other",
+          "value": 9825.261,
+          "carrier": "oil",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:oil:supply",
+          "target": "carrier:oil:available",
+          "value": 238528.869,
+          "carrier": "oil",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "carrier:oil:available",
+          "value": 4597459.82,
+          "carrier": "oil",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "adjustment:source",
+          "target": "carrier:oil:available",
+          "value": 7948.762,
+          "carrier": "oil",
+          "kind": "balance_adjustment"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:industry",
+          "value": 158352.419,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:transport",
+          "value": 1844710.133,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:households",
+          "value": 416491.891,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:services",
+          "value": 68079.599,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_final",
+          "value": 91378.43,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:non_energy",
+          "value": 608781.539,
+          "carrier": "oil",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:exports",
+          "value": 1020029.055,
+          "carrier": "oil",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:oil:available",
+          "target": "use:other_energy",
+          "value": 636114.385,
+          "carrier": "oil",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:renewables:supply",
+          "value": 2063337.82,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:renewables:supply",
+          "value": 111935.101,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "source:stock_draw",
+          "target": "carrier:renewables:supply",
+          "value": 264.537,
+          "carrier": "renewables",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:power",
+          "value": 1286054.994,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "transform:other",
+          "value": 173608.453,
+          "carrier": "renewables",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:renewables:supply",
+          "target": "carrier:renewables:available",
+          "value": 715874.011,
+          "carrier": "renewables",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:other",
+          "target": "carrier:renewables:available",
+          "value": 133188.314,
+          "carrier": "renewables",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:industry",
+          "value": 116960.108,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:transport",
+          "value": 124760.326,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:households",
+          "value": 338231.363,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:services",
+          "value": 95509.26,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_final",
+          "value": 33649.792,
+          "carrier": "renewables",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:exports",
+          "value": 120378.522,
+          "carrier": "renewables",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:renewables:available",
+          "target": "use:other_energy",
+          "value": 19572.954,
+          "carrier": "renewables",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:waste:supply",
+          "value": 168841.0,
+          "carrier": "waste",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "transform:power",
+          "value": 119991.0,
+          "carrier": "waste",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:waste:supply",
+          "target": "carrier:waste:available",
+          "value": 48850.0,
+          "carrier": "waste",
+          "kind": "direct"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:industry",
+          "value": 48243.0,
+          "carrier": "waste",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:waste:available",
+          "target": "use:other_energy",
+          "value": 607.0,
+          "carrier": "waste",
+          "kind": "other_energy"
+        },
+        {
+          "source": "source:production",
+          "target": "carrier:nuclear:supply",
+          "value": 77832.612,
+          "carrier": "nuclear",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:nuclear:supply",
+          "target": "transform:power",
+          "value": 77832.612,
+          "carrier": "nuclear",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "source:imports",
+          "target": "carrier:electricity:supply",
+          "value": 249505.2,
+          "carrier": "electricity",
+          "kind": "source"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "transform:power",
+          "value": 31143.6,
+          "carrier": "electricity",
+          "kind": "transformation_input"
+        },
+        {
+          "source": "carrier:electricity:supply",
+          "target": "carrier:electricity:available",
+          "value": 218361.6,
+          "carrier": "electricity",
+          "kind": "direct"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:electricity:available",
+          "value": 1882335.6,
+          "carrier": "electricity",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:industry",
+          "value": 685648.8,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:transport",
+          "value": 62157.6,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:households",
+          "value": 473234.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:services",
+          "value": 433040.4,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_final",
+          "value": 16272.0,
+          "carrier": "electricity",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:exports",
+          "value": 216295.2,
+          "carrier": "electricity",
+          "kind": "export"
+        },
+        {
+          "source": "carrier:electricity:available",
+          "target": "use:other_energy",
+          "value": 214048.8,
+          "carrier": "electricity",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "carrier:heat:available",
+          "value": 412843.0,
+          "carrier": "heat",
+          "kind": "transformation_output"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:industry",
+          "value": 153859.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:households",
+          "value": 144695.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:services",
+          "value": 60981.0,
+          "carrier": "heat",
+          "kind": "final_use"
+        },
+        {
+          "source": "carrier:heat:available",
+          "target": "use:other_energy",
+          "value": 53308.0,
+          "carrier": "heat",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:power",
+          "target": "use:other_energy",
+          "value": 1221389.531,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:refineries",
+          "target": "use:other_energy",
+          "value": 91276.879,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        },
+        {
+          "source": "transform:other",
+          "target": "use:other_energy",
+          "value": 457285.935,
+          "carrier": "mixed",
+          "kind": "other_energy"
+        }
+      ],
+      "carriers": [
+        {
+          "id": "solid",
+          "code": "C0000X0350-0370",
+          "label": "Solid fossil fuels",
+          "color": "#5B6573"
+        },
+        {
+          "id": "gas",
+          "code": "G3000",
+          "label": "Natural gas",
+          "color": "#168AAD"
+        },
+        {
+          "id": "oil",
+          "code": "O4000XBIO",
+          "label": "Oil products",
+          "color": "#E07A2D"
+        },
+        {
+          "id": "renewables",
+          "code": "RA000",
+          "label": "Renewables & biofuels",
+          "color": "#2E9D6F"
+        },
+        {
+          "id": "waste",
+          "code": "W6100_6220",
+          "label": "Non-renewable waste",
+          "color": "#8A6D3B"
+        },
+        {
+          "id": "nuclear",
+          "code": "N900H",
+          "label": "Nuclear heat",
+          "color": "#9C6ADE"
+        },
+        {
+          "id": "electricity",
+          "code": "E7000",
+          "label": "Electricity",
+          "color": "#E6B325"
+        },
+        {
+          "id": "heat",
+          "code": "H8000",
+          "label": "Heat",
+          "color": "#D45353"
+        }
+      ]
+    }
+  ]
+}

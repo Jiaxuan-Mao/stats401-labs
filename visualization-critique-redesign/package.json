@@ -1,0 +1,10 @@
+{
+  "name": "europe-energy-flow-redesign",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/model.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "build:data": "python3 scripts/build_energy_data.py data/source/nrg_bal_c_*.json --output data/europe_energy_flows.json",
+    "serve": "python3 -m http.server 4173"
+  }
+}
