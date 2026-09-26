@@ -35,6 +35,48 @@ h2 {
     margin-top: 30px;
 }
 
+.featured-project {
+    margin-top: 34px;
+    padding: 24px 26px;
+    border: 1px solid #e6bfd0;
+    border-left: 6px solid #a91d55;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fff7fa, #fde3ec);
+}
+
+.featured-project h2 {
+    margin: 4px 0 8px;
+}
+
+.featured-project p {
+    max-width: 760px;
+}
+
+.featured-kicker {
+    margin: 0;
+    color: #a91d55;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.featured-project-link {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background: #a91d55;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.featured-project-link:hover,
+.featured-project-link:focus-visible {
+    background: #691437;
+}
+
 p {
     line-height: 1.6;
 }
