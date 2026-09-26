@@ -248,9 +248,16 @@ function renderBars(containerId, values, color, total = null) {
 }
 
 function totalSystemInflow(data) { return data.links.filter((item) => item.kind === 'source').reduce((sum, item) => sum + item.value, 0); }
-function carrierColor(carrier) { return yearData().carriers.find((item) => item.id === carrier)?.color || '#9aa4a8'; }
+function carrierColor(carrier) {
+  const base = yearData().carriers.find((item) => item.id === carrier)?.color || '#9aa4a8';
+  const color = d3.color(base);
+  return color ? color.brighter(.72).formatHex() : base;
+}
 function nodeColor(node) {
-  if (node.color) return node.color;
+  if (node.color) {
+    const color = d3.color(node.color);
+    return color ? color.brighter(.72).formatHex() : node.color;
+  }
   if (node.kind === 'transformation') return '#243947';
   if (node.kind === 'adjustment') return '#c3c9cc';
   if (node.kind === 'source') return '#536772';

@@ -161,12 +161,12 @@ footer p { max-width: 620px; margin: 0; }
 /* Course-site critique wrapper. The interactive redesign keeps its original
    chart styles above; these additions support the required report and source. */
 .critique-page .back-home { align-self: end; margin-top: 0; color: var(--accent-dark); background: white; border: 1px solid var(--line); }
-.critique-page .source-intro { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: 28px; align-items: start; margin-bottom: 18px; }
+.critique-page .source-intro { display: block; margin-bottom: 18px; }
 .critique-page .source-intro__image { margin: 0; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: var(--shadow); }
 .critique-page .source-intro__image img { display: block; width: 100%; height: auto; border-radius: 8px; }
 .critique-page .caption { margin: 10px 2px 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
 .critique-page .caption a, .critique-page .source-intro__copy a, .critique-page .report a { color: var(--accent-dark); }
-.critique-page .source-intro__copy { padding: 9px 4px; }
+.critique-page .source-intro__copy { margin-top: 24px; padding: 24px 4px 4px; border-top: 1px solid var(--line); }
 .critique-page .source-intro__copy h2, .critique-page .report h2, .critique-page .redesign-heading h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.03em; }
 .critique-page .source-intro__copy p { margin: 0 0 15px; color: var(--muted); font-size: 13px; line-height: 1.58; }
 .critique-page .source-intro__copy h3 { margin: 18px 0 6px; color: var(--ink); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
@@ -181,6 +181,9 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .section-heading h2 { margin-bottom: 13px; }
 .critique-page .word-count { color: var(--muted); font-size: 10px; white-space: nowrap; }
 .critique-page .report > p:not(.report-reference) { max-width: 1080px; margin: 0 0 13px; color: #46535c; font-size: 12px; line-height: 1.58; }
+.critique-page .critique-block { max-width: 1080px; padding: 16px 0 3px; border-top: 1px solid var(--line); }
+.critique-page .critique-block h3 { margin: 0 0 7px; color: var(--ink); font-size: 14px; line-height: 1.35; }
+.critique-page .critique-block p { margin: 0; color: #46535c; font-size: 12px; line-height: 1.58; }
 .critique-page .report > p strong { color: var(--ink); }
 .critique-page .report-reference { margin: 17px 0 0; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.45; }
 .critique-page .redesign-heading { padding: 42px 0 17px; }
