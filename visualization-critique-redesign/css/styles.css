@@ -173,9 +173,8 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .source-intro__copy ul { margin: 0 0 16px; padding-left: 20px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .critique-page .source-intro__copy li { margin-bottom: 4px; }
 .critique-page .source-intro__copy .data-note { padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.72); font-size: 12px; }
-.critique-page .original-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 11px 15px; border-radius: 7px; background: var(--accent-dark); color: white; font-size: 13px; font-weight: 700; text-decoration: none; }
-.critique-page .source-intro__copy .original-link { color: white; }
-.critique-page .original-link:hover, .critique-page .original-link:focus-visible { background: #0a4a5a; }
+.critique-page .original-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 11px 15px; border: 1px solid #a7c9cf; border-radius: 7px; background: #e8f3f4; color: #07586b !important; font-size: 13px; font-weight: 700; text-decoration: none; }
+.critique-page .original-link:hover, .critique-page .original-link:focus-visible { background: #d6ebed; color: #043e4b !important; }
 .critique-page .report { margin-top: 34px; padding: 30px 4px 24px; border-top: 1px solid var(--line); }
 .critique-page .section-heading { display: block; margin-bottom: 22px; }
 .critique-page .section-heading .eyebrow { margin-bottom: 6px; }
