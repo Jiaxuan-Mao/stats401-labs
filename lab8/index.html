@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 8</title>
+    <link rel="icon" href="data:,">
+    <title>Lab 8: Web Text Data and Visualization</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="lab8.css">
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="lab8.js" defer></script>
 </head>
+<body class="lab8-page">
+    <h1>Lab 8: Web Text Data and Visualization</h1>
+    <p>Exploring the DKU Undergraduate Bulletin: how do its formal sections connect to its semantic topics?</p>
+    <p id="lab8-status" role="status">Loading bulletin passages and analysis…</p>
 
-<body>
-    <h1>Lab 8</h1>
+    <h2>1. Bulletin and corpus</h2>
+    <p><a id="source-link" href="https://dku-web-admissions.s3.cn-north-1.amazonaws.com.cn/dkumain/files/V2021-22_DKU_UG_Bulletin.pdf" target="_blank" rel="noopener">Bulletin of Duke Kunshan University Undergraduate Instruction, 2021–2022</a> (July 2021; instructor-supplied version V2021-22). Accessed September 23, 2026. This is a historical document, not current academic policy.</p>
+    <dl id="corpus-stats" class="lab8-stats"></dl>
+    <details>
+        <summary>Passage preparation, coverage and reproducibility</summary>
+        <p id="corpus-scope"></p>
+        <p id="corpus-cleaning"></p>
+        <p id="corpus-hierarchy"></p>
+        <p>Page numbers are one-based PDF pages, matching the printed numbering. “Introduction” and “Overview” denote an absent lower-level heading. Exact duplicate text retains its first location; therefore cross-listed courses and repeated policies are underrepresented in later sections. Counts describe retained prose, not all pages or all policy occurrences. PDF extraction is heuristic; follow the source-page link to check a passage in context.</p>
+        <p><a href="prepare_corpus.py">Corpus script</a> · <a href="analyze_bulletin.py">Analysis script</a> · <a href="../data/bulletin_passages.csv">Clean corpus</a> · <a href="../data/lab8_model_report.json">Model settings and versions</a></p>
+    </details>
 
-    <p>
-        Lab 8 will be added here.
-    </p>
+    <h2>2. Corpus overview</h2>
+    <div class="lab8-overview">
+        <section><h3>Passages by formal section</h3><p>All 127 sections, ordered by passage count. Scroll to see every section; hover a bar for its full chapter and section.</p><div id="section-summary" class="lab8-bars-scroll" tabindex="0" aria-label="Passage counts for all formal sections; scroll to explore"></div></section>
+        <section><h3>Characteristic corpus terms</h3><p>Top 12 terms by mean passage TF-IDF; English stop words excluded only for this summary.</p><div class="lab8-table-scroll"><table id="term-summary"><thead><tr><th scope="col">Term</th><th scope="col">Mean TF-IDF</th></tr></thead><tbody></tbody></table></div></section>
+    </div>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+    <h2>3. Semantic embedding map</h2>
+    <p>One circle is one passage. Nearby points often discuss similar ideas. UMAP coordinates have no independent semantic meaning; distance on this map is approximate.</p>
+    <div class="lab8-controls">
+        <label>Search passage text<input id="search" type="search" placeholder="Try credit or academic integrity" disabled></label>
+        <label>Formal section<select id="section-filter" aria-label="Formal section" disabled><option value="">All sections</option></select></label>
+        <label>Semantic topic<select id="topic-filter" aria-label="Semantic topic" disabled><option value="">All topics</option></select></label>
+    </div>
+    <div class="lab8-actions"><button id="reset" disabled>Reset all</button><button id="zoom-in" aria-label="Zoom in" disabled>Zoom +</button><button id="zoom-out" aria-label="Zoom out" disabled>Zoom −</button><button id="reset-view" disabled>Reset view</button></div>
+    <p id="match-status" aria-live="polite"></p>
+    <div id="semantic-map" class="lab8-map"></div>
+    <div id="topic-legend" class="lab8-topic-legend" aria-label="Topic color legend"></div>
+    <div class="lab8-encoding"><div id="size-legend"></div><p><strong>Outline:</strong> black = selected passage; orange = its five nearest semantic neighbors. Faded points do not match all active search/filter conditions. Neighbors are calculated over the whole corpus, using original embedding cosine similarity.</p></div>
+    <p class="lab8-hint">Click a circle or passage button for details. Drag to pan; scroll or pinch to zoom. Topic and section filters combine with the text search. Reset view changes only the map position.</p>
+    <details><summary>Matching passages — keyboard-accessible list</summary><p id="result-note"></p><div id="passage-results" class="lab8-results"></div></details>
+    <section id="detail-panel" class="lab8-details" aria-live="polite"><h3>Passage details</h3><p>Select a passage to see its full text, source and nearest neighbors.</p></section>
+
+    <h2>4. Topic × bulletin section matrix</h2>
+    <p>Rows are formal sections; columns are the same eight semantic topics. Darker cells mean more retained passages. Counts always describe the full corpus, so they stay comparable during filtering. The table scrolls vertically and horizontally.</p>
+    <div id="matrix-legend"></div>
+    <p class="lab8-hint">Hover or focus a cell for details. Clicking a cell sets both filters and clears text search; selecting a map point outlines its cell. Long row labels show the full name on hover.</p>
+    <div class="lab8-matrix-scroll" tabindex="0" aria-label="Scrollable topic by formal section matrix"><table id="topic-matrix"><thead></thead><tbody></tbody></table></div>
+    <div id="matrix-tooltip" role="tooltip" hidden></div>
+
+    <h2>5. Semantic findings</h2>
+    <ol id="findings" class="lab8-findings"></ol>
+    <details><summary>How the eight topics were labeled</summary><p>KMeans groups were inspected using characteristic TF-IDF terms and passages closest to each centroid. Labels are interpretive summaries, not official bulletin categories; mixed passages receive one cluster.</p><div id="topic-evidence"></div><p><a href="topic_labels.json">Labels and rationale</a></p></details>
+
+    <h2>6. Design description</h2>
+    <div id="design-description"></div>
+    <p id="model-note" class="lab8-hint"></p>
+    <a class="back-home" href="../index.html">Back to home</a>
 </body>
 </html>

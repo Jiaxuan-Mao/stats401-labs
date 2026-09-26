@@ -1,0 +1,80 @@
+/* Lab 8 only: preserve the existing course site's typography and pink accents. */
+.lab8-page { color: #28232b; }
+.lab8-page h2 { margin-top: 42px; padding-top: 12px; border-top: 1px solid #e5dce1; }
+.lab8-page h3 { font-size: 18px; }
+.lab8-page a { color: #96375f; }
+.lab8-page .lab8-stats { display: flex; flex-wrap: wrap; gap: 20px 36px; margin: 25px 0; }
+.lab8-page .lab8-stats div { min-width: 125px; }
+.lab8-page .lab8-stats dt { font-size: 13px; color: #625b64; }
+.lab8-page .lab8-stats dd { font-size: 26px; font-weight: bold; margin: 6px 0 0; }
+.lab8-page details { margin: 20px 0; }
+.lab8-page summary { cursor: pointer; color: #873355; line-height: 1.5; font-weight: bold; }
+.lab8-page .lab8-overview { display: grid; grid-template-columns: 1.8fr 1fr; gap: 28px; }
+.lab8-page .lab8-overview section { min-width: 0; }
+.lab8-page .lab8-table-scroll { max-height: 330px; overflow: auto; border: 1px solid #e6dfe3; }
+.lab8-page table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+.lab8-page th, .lab8-page td { padding: 9px 10px; text-align: left; border-bottom: 1px solid #e8e1e5; }
+.lab8-page th { background: #fce7ef; }
+.lab8-page thead th { position: sticky; top: 0; z-index: 2; }
+.lab8-page .lab8-controls { display: grid; grid-template-columns: 1.15fr 1.4fr 1fr; gap: 14px; }
+.lab8-page label { display: block; font-size: 13px; font-weight: bold; }
+.lab8-page input, .lab8-page select { display: block; width: 100%; min-width: 0; box-sizing: border-box; padding: 9px; margin-top: 7px; border: 1px solid #aaa0a8; border-radius: 4px; background: white; font: inherit; font-weight: normal; }
+.lab8-page button { font: inherit; color: #29232c; background: #fde3ec; border: 1px solid #a85076; border-radius: 4px; padding: 8px 12px; cursor: pointer; }
+.lab8-page button:hover { background: #f5c9da; }
+.lab8-page button:disabled { opacity: .5; cursor: wait; }
+.lab8-page :focus-visible { outline: 2px solid #26222b; outline-offset: 3px; }
+.lab8-page .lab8-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.lab8-page #match-status { font-size: 14px; min-height: 1.6em; }
+.lab8-page .lab8-map { border: 1px solid #ddd3da; border-radius: 5px; background: #fcfafc; overflow: hidden; }
+.lab8-page .lab8-map svg { display: block; width: 100%; height: auto; touch-action: none; }
+.lab8-page .passage { cursor: pointer; }
+.lab8-page .lab8-topic-legend { display: flex; flex-wrap: wrap; gap: 12px 20px; margin: 20px 0; font-size: 13px; }
+.lab8-page .lab8-key { display: inline-flex; align-items: center; gap: 7px; }
+.lab8-page .lab8-swatch { width: 13px; height: 13px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.lab8-page .lab8-encoding { display: grid; grid-template-columns: 260px 1fr; gap: 20px; font-size: 13px; }
+.lab8-page .lab8-encoding p { margin-top: 0; }
+.lab8-page .lab8-hint { font-size: 13px; color: #635c65; }
+.lab8-page .lab8-results { max-height: 270px; overflow: auto; display: grid; gap: 6px; }
+.lab8-page .lab8-results button { text-align: left; background: #fff; }
+.lab8-page .lab8-details { margin: 24px 0; padding: 8px 22px 20px; border-left: 3px solid #ac4a73; background: #fff7fa; overflow-wrap: anywhere; }
+.lab8-page .lab8-details h4 { margin-bottom: 8px; }
+.lab8-page .lab8-details dl { display: grid; grid-template-columns: 105px 1fr; gap: 6px 12px; font-size: 14px; }
+.lab8-page .lab8-details dt { font-weight: bold; }
+.lab8-page .lab8-details dd { margin: 0; }
+.lab8-page .lab8-original { line-height: 1.75; }
+.lab8-page .lab8-neighbors { padding-left: 22px; }
+.lab8-page .lab8-neighbors li { margin-bottom: 18px; }
+.lab8-page .lab8-neighbors button { font-size: 13px; margin-bottom: 5px; text-align: left; }
+.lab8-page .lab8-neighbors p { font-size: 14px; margin: 4px 0; }
+.lab8-page .lab8-matrix-scroll { max-height: 600px; overflow: auto; border: 1px solid #ddd3da; position: relative; }
+.lab8-page #topic-matrix { min-width: 980px; table-layout: fixed; }
+.lab8-page #topic-matrix th:first-child { width: 280px; position: sticky; left: 0; }
+.lab8-page #topic-matrix thead th:first-child { z-index: 4; }
+.lab8-page #topic-matrix tbody th { z-index: 1; background: #fff8fb; font-weight: normal; font-size: 12px; }
+.lab8-page #topic-matrix tbody th span { display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.lab8-page #topic-matrix thead th { height: 68px; font-size: 12px; vertical-align: middle; }
+.lab8-page #topic-matrix td { padding: 2px; }
+.lab8-page #topic-matrix button { width: 100%; min-height: 29px; border: 2px solid transparent; border-radius: 0; padding: 3px; font-size: 12px; }
+.lab8-page #topic-matrix button.selected-cell { border-color: #17151c; box-shadow: inset 0 0 0 1px white; }
+.lab8-page #topic-matrix button.filter-cell { outline: 2px dashed #a94b16; outline-offset: -4px; }
+.lab8-page #matrix-tooltip { position: fixed; z-index: 20; background: #fff; border: 1px solid #8e6477; box-shadow: 0 3px 12px #0002; padding: 10px; font-size: 13px; line-height: 1.5; max-width: min(300px, calc(100vw - 36px)); pointer-events: none; white-space: pre-line; overflow-wrap: anywhere; }
+.lab8-page #matrix-legend { margin: 16px 0; font-size: 13px; }
+.lab8-page .lab8-findings { padding-left: 24px; line-height: 1.75; }
+.lab8-page .lab8-findings li { margin-bottom: 22px; }
+.lab8-page .lab8-findings strong { display: block; }
+.lab8-page #topic-evidence article { margin: 22px 0; }
+.lab8-page #topic-evidence p { margin: 6px 0; }
+.lab8-page .error { color: #a51c32; font-weight: bold; }
+@media(max-width:700px) {
+ .lab8-page .lab8-overview, .lab8-page .lab8-controls, .lab8-page .lab8-encoding { grid-template-columns: 1fr; }
+ .lab8-page .lab8-details { padding: 8px 14px 16px; }
+ .lab8-page .lab8-details dl { grid-template-columns: 1fr; gap: 4px; }
+ .lab8-page .lab8-details dd { margin-bottom: 8px; }
+}
+
+/* Corpus overview: all sections remain available in a scrollable bar chart. */
+.lab8-page .lab8-bars-scroll { max-height: 390px; overflow: auto; border: 1px solid #e6dfe3; }
+.lab8-page .lab8-bars-scroll svg { display: block; }
+.lab8-page .lab8-bar-axis { position: sticky; top: 0; z-index: 1; background: #fff7fa; font-size: 12px; }
+.lab8-page .lab8-bar-label, .lab8-page .lab8-bar-value { font: 12px Arial, sans-serif; fill: #28232b; }
+.lab8-page .lab8-bar-row:hover rect, .lab8-page .lab8-bar-row:focus rect { fill: #873355; }

@@ -1,0 +1,54 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "normalized": true,
+  "device": "cpu",
+  "random_seed": 401,
+  "umap": {
+    "n_components": 2,
+    "n_neighbors": 15,
+    "min_dist": 0.15,
+    "metric": "cosine",
+    "random_state": 401,
+    "n_jobs": 1
+  },
+  "clustering": {
+    "method": "KMeans on original normalized embeddings",
+    "n_clusters": 8,
+    "random_state": 401,
+    "n_init": "auto"
+  },
+  "embedding_chunks": {
+    "max_seq_length": 256,
+    "long_passages_chunked": 8,
+    "encoded_chunks": 967,
+    "long_passage_method": "Sentence-aligned chunks <=254 tokens; token-weighted mean of normalized chunk vectors, then L2 normalization."
+  },
+  "corpus_sha256": "5157609096476e40c1d6bbd4daf0b5db5298805eadf90f947e42b7081257fefc",
+  "model_provenance": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "download_endpoint": "https://hf-mirror.com",
+    "sha256": {
+      "1_Pooling/config.json": "4be450dde3b0273bb9787637cfbd28fe04a7ba6ab9d36ac48e92b11e350ffc23",
+      "config.json": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41",
+      "config_sentence_transformers.json": "061ca9d39661d6c6d6de5ba27f79a1cd5770ea247f8d46412a68a498dc5ac9f3",
+      "model.safetensors": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+      "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "sentence_bert_config.json": "fc1993fde0a95c24ec6c022539d41cf6e2f7c9721e5415d6fb6897472a9cd4b7",
+      "special_tokens_map.json": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+      "tokenizer.json": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "tokenizer_config.json": "acb92769e8195aabd29b7b2137a9e6d6e25c476a4f15aa4355c233426c61576b",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    }
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": "6.1.0",
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "umap-learn": "0.5.12"
+  }
+}

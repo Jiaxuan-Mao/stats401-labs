@@ -1,0 +1,1901 @@
+{
+  "topics": [
+    {
+      "cluster": 0,
+      "name": "Computing & mathematics",
+      "count": 98,
+      "terms": [
+        "data",
+        "course",
+        "covers",
+        "course covers",
+        "theory",
+        "models",
+        "science",
+        "model",
+        "algorithms",
+        "analysis",
+        "programming",
+        "computer"
+      ],
+      "rationale": "Centroid-near passages describe computer organization, discrete mathematics and numerical analysis; characteristic terms include data, algorithms, models and programming. This cluster also includes quantitative methods outside computing departments.",
+      "representative_ids": [
+        "p00472",
+        "p00470",
+        "p00469"
+      ],
+      "section_count": 18
+    },
+    {
+      "cluster": 1,
+      "name": "University & student life",
+      "count": 87,
+      "terms": [
+        "students",
+        "university",
+        "duke",
+        "student",
+        "academic",
+        "kunshan",
+        "dku",
+        "duke kunshan",
+        "kunshan university",
+        "programs",
+        "activities",
+        "opportunities"
+      ],
+      "rationale": "Representative passages discuss the university mission, campus programs, international student services and student clubs. University, students, activities and opportunities characterize this broad institutional and community theme.",
+      "representative_ids": [
+        "p00303",
+        "p00004",
+        "p00315"
+      ],
+      "section_count": 50
+    },
+    {
+      "cluster": 2,
+      "name": "Language, writing & practice",
+      "count": 163,
+      "terms": [
+        "students",
+        "course",
+        "skills",
+        "media",
+        "writing",
+        "chinese",
+        "language",
+        "learn",
+        "seminar",
+        "develop",
+        "ability",
+        "knowledge"
+      ],
+      "rationale": "Chinese language, academic writing and communication courses dominate the representative passages. Terms such as skills, writing, language and learn reflect skill-building; the cluster also contains practical arts, media and physical-education courses.",
+      "representative_ids": [
+        "p00446",
+        "p00958",
+        "p00530"
+      ],
+      "section_count": 41
+    },
+    {
+      "cluster": 3,
+      "name": "Academic status & conduct",
+      "count": 112,
+      "terms": [
+        "student",
+        "term",
+        "academic",
+        "grade",
+        "students",
+        "absence",
+        "leave",
+        "university",
+        "leave absence",
+        "course",
+        "probation",
+        "dean"
+      ],
+      "rationale": "Representatives concern withdrawal, incomplete grades, academic probation and student status. Academic, grade, leave and probation support a policy label; disciplinary procedures and conduct are also included.",
+      "representative_ids": [
+        "p00218",
+        "p00134",
+        "p00171"
+      ],
+      "section_count": 28
+    },
+    {
+      "cluster": 4,
+      "name": "History, culture & politics",
+      "count": 170,
+      "terms": [
+        "china",
+        "world",
+        "course",
+        "political",
+        "american",
+        "history",
+        "historical",
+        "cultural",
+        "chinese",
+        "global",
+        "social",
+        "war"
+      ],
+      "rationale": "Representative texts discuss world history, empire, modern China and global cultural studies. Characteristic terms include China, history, political, cultural and war, spanning several humanities and social-science subjects.",
+      "representative_ids": [
+        "p00621",
+        "p00566",
+        "p00602"
+      ],
+      "section_count": 22
+    },
+    {
+      "cluster": 5,
+      "name": "Society, health & policy",
+      "count": 138,
+      "terms": [
+        "health",
+        "course",
+        "social",
+        "policy",
+        "human",
+        "political",
+        "environmental",
+        "economic",
+        "science",
+        "research",
+        "public",
+        "global"
+      ],
+      "rationale": "Representative passages describe policy analysis, social research, governance, ethics and environmental regulation. Health, social, policy, human and environmental indicate a mixed applied social and public-policy theme.",
+      "representative_ids": [
+        "p00864",
+        "p00908",
+        "p00365"
+      ],
+      "section_count": 25
+    },
+    {
+      "cluster": 6,
+      "name": "Natural & molecular science",
+      "count": 73,
+      "terms": [
+        "molecular",
+        "chemistry",
+        "materials",
+        "chemical",
+        "topics",
+        "systems",
+        "include",
+        "biological",
+        "properties",
+        "biology",
+        "structure",
+        "physics"
+      ],
+      "rationale": "Representatives cover biophysics, physical chemistry, molecular structures and biogeochemistry. Chemistry, molecular, materials, biological and physics distinguish this scientific cluster from the quantitative-computing cluster.",
+      "representative_ids": [
+        "p00377",
+        "p00431",
+        "p00426"
+      ],
+      "section_count": 10
+    },
+    {
+      "cluster": 7,
+      "name": "Credits & degree requirements",
+      "count": 118,
+      "terms": [
+        "duke",
+        "courses",
+        "credit",
+        "credits",
+        "university",
+        "duke kunshan",
+        "kunshan",
+        "kunshan university",
+        "students",
+        "requirements",
+        "taken",
+        "course"
+      ],
+      "rationale": "Representative paragraphs explain precollege credit, transfer rules and graduation credit limits. Credits, requirements, courses and taken characterize degree planning and credit eligibility.",
+      "representative_ids": [
+        "p00112",
+        "p00122",
+        "p00057"
+      ],
+      "section_count": 33
+    }
+  ],
+  "sections": [
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Introduction",
+      "count": 3,
+      "mean_words": 63.666666666666664,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "1": 2,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Mission Statement",
+      "count": 1,
+      "mean_words": 141.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Statement on Diversity and Inclusion",
+      "count": 1,
+      "mean_words": 146.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Who We Are",
+      "count": 1,
+      "mean_words": 122.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Partners",
+      "count": 2,
+      "mean_words": 111.5,
+      "topics": 2,
+      "entropy": 1.0,
+      "counts": {
+        "1": 1,
+        "4": 1
+      }
+    },
+    {
+      "chapter": "Part 1: General Information",
+      "section": "Duke Kunshan University Community Standard",
+      "count": 1,
+      "mean_words": 136.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 2: A Liberal Arts Education at Duke Kunshan University",
+      "section": "A 21st Century Curriculum",
+      "count": 1,
+      "mean_words": 119.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 2: A Liberal Arts Education at Duke Kunshan University",
+      "section": "A Liberal Arts College Experience",
+      "count": 1,
+      "mean_words": 153.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 2: A Liberal Arts Education at Duke Kunshan University",
+      "section": "Dual Degrees",
+      "count": 1,
+      "mean_words": 92.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 2: A Liberal Arts Education at Duke Kunshan University",
+      "section": "Animating Principles",
+      "count": 8,
+      "mean_words": 30.875,
+      "topics": 4,
+      "entropy": 1.75,
+      "counts": {
+        "2": 4,
+        "5": 2,
+        "1": 1,
+        "4": 1
+      }
+    },
+    {
+      "chapter": "Part 3: The Curriculum",
+      "section": "Overview",
+      "count": 4,
+      "mean_words": 144.5,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "2": 3,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 3: The Curriculum",
+      "section": "Key Components",
+      "count": 6,
+      "mean_words": 81.33333333333333,
+      "topics": 3,
+      "entropy": 1.4591479170272448,
+      "counts": {
+        "7": 3,
+        "2": 2,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 3: The Curriculum",
+      "section": "Degree Requirements",
+      "count": 30,
+      "mean_words": 83.46666666666667,
+      "topics": 4,
+      "entropy": 1.4166856206042056,
+      "counts": {
+        "7": 17,
+        "2": 10,
+        "1": 2,
+        "0": 1
+      }
+    },
+    {
+      "chapter": "Part 4: Admission, Scholarships and Financial Aid",
+      "section": "Principles of Selection",
+      "count": 2,
+      "mean_words": 61.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 4: Admission, Scholarships and Financial Aid",
+      "section": "Application Timelines",
+      "count": 4,
+      "mean_words": 45.75,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "7": 3,
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 4: Admission, Scholarships and Financial Aid",
+      "section": "Application Requirements",
+      "count": 4,
+      "mean_words": 49.5,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "7": 3,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 4: Admission, Scholarships and Financial Aid",
+      "section": "Scholarships and Financial Aid",
+      "count": 3,
+      "mean_words": 69.66666666666667,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "7": 2,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 5: Financial Information",
+      "section": "Tuition and Fees",
+      "count": 2,
+      "mean_words": 67.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 5: Financial Information",
+      "section": "Estimated Expenses",
+      "count": 16,
+      "mean_words": 54.625,
+      "topics": 3,
+      "entropy": 1.5052408149441479,
+      "counts": {
+        "3": 7,
+        "7": 6,
+        "1": 3
+      }
+    },
+    {
+      "chapter": "Part 5: Financial Information",
+      "section": "Refund",
+      "count": 9,
+      "mean_words": 32.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 9
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Academic Integrity",
+      "count": 5,
+      "mean_words": 103.0,
+      "topics": 3,
+      "entropy": 1.5219280948873621,
+      "counts": {
+        "1": 2,
+        "3": 2,
+        "0": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Entrance Credit and Placement",
+      "count": 15,
+      "mean_words": 79.4,
+      "topics": 3,
+      "entropy": 0.9055872616982603,
+      "counts": {
+        "7": 12,
+        "2": 2,
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Transfer of Work Taken Elsewhere",
+      "count": 9,
+      "mean_words": 91.44444444444444,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 9
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Time Limit for Completing Undergraduate Degree",
+      "count": 1,
+      "mean_words": 73.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Registration",
+      "count": 7,
+      "mean_words": 87.71428571428571,
+      "topics": 2,
+      "entropy": 0.5916727785823275,
+      "counts": {
+        "3": 6,
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Undergraduate Course Load",
+      "count": 13,
+      "mean_words": 101.76923076923077,
+      "topics": 2,
+      "entropy": 0.7793498372920851,
+      "counts": {
+        "3": 10,
+        "7": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Eligibility for Courses",
+      "count": 3,
+      "mean_words": 112.33333333333333,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Course Repeat",
+      "count": 6,
+      "mean_words": 98.5,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "7": 4,
+        "3": 2
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Course Audit",
+      "count": 1,
+      "mean_words": 206.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Two-Credit Writing Courses",
+      "count": 1,
+      "mean_words": 120.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Independent Studies",
+      "count": 2,
+      "mean_words": 115.0,
+      "topics": 2,
+      "entropy": 1.0,
+      "counts": {
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Submission of Term Paper",
+      "count": 1,
+      "mean_words": 41.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Declaration of Major",
+      "count": 2,
+      "mean_words": 132.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 2
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Class Attendance and Missed Work",
+      "count": 3,
+      "mean_words": 97.66666666666667,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Class Scheduling",
+      "count": 1,
+      "mean_words": 46.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Incomplete Coursework and Excused Absence from Final Exam",
+      "count": 3,
+      "mean_words": 168.66666666666666,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Final Examinations",
+      "count": 3,
+      "mean_words": 115.66666666666667,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Grading and Grade Requirements",
+      "count": 19,
+      "mean_words": 105.57894736842105,
+      "topics": 2,
+      "entropy": 0.9980008838722996,
+      "counts": {
+        "3": 10,
+        "7": 9
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Progress toward Degree",
+      "count": 4,
+      "mean_words": 66.75,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 4
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Academic Warning, Probation, and Suspension for Students in the Classes of 2022-2024",
+      "count": 10,
+      "mean_words": 101.1,
+      "topics": 2,
+      "entropy": 0.4689955935892812,
+      "counts": {
+        "3": 9,
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Academic Warning, Probation, and Suspension for Students in the Class of 2025 and Beyond",
+      "count": 8,
+      "mean_words": 79.375,
+      "topics": 2,
+      "entropy": 0.5435644431995964,
+      "counts": {
+        "3": 7,
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Changes in Status",
+      "count": 12,
+      "mean_words": 107.91666666666667,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "3": 9,
+        "7": 3
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Academic Recognition and Honors",
+      "count": 4,
+      "mean_words": 105.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 4
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Notification of Intention to Graduate",
+      "count": 1,
+      "mean_words": 116.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Graduation and Commencement",
+      "count": 1,
+      "mean_words": 84.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Education Records",
+      "count": 4,
+      "mean_words": 55.5,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "1": 3,
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "The Provision of Academic Information to Parents and Guardians",
+      "count": 1,
+      "mean_words": 68.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Procedure for Resolution of Students' Academic Concerns",
+      "count": 5,
+      "mean_words": 82.8,
+      "topics": 2,
+      "entropy": 0.7219280948873623,
+      "counts": {
+        "3": 4,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Grade Review Procedure",
+      "count": 6,
+      "mean_words": 79.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 6
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Exclusion of Disruptive Students from a Course",
+      "count": 2,
+      "mean_words": 57.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 2
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Compliance with Academic Regulations",
+      "count": 1,
+      "mean_words": 79.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "3": 1
+      }
+    },
+    {
+      "chapter": "Part 6: Academic Procedures and Information",
+      "section": "Religious Holidays",
+      "count": 1,
+      "mean_words": 107.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 7: Academic Advising and Support",
+      "section": "Introduction",
+      "count": 1,
+      "mean_words": 82.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 7: Academic Advising and Support",
+      "section": "Academic Advising",
+      "count": 4,
+      "mean_words": 104.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 4
+      }
+    },
+    {
+      "chapter": "Part 7: Academic Advising and Support",
+      "section": "Academic Resource Center",
+      "count": 5,
+      "mean_words": 66.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 5
+      }
+    },
+    {
+      "chapter": "Part 7: Academic Advising and Support",
+      "section": "Seven Principles of Duke Kunshan University Academic Advising",
+      "count": 2,
+      "mean_words": 81.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 8: Career Services, Study Away, and Research Opportunities",
+      "section": "Career Services",
+      "count": 1,
+      "mean_words": 190.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 8: Career Services, Study Away, and Research Opportunities",
+      "section": "Student Research Opportunities",
+      "count": 2,
+      "mean_words": 83.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 8: Career Services, Study Away, and Research Opportunities",
+      "section": "Office of Global Education and Study Away",
+      "count": 19,
+      "mean_words": 87.3157894736842,
+      "topics": 3,
+      "entropy": 1.4674579648482995,
+      "counts": {
+        "7": 10,
+        "1": 5,
+        "3": 4
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Student Affairs",
+      "count": 2,
+      "mean_words": 32.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Student Affairs Conceptual Framework",
+      "count": 1,
+      "mean_words": 156.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Residence Life",
+      "count": 1,
+      "mean_words": 40.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Accommodations",
+      "count": 3,
+      "mean_words": 80.33333333333333,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "3": 2,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Leadership Development",
+      "count": 1,
+      "mean_words": 89.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Campus Engagement",
+      "count": 1,
+      "mean_words": 53.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Arts and Culture",
+      "count": 1,
+      "mean_words": 113.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Blue Oasis Student Center",
+      "count": 1,
+      "mean_words": 105.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Campus Programs",
+      "count": 3,
+      "mean_words": 90.33333333333333,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 3
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Student Clubs and Organizations",
+      "count": 1,
+      "mean_words": 115.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Athletics & University Sports",
+      "count": 5,
+      "mean_words": 47.8,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 5
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Counseling and Psychological Services (CAPS)",
+      "count": 1,
+      "mean_words": 98.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Campus Health Clinic",
+      "count": 1,
+      "mean_words": 157.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Chinese Student Services and Student Mobility",
+      "count": 2,
+      "mean_words": 102.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "International Student Services",
+      "count": 2,
+      "mean_words": 47.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 2
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Host Family Program",
+      "count": 1,
+      "mean_words": 45.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 9: Student Affairs and Campus Life",
+      "section": "Student Conduct",
+      "count": 3,
+      "mean_words": 60.666666666666664,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "3": 2,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Requirements for All Majors",
+      "count": 3,
+      "mean_words": 34.333333333333336,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "7": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Majors (listed in alphabetical order)",
+      "count": 60,
+      "mean_words": 97.2,
+      "topics": 8,
+      "entropy": 2.5829498210934063,
+      "counts": {
+        "5": 18,
+        "6": 12,
+        "0": 10,
+        "4": 9,
+        "2": 5,
+        "7": 4,
+        "3": 1,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Arts and Humanities (ARHU)",
+      "count": 2,
+      "mean_words": 83.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Behavior Science (BEHAVSCI)",
+      "count": 11,
+      "mean_words": 66.81818181818181,
+      "topics": 2,
+      "entropy": 0.8453509366224364,
+      "counts": {
+        "5": 8,
+        "0": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Biology (BIOL)",
+      "count": 29,
+      "mean_words": 74.27586206896552,
+      "topics": 2,
+      "entropy": 0.6631968402398287,
+      "counts": {
+        "6": 24,
+        "5": 5
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Chemistry (CHEM)",
+      "count": 12,
+      "mean_words": 74.16666666666667,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "6": 12
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Chinese (CHINESE)",
+      "count": 22,
+      "mean_words": 86.68181818181819,
+      "topics": 2,
+      "entropy": 0.26676498780302604,
+      "counts": {
+        "2": 21,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Chinese Society and Culture (CHSC)",
+      "count": 8,
+      "mean_words": 96.875,
+      "topics": 2,
+      "entropy": 0.8112781244591328,
+      "counts": {
+        "4": 6,
+        "7": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Computer Design (COMPDSGN)",
+      "count": 1,
+      "mean_words": 116.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "0": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Computer Science (COMPSCI)",
+      "count": 18,
+      "mean_words": 42.833333333333336,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "0": 18
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Cultural Anthropology (CULANTH)",
+      "count": 16,
+      "mean_words": 109.125,
+      "topics": 3,
+      "entropy": 1.3294340029249652,
+      "counts": {
+        "4": 10,
+        "2": 3,
+        "5": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Cultures and Movements (CULMOVE)",
+      "count": 8,
+      "mean_words": 107.5,
+      "topics": 3,
+      "entropy": 1.2987949406953985,
+      "counts": {
+        "4": 5,
+        "2": 2,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Economics (ECON)",
+      "count": 19,
+      "mean_words": 71.89473684210526,
+      "topics": 4,
+      "entropy": 1.5229571181374095,
+      "counts": {
+        "5": 12,
+        "0": 3,
+        "7": 2,
+        "4": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: English for Academic Purposes (EAP)",
+      "count": 8,
+      "mean_words": 87.375,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 8
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Environment (ENVIR)",
+      "count": 14,
+      "mean_words": 72.28571428571429,
+      "topics": 3,
+      "entropy": 1.1981174211304033,
+      "counts": {
+        "5": 9,
+        "6": 4,
+        "4": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Ethics and Leadership (ETHLDR)",
+      "count": 12,
+      "mean_words": 99.66666666666667,
+      "topics": 3,
+      "entropy": 1.2516291673878228,
+      "counts": {
+        "5": 8,
+        "4": 2,
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: French (FRENCH)",
+      "count": 1,
+      "mean_words": 114.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: German (GERMAN)",
+      "count": 1,
+      "mean_words": 97.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Global China Studies (GCHINA)",
+      "count": 8,
+      "mean_words": 96.75,
+      "topics": 2,
+      "entropy": 0.5435644431995964,
+      "counts": {
+        "4": 7,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Global Cultural Studies (GCULS)",
+      "count": 11,
+      "mean_words": 105.27272727272727,
+      "topics": 3,
+      "entropy": 1.3221793455166666,
+      "counts": {
+        "4": 6,
+        "2": 4,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Global Health (GLHLTH)",
+      "count": 13,
+      "mean_words": 123.15384615384616,
+      "topics": 3,
+      "entropy": 0.9912642605354288,
+      "counts": {
+        "5": 10,
+        "2": 2,
+        "6": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Global Challenges (GLOCHALL)",
+      "count": 1,
+      "mean_words": 108.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: History (HIST)",
+      "count": 51,
+      "mean_words": 94.27450980392157,
+      "topics": 5,
+      "entropy": 0.901260940948158,
+      "counts": {
+        "4": 43,
+        "2": 4,
+        "7": 2,
+        "1": 1,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Independent Study (INDSTU)",
+      "count": 1,
+      "mean_words": 40.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Information Science (INFOSCI)",
+      "count": 7,
+      "mean_words": 90.85714285714286,
+      "topics": 2,
+      "entropy": 0.863120568566631,
+      "counts": {
+        "0": 5,
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Institutions and Governance (INSTGOV)",
+      "count": 1,
+      "mean_words": 116.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Integrated Science (INTGSCI)",
+      "count": 2,
+      "mean_words": 99.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "6": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Italian (ITALIAN)",
+      "count": 1,
+      "mean_words": 72.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Japanese (JAPANESE)",
+      "count": 3,
+      "mean_words": 76.66666666666667,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Literature (LIT)",
+      "count": 27,
+      "mean_words": 97.03703703703704,
+      "topics": 3,
+      "entropy": 0.824980257347893,
+      "counts": {
+        "4": 22,
+        "2": 4,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Material Science (MATSCI)",
+      "count": 9,
+      "mean_words": 68.55555555555556,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "6": 6,
+        "0": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Mathematics (MATH)",
+      "count": 22,
+      "mean_words": 56.09090909090909,
+      "topics": 2,
+      "entropy": 0.26676498780302604,
+      "counts": {
+        "0": 21,
+        "6": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Media and Arts (MEDIART)",
+      "count": 33,
+      "mean_words": 97.3030303030303,
+      "topics": 3,
+      "entropy": 0.6311718053929062,
+      "counts": {
+        "2": 29,
+        "4": 3,
+        "1": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Military Science (MILITSCI)",
+      "count": 2,
+      "mean_words": 30.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Music (MUSIC)",
+      "count": 2,
+      "mean_words": 129.5,
+      "topics": 2,
+      "entropy": 1.0,
+      "counts": {
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Neuroscience (NEUROSCI)",
+      "count": 4,
+      "mean_words": 52.0,
+      "topics": 3,
+      "entropy": 1.5,
+      "counts": {
+        "6": 2,
+        "5": 1,
+        "0": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Philosophy (PHIL)",
+      "count": 17,
+      "mean_words": 98.05882352941177,
+      "topics": 4,
+      "entropy": 1.807763576417194,
+      "counts": {
+        "4": 8,
+        "5": 4,
+        "0": 3,
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Physics (PHYS)",
+      "count": 15,
+      "mean_words": 76.4,
+      "topics": 3,
+      "entropy": 1.2309595631140104,
+      "counts": {
+        "6": 9,
+        "0": 5,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Physical Education (PHYSEDU)",
+      "count": 26,
+      "mean_words": 60.69230769230769,
+      "topics": 4,
+      "entropy": 1.693485507857091,
+      "counts": {
+        "2": 12,
+        "0": 7,
+        "1": 6,
+        "7": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Political Economy (POLECON)",
+      "count": 7,
+      "mean_words": 94.42857142857143,
+      "topics": 2,
+      "entropy": 0.9852281360342515,
+      "counts": {
+        "5": 4,
+        "4": 3
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Political Science (POLSCI)",
+      "count": 30,
+      "mean_words": 93.6,
+      "topics": 2,
+      "entropy": 0.9182958340544896,
+      "counts": {
+        "4": 20,
+        "5": 10
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Psychology (PSYCH)",
+      "count": 6,
+      "mean_words": 52.166666666666664,
+      "topics": 3,
+      "entropy": 1.4591479170272448,
+      "counts": {
+        "2": 3,
+        "5": 2,
+        "0": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Public Policy (PUBPOL)",
+      "count": 31,
+      "mean_words": 81.19354838709677,
+      "topics": 3,
+      "entropy": 0.8346464646189742,
+      "counts": {
+        "5": 25,
+        "4": 5,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Research Independent Study (RINDSTU)",
+      "count": 1,
+      "mean_words": 38.0,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Religious Studies (RELIG)",
+      "count": 12,
+      "mean_words": 89.08333333333333,
+      "topics": 4,
+      "entropy": 1.207518749639422,
+      "counts": {
+        "4": 9,
+        "0": 1,
+        "2": 1,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Social Science (SOSC)",
+      "count": 8,
+      "mean_words": 81.125,
+      "topics": 4,
+      "entropy": 1.9056390622295665,
+      "counts": {
+        "5": 3,
+        "4": 2,
+        "0": 2,
+        "2": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Sociology (SOCIOL)",
+      "count": 11,
+      "mean_words": 87.18181818181819,
+      "topics": 3,
+      "entropy": 1.4353713907745331,
+      "counts": {
+        "5": 6,
+        "4": 3,
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Statistics (STATS)",
+      "count": 13,
+      "mean_words": 53.23076923076923,
+      "topics": 2,
+      "entropy": 0.39124356362925566,
+      "counts": {
+        "0": 12,
+        "5": 1
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Third Language (TLANG)",
+      "count": 4,
+      "mean_words": 143.5,
+      "topics": 1,
+      "entropy": -0.0,
+      "counts": {
+        "2": 4
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: US Studies (USTUD)",
+      "count": 4,
+      "mean_words": 110.5,
+      "topics": 2,
+      "entropy": 1.0,
+      "counts": {
+        "4": 2,
+        "2": 2
+      }
+    },
+    {
+      "chapter": "Part 10: Majors and Courses",
+      "section": "Courses with Course Subject: Written and Oral Communication (WOC)",
+      "count": 12,
+      "mean_words": 81.0,
+      "topics": 3,
+      "entropy": 0.8166890883150209,
+      "counts": {
+        "2": 10,
+        "5": 1,
+        "7": 1
+      }
+    }
+  ],
+  "queries": {
+    "credit": {
+      "count": 117,
+      "topics": {
+        "Credits & degree requirements": 73,
+        "Academic status & conduct": 29,
+        "University & student life": 5,
+        "Language, writing & practice": 4,
+        "History, culture & politics": 3,
+        "Natural & molecular science": 1,
+        "Society, health & policy": 1,
+        "Computing & mathematics": 1
+      }
+    },
+    "graduation": {
+      "count": 29,
+      "topics": {
+        "Credits & degree requirements": 15,
+        "Academic status & conduct": 13,
+        "University & student life": 1
+      }
+    },
+    "registration": {
+      "count": 9,
+      "topics": {
+        "Academic status & conduct": 7,
+        "University & student life": 2
+      }
+    },
+    "academic integrity": {
+      "count": 3,
+      "topics": {
+        "University & student life": 2,
+        "Academic status & conduct": 1
+      }
+    }
+  },
+  "cross_section_pairs": [
+    {
+      "a": "p00524",
+      "b": "p00713",
+      "score": 0.9999858140945435
+    },
+    {
+      "a": "p00630",
+      "b": "p00743",
+      "score": 0.9989259243011475
+    },
+    {
+      "a": "p00207",
+      "b": "p00217",
+      "score": 0.9936740398406982
+    },
+    {
+      "a": "p00493",
+      "b": "p00843",
+      "score": 0.9910861849784851
+    },
+    {
+      "a": "p00569",
+      "b": "p00826",
+      "score": 0.9793223142623901
+    },
+    {
+      "a": "p00205",
+      "b": "p00215",
+      "score": 0.9696873426437378
+    },
+    {
+      "a": "p00188",
+      "b": "p00286",
+      "score": 0.9612988829612732
+    },
+    {
+      "a": "p00202",
+      "b": "p00212",
+      "score": 0.9554399847984314
+    },
+    {
+      "a": "p00640",
+      "b": "p00874",
+      "score": 0.9380451440811157
+    },
+    {
+      "a": "p00657",
+      "b": "p00947",
+      "score": 0.9341539144515991
+    },
+    {
+      "a": "p00206",
+      "b": "p00216",
+      "score": 0.9301878213882446
+    },
+    {
+      "a": "p00509",
+      "b": "p00947",
+      "score": 0.9258323311805725
+    },
+    {
+      "a": "p00121",
+      "b": "p00285",
+      "score": 0.9230774641036987
+    },
+    {
+      "a": "p00112",
+      "b": "p00122",
+      "score": 0.9209049940109253
+    },
+    {
+      "a": "p00508",
+      "b": "p00946",
+      "score": 0.9205154180526733
+    },
+    {
+      "a": "p00030",
+      "b": "p00052",
+      "score": 0.9085074067115784
+    },
+    {
+      "a": "p00147",
+      "b": "p00222",
+      "score": 0.8983195424079895
+    },
+    {
+      "a": "p00127",
+      "b": "p00287",
+      "score": 0.8966379761695862
+    },
+    {
+      "a": "p00124",
+      "b": "p00285",
+      "score": 0.8731642365455627
+    },
+    {
+      "a": "p00128",
+      "b": "p00285",
+      "score": 0.8728624582290649
+    },
+    {
+      "a": "p00012",
+      "b": "p00051",
+      "score": 0.8682991862297058
+    },
+    {
+      "a": "p00315",
+      "b": "p00316",
+      "score": 0.8662701845169067
+    },
+    {
+      "a": "p00057",
+      "b": "p00121",
+      "score": 0.8643753528594971
+    },
+    {
+      "a": "p00001",
+      "b": "p00005",
+      "score": 0.8643325567245483
+    },
+    {
+      "a": "p00201",
+      "b": "p00210",
+      "score": 0.8622714281082153
+    },
+    {
+      "a": "p00562",
+      "b": "p00657",
+      "score": 0.8598091006278992
+    },
+    {
+      "a": "p00126",
+      "b": "p00287",
+      "score": 0.8571608066558838
+    },
+    {
+      "a": "p00561",
+      "b": "p00946",
+      "score": 0.8518427610397339
+    },
+    {
+      "a": "p00107",
+      "b": "p00122",
+      "score": 0.8435481190681458
+    },
+    {
+      "a": "p00369",
+      "b": "p00722",
+      "score": 0.8368017673492432
+    }
+  ]
+}

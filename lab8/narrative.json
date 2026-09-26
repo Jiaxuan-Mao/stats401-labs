@@ -1,0 +1,50 @@
+{
+  "findings": [
+    {
+      "question": "What are the major semantic topics?",
+      "answer": "The eight groups are Computing & mathematics (98 passages), University & student life (87), Language, writing & practice (163), Academic status & conduct (112), History, culture & politics (170), Society, health & policy (138), Natural & molecular science (73), and Credits & degree requirements (118). History/culture/politics is the largest group, followed by language/writing/practice. Course descriptions occupy much of the source document, so these totals reflect the retained corpus rather than the importance of university policies.",
+      "passage_ids": [
+        "p00621",
+        "p00446"
+      ]
+    },
+    {
+      "question": "Which topics appear across multiple formal sections?",
+      "answer": "Every topic spans multiple rows of the matrix. University & student life occurs in 50 sections, Language, writing & practice in 41, and Credits & degree requirements in 33. The credit topic links Degree Requirements, Entrance Credit and Placement, Transfer of Work Taken Elsewhere, and Study Away. For example, p00057 explains degree-credit limits, while p00121 explains the related transfer-credit ceiling. Clicking either passage locates its formal section in the matrix.",
+      "passage_ids": [
+        "p00057",
+        "p00121"
+      ]
+    },
+    {
+      "question": "Which formal sections contain the most semantically diverse content?",
+      "answer": "Among sections with at least 10 retained passages, Majors (listed in alphabetical order) has the greatest topic diversity: all eight topics across 60 passages and Shannon entropy 2.58 bits. Philosophy follows at 1.81 bits, then Physical Education at 1.69. Entropy is −Σ p log₂(p), using each topic’s share within a section; zero means one topic and three bits is the eight-topic maximum. The matrix shows Majors spread across all eight columns. Section sizes and boundaries are unequal, and cluster assignments are approximate: for example, sports descriptions sometimes fall into the quantitative group. Diversity is not a ranking of academic quality.",
+      "passage_ids": [
+        "p00355",
+        "p00377"
+      ]
+    },
+    {
+      "question": "Which passages from different sections are semantically similar?",
+      "answer": "Passage p00112 (Entrance Credit and Placement, p. 38) and p00122 (Transfer of Work Taken Elsewhere, p. 40) are each other’s nearest neighbor, with cosine similarity 0.921. Both describe college work completed before matriculation, but the former explains how credits count and the latter gives eligibility and review criteria. This is a useful cross-section connection beyond shared keywords. Extremely high similarities elsewhere can come from almost identical cross-listed course descriptions: exact duplicates were removed, but minor wording variants remain. Neighbor scores measure textual similarity, not identical policy meaning.",
+      "passage_ids": [
+        "p00112",
+        "p00122"
+      ]
+    },
+    {
+      "question": "Does a search for “credit” occupy one semantic region?",
+      "answer": "With both filters cleared, the literal, case-insensitive substring search finds 117 passages across all eight topics: 73 in Credits & degree requirements, 29 in Academic status & conduct, five in University & student life, four in Language, writing & practice, three in History, culture & politics, and one in each remaining topic. Most matches gather in the credit and academic-policy regions, but the concept is not confined to one cluster. “Graduation” yields 29 matches across three topics; “registration” gives nine across two; “academic integrity” gives three across two. These are passage counts, not word frequencies, and substring search also matches forms such as “credits.”",
+      "passage_ids": [
+        "p00057",
+        "p00173"
+      ]
+    }
+  ],
+  "design": [
+    "I extracted prose from the 2021–2022 DKU Bulletin using PDF text coordinates and its original outline. Paragraphs retain chapter, section, subsection and page metadata. Cleaning normalizes whitespace, removes exact duplicates and excludes short fragments, tables and reference lists. The overview reports section counts and characteristic TF-IDF terms so readers can see the corpus composition before exploring the map.",
+    "Following the lab tasks, I encoded passages with all-MiniLM-L6-v2 and normalized the 384-dimensional vectors. Eight long passages were divided into sentence-based chunks, then combined using a normalized, token-weighted mean. UMAP uses 15 neighbors, minimum distance 0.15, cosine distance and seed 401. KMeans uses eight clusters, seed 401 and n_init=auto on the original embeddings. I named topics by inspecting centroid-near passages and characteristic TF-IDF terms; the labels summarize mixed groups rather than official categories.",
+    "Each circle represents one passage. Position shows the UMAP projection, color identifies topic, and circle area represents word count. Search and section/topic filters fade nonmatching passages. Zoom and pan reveal crowded neighborhoods. Clicking a point shows its original text, source page and five cosine-nearest passages. A black outline marks the selection; orange outlines mark its neighbors.",
+    "The matrix uses color intensity for passage counts. Clicking a cell selects its section and topic; selecting a point outlines the corresponding cell. These linked views reveal how credit policies cross formal boundaries and how major descriptions span many topics. UMAP distances are approximate, topic assignments depend on modeling choices, and counts describe retained prose rather than the entire bulletin."
+  ]
+}

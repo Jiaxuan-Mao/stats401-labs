@@ -1,0 +1,32 @@
+{
+  "title": "Bulletin of Duke Kunshan University Undergraduate Instruction",
+  "academic_year": "2021–2022",
+  "version": "July 2021; supplied PDF V2021-22",
+  "source": "https://dku-web-admissions.s3.cn-north-1.amazonaws.com.cn/dkumain/files/V2021-22_DKU_UG_Bulletin.pdf",
+  "accessed": "2026-09-23",
+  "pdf_pages": 400,
+  "source_sha256": "431bd3fdcdfdf7722783c29502a7600e8ac21ae45fd4785d230d1ab387dc9133",
+  "raw_passages": 1425,
+  "clean_passages": 959,
+  "average_words": 85.32846715328468,
+  "median_words": 84.0,
+  "max_words": 304,
+  "formal_sections": 127,
+  "chapters": 10,
+  "pages_with_retained_text": 264,
+  "cleaning_reasons": {
+    "": 959,
+    "standalone_prerequisite_list": 251,
+    "short_fragment_under_20_words": 142,
+    "duplicate_normalized_text": 73
+  },
+  "exclusions": {
+    "tables_excluded": 284,
+    "table_lines_excluded": 2841,
+    "footnote_lines_excluded": 24
+  },
+  "scope": "Narrative paragraphs and course descriptions on PDF pages 10–396 (Parts 1–10). Excludes cover/editorial/contents pages 1–9, calendars/contact lists 397–400, ruled course tables, small footnotes, standalone prerequisite lists and fragments under 20 words. Cross-page unfinished prose is joined; normalized exact duplicates retain their first occurrence.",
+  "hierarchy": "chapter = original Part; section = original level-2 heading, except Course Descriptions uses its original subject heading at level 3; subsection = remaining deeper headings. Introduction/Overview explicitly mark absent lower headings; hierarchy_path preserves the full original outline.",
+  "heading_matches": 1140,
+  "heading_total": 1140
+}
