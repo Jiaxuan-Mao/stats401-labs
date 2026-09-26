@@ -184,6 +184,12 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .critique-block { max-width: 1080px; margin-bottom: 20px; }
 .critique-page .critique-block h3 { margin: 0 0 7px; color: var(--ink); font-size: 14px; line-height: 1.35; }
 .critique-page .critique-block p { margin: 0; color: #46535c; font-size: 12px; line-height: 1.58; }
+.critique-page .rationale-section { margin-top: 34px; padding: 30px 4px 10px; border-top: 1px solid var(--line); }
+.critique-page .rationale-section h2 { margin: 0 0 22px; font-size: 24px; letter-spacing: -.03em; }
+.critique-page .rationale-section .eyebrow { margin-bottom: 6px; }
+.critique-page .rationale-block { max-width: 1080px; margin-bottom: 20px; }
+.critique-page .rationale-block h3 { margin: 0 0 7px; color: var(--ink); font-size: 14px; line-height: 1.35; }
+.critique-page .rationale-block p { margin: 0; color: #46535c; font-size: 12px; line-height: 1.58; }
 .critique-page .report > p strong { color: var(--ink); }
 .critique-page .report-reference { margin: 17px 0 0; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.45; }
 .critique-page .redesign-heading { padding: 42px 0 17px; }

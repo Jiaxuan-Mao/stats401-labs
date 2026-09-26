@@ -56,7 +56,6 @@
     </section>
 
     <section class="report" aria-labelledby="report-title">
-      <div class="section-heading"><p class="eyebrow">Critique</p><h2 id="report-title">Critique</h2></div>
       <div class="critique-block">
         <h3>Strength 1 — Effective representation of the complete energy system</h3>
         <p>The Sankey structure is well suited to energy-balance data because connected ribbons show how energy moves from supply through transformation to final consumption or exits. Ribbon width represents quantity, so dominant pathways are easy to identify, while different colors distinguish energy commodities and help users follow their trajectories. This allows the overall energy system to be understood in one coordinated view.</p>
@@ -77,7 +76,6 @@
         <h3>Weakness 3 — Difficult temporal comparison</h3>
         <p>Users can select different years and keep a consistent scale, but only one year is shown at a time. When the year changes, the previous state disappears, forcing users to remember earlier widths and positions. Side-by-side comparison, change indicators, or animated playback could make temporal differences easier to identify.</p>
       </div>
-      <p><strong>Redesign rationale.</strong> The redesign makes three major changes. First, it assigns each carrier a high-contrast, consistent color and adds “Major flows” and “All flows” modes. The overview suppresses visual noise, while the complete network remains one click away. Second, clicking a node, link or legend item highlights the carrier path and keeps a same-page detail panel visible. Source and destination bars give a direct summary without asking users to follow every ribbon. Third, a 2019–2023 slider, play control and previous-year comparison turn time into an explicit task. “Same scale across years” preserves comparability when the selected geography changes. Europe represents the official EU-27 aggregate, while eight country options support regional comparison.</p>
       <p><strong>Original versus redesign.</strong> The redesign improves targeted questions, temporal pattern recognition and same-page explanation. A user can start with a complete system view, focus natural gas, play through the 2020 disruption and inspect destination changes without leaving the page. It also keeps the original Sankey grammar, so the redesign remains recognizable. The trade-off is scope and detail. The public prototype uses Eurostat rather than IEA values, groups some technical items under “Other energy flows,” and limits the comparison window to 2019–2023. A persistent detail panel and stronger colors improve focus but reduce the neutral, all-at-once feel of the original. Thin flows still require “All flows” or a focused selection. These limits are deliberate: the redesign prioritizes traceability and comparison over reproducing every original category.</p>
       <p class="report-reference"><strong>References:</strong> International Energy Agency, <a href="https://www.iea.org/data-and-statistics/data-tools/energy-sankey" target="_blank" rel="noopener">Energy Sankey</a>; IEA, <a href="https://www.iea.org/commentaries/understanding-and-using-the-energy-balance" target="_blank" rel="noopener">Understanding and using the Energy Balance</a>; Eurostat, <a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c/default/table" target="_blank" rel="noopener">Complete energy balances, nrg_bal_c</a>.</p>
     </section>
@@ -163,6 +161,23 @@
         </div>
         <p class="panel-note">Click a colored carrier node, flow, or legend item to refocus the whole view.</p>
       </aside>
+    </section>
+
+    <section class="rationale-section" aria-labelledby="rationale-title">
+      <p class="eyebrow">Redesign Rationale</p>
+      <h2 id="rationale-title">Redesign Rationale</h2>
+      <div class="rationale-block">
+        <h3>Decision 1 — Stronger filtering and highlighting</h3>
+        <p>To improve path tracing, the redesign adds Major Flows and All Flows modes and strengthens the visual emphasis of selected nodes, links, and energy carriers. Colors are brighter and more saturated, while node opacity is increased for better visibility. Hovering over a flow immediately highlights the related pathway while unrelated flows fade into the background. Transformation labels are also made clearer, reducing clutter and making individual energy paths easier to follow.</p>
+      </div>
+      <div class="rationale-block">
+        <h3>Decision 2 — More direct quantitative comparison</h3>
+        <p>The redesign makes values easier to access by showing flow information directly on hover. A linked detail panel on the right also presents aligned horizontal bars for sources and destinations. When a specific carrier is selected, the panel updates to show its total value and the contributions from different sources and destinations. The common baseline of the bars makes these quantities easier to compare than ribbon widths alone.</p>
+      </div>
+      <div class="rationale-block">
+        <h3>Decision 3 — Better temporal comparison</h3>
+        <p>The redesign adds a 2019–2023 year slider, playback controls, a Compare with previous year option, and a same-scale-across-years setting. Users can move through the timeline continuously instead of relying on memory. When comparison is enabled, the right-side panel shows current and previous-year values for either the overall system or a selected carrier. These features make temporal increases and decreases easier to identify.</p>
+      </div>
     </section>
 
     <section class="method-note" aria-label="Data and method note">
