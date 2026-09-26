@@ -170,6 +170,8 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .source-intro__copy h2, .critique-page .report h2, .critique-page .redesign-heading h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.03em; }
 .critique-page .source-intro__copy p { margin: 0 0 15px; color: var(--muted); font-size: 13px; line-height: 1.58; }
 .critique-page .source-intro__copy .data-note { padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.72); font-size: 12px; }
+.critique-page .original-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 11px 15px; border-radius: 7px; background: var(--accent-dark); color: white; font-size: 13px; font-weight: 700; text-decoration: none; }
+.critique-page .original-link:hover, .critique-page .original-link:focus-visible { background: #0a4a5a; }
 .critique-page .report { margin-top: 18px; padding: 26px 28px 24px; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: var(--shadow); }
 .critique-page .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); margin-bottom: 17px; }
 .critique-page .section-heading .eyebrow { margin-bottom: 6px; }
