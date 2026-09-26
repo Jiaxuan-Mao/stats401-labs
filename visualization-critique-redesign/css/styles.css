@@ -169,6 +169,9 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .source-intro__copy { padding: 9px 4px; }
 .critique-page .source-intro__copy h2, .critique-page .report h2, .critique-page .redesign-heading h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -.03em; }
 .critique-page .source-intro__copy p { margin: 0 0 15px; color: var(--muted); font-size: 13px; line-height: 1.58; }
+.critique-page .source-intro__copy h3 { margin: 18px 0 6px; color: var(--ink); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.critique-page .source-intro__copy ul { margin: 0 0 16px; padding-left: 20px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.critique-page .source-intro__copy li { margin-bottom: 4px; }
 .critique-page .source-intro__copy .data-note { padding: 12px 14px; border-left: 3px solid var(--accent); background: rgba(255,255,255,.72); font-size: 12px; }
 .critique-page .original-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 11px 15px; border-radius: 7px; background: var(--accent-dark); color: white; font-size: 13px; font-weight: 700; text-decoration: none; }
 .critique-page .original-link:hover, .critique-page .original-link:focus-visible { background: #0a4a5a; }
