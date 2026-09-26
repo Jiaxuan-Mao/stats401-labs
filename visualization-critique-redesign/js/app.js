@@ -1,6 +1,6 @@
 import { compareCarrier, flowOpacity, formatEnergy, isDestinationKind, nextYear, playbackYears, selectCountry, yearsForCountry } from './model.mjs';
 
-const state = { data: null, country: 'EU27_2020', year: 2023, selectedCarrier: 'gas', majorOnly: true, playing: false };
+const state = { data: null, country: 'EU27_2020', year: 2023, selectedCarrier: null, majorOnly: true, playing: false };
 const labels = new Map();
 let playTimer = null;
 
