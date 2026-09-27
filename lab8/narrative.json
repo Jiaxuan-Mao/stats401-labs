@@ -2,7 +2,7 @@
   "findings": [
     {
       "question": "What are the major semantic topics?",
-      "answer": "The eight groups are Computing & mathematics (98 passages), University & student life (87), Language, writing & practice (163), Academic status & conduct (112), History, culture & politics (170), Society, health & policy (138), Natural & molecular science (73), and Credits & degree requirements (118). History/culture/politics is the largest group, followed by language/writing/practice. Course descriptions occupy much of the source document, so these totals reflect the retained corpus rather than the importance of university policies.",
+      "answer": "The passages are grouped into eight semantic topics: Computing & mathematics (98 passages), University & student life (87), Language, writing & practice (163), Academic status & conduct (112), History, culture & politics (170), Society, health & policy (138), Natural & molecular science (73), and Credits & degree requirements (118). History, culture & politics is the largest group, followed by Language, writing & practice. Since course descriptions make up a large part of the bulletin, these counts show the composition of the retained corpus rather than which topics are more important to the university.",
       "passage_ids": [
         "p00621",
         "p00446"
@@ -10,7 +10,7 @@
     },
     {
       "question": "Which topics appear across multiple formal sections?",
-      "answer": "Every topic spans multiple rows of the matrix. University & student life occurs in 50 sections, Language, writing & practice in 41, and Credits & degree requirements in 33. The credit topic links Degree Requirements, Entrance Credit and Placement, Transfer of Work Taken Elsewhere, and Study Away. For example, p00057 explains degree-credit limits, while p00121 explains the related transfer-credit ceiling. Clicking either passage locates its formal section in the matrix.",
+      "answer": "All eight topics appear in more than one formal section. University & student life appears in 51 sections, Language, writing & practice in 41, and Credits & degree requirements in 33. For example, the credit topic connects Degree Requirements, Entrance Credit and Placement, Transfer of Work Taken Elsewhere, and Study Away. Passage p00057 discusses degree-credit limits, while p00121 discusses transfer-credit limits, showing how similar ideas appear in different parts of the bulletin.",
       "passage_ids": [
         "p00057",
         "p00121"
@@ -18,7 +18,7 @@
     },
     {
       "question": "Which formal sections contain the most semantically diverse content?",
-      "answer": "Among sections with at least 10 retained passages, Majors (listed in alphabetical order) has the greatest topic diversity: all eight topics across 60 passages and Shannon entropy 2.58 bits. Philosophy follows at 1.81 bits, then Physical Education at 1.69. Entropy is −Σ p log₂(p), using each topic’s share within a section; zero means one topic and three bits is the eight-topic maximum. The matrix shows Majors spread across all eight columns. Section sizes and boundaries are unequal, and cluster assignments are approximate: for example, sports descriptions sometimes fall into the quantitative group. Diversity is not a ranking of academic quality.",
+      "answer": "I compare only sections with at least 10 retained passages because a section with just a few passages can look unusually diverse based on very little text. Among these sections, Majors (listed in alphabetical order) is the most diverse, with all eight topics across 60 passages and a Shannon entropy of 2.58 bits. Philosophy follows at 1.81 bits, then Physical Education at 1.69. Shannon entropy uses each topic’s share within a section; zero means one topic, while three bits is the maximum for eight topics. These results still depend on the clustering, and some passages do not fit perfectly into one topic.",
       "passage_ids": [
         "p00355",
         "p00377"
@@ -26,7 +26,7 @@
     },
     {
       "question": "Which passages from different sections are semantically similar?",
-      "answer": "Passage p00112 (Entrance Credit and Placement, p. 38) and p00122 (Transfer of Work Taken Elsewhere, p. 40) are each other’s nearest neighbor, with cosine similarity 0.921. Both describe college work completed before matriculation, but the former explains how credits count and the latter gives eligibility and review criteria. This is a useful cross-section connection beyond shared keywords. Extremely high similarities elsewhere can come from almost identical cross-listed course descriptions: exact duplicates were removed, but minor wording variants remain. Neighbor scores measure textual similarity, not identical policy meaning.",
+      "answer": "Passage p00112 from Entrance Credit and Placement and p00122 from Transfer of Work Taken Elsewhere are each other’s nearest semantic neighbor, with cosine similarity 0.921. Both discuss college work completed before entering DKU, but they focus on different rules. One explains how the credits can count, while the other explains whether the work is eligible for review. This shows that semantically similar passages can appear in different formal sections.",
       "passage_ids": [
         "p00112",
         "p00122"
@@ -34,7 +34,7 @@
     },
     {
       "question": "Does a search for “credit” occupy one semantic region?",
-      "answer": "With both filters cleared, the literal, case-insensitive substring search finds 117 passages across all eight topics: 73 in Credits & degree requirements, 29 in Academic status & conduct, five in University & student life, four in Language, writing & practice, three in History, culture & politics, and one in each remaining topic. Most matches gather in the credit and academic-policy regions, but the concept is not confined to one cluster. “Graduation” yields 29 matches across three topics; “registration” gives nine across two; “academic integrity” gives three across two. These are passage counts, not word frequencies, and substring search also matches forms such as “credits.”",
+      "answer": "Not completely. Searching for “credit” finds 117 passages across all eight topics. Most are in Credits & degree requirements (73 passages) and Academic status & conduct (29), with smaller numbers in the other topics. The idea of credit is concentrated in a few semantic regions, but it is not limited to one cluster. This is a case-insensitive substring search, so it also matches words such as “credits.”",
       "passage_ids": [
         "p00057",
         "p00173"

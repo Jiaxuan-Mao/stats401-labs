@@ -24,6 +24,15 @@ UMAP_SETTINGS=dict(n_components=2,n_neighbors=15,min_dist=0.15,metric='cosine',r
 def save_json(path,value):
     path.write_text(json.dumps(value,ensure_ascii=False,indent=2,allow_nan=False)+'\n')
 
+def formal_section_count(df):
+    return int(df[['chapter','section']].drop_duplicates().shape[0])
+
+def different_formal_section_indices(df,row):
+    return np.flatnonzero(
+        (df.chapter.to_numpy()!=row.chapter) |
+        (df.section.to_numpy()!=row.section)
+    )
+
 def compute_embeddings(df,model_path):
     import torch
     from sentence_transformers import SentenceTransformer
@@ -125,13 +134,13 @@ def main():
     for i,row in df.iterrows():
         ranked=np.argsort(-similarity[i],kind='stable')[:5]
         neighbors[row.passage_id]=[dict(passage_id=df.iloc[j].passage_id,score=round(float(similarity[i,j]),7)) for j in ranked]
-        different=np.flatnonzero(df.section.to_numpy()!=row.section)
+        different=different_formal_section_indices(df,row)
         j=different[np.argmax(similarity[i,different])]
         if i<j:cross_pairs.append(dict(a=row.passage_id,b=df.iloc[j].passage_id,score=float(similarity[i,j])))
     save_json(out/'lab8_neighbors.json',neighbors)
-    topics=[dict(cluster=e['cluster'],name=labels[str(e['cluster'])]['name'],count=e['count'],terms=e['terms'],rationale=labels[str(e['cluster'])]['rationale'],
+    topics=[dict(cluster=e['cluster'],name=labels[str(e['cluster'])]['name'],count=e['count'],terms=labels[str(e['cluster'])]['display_terms'],rationale=labels[str(e['cluster'])]['rationale'],
         representative_ids=[r['passage_id'] for r in e['representatives'][:3]],
-        section_count=int(df.loc[df.cluster.eq(e['cluster']),'section'].nunique())) for e in evidence]
+        section_count=formal_section_count(df.loc[df.cluster.eq(e['cluster'])])) for e in evidence]
     sections=[]
     for (chapter,section),group in df.groupby(['chapter','section'],sort=False):
         counts=group.cluster.value_counts();p=counts/len(group)

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="lab8.css">
     <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="neighbor_preview.js" defer></script>
     <script src="lab8.js" defer></script>
 </head>
 <body class="lab8-page">
@@ -29,7 +30,7 @@
 
     <h2>2. Corpus overview</h2>
     <div class="lab8-overview">
-        <section><h3>Passages by formal section</h3><p>All 127 sections, ordered by passage count. Scroll to see every section; hover a bar for its full chapter and section.</p><div id="section-summary" class="lab8-bars-scroll" tabindex="0" aria-label="Passage counts for all formal sections; scroll to explore"></div></section>
+        <section><h3>Passages by formal section</h3><p>Top 15 formal sections by retained passage count.</p><div id="section-summary" class="lab8-bars-scroll" tabindex="0" aria-label="Passage counts for the top 15 formal sections"></div></section>
         <section><h3>Characteristic corpus terms</h3><p>Top 12 terms by mean passage TF-IDF; English stop words excluded only for this summary.</p><div class="lab8-table-scroll"><table id="term-summary"><thead><tr><th scope="col">Term</th><th scope="col">Mean TF-IDF</th></tr></thead><tbody></tbody></table></div></section>
     </div>
 

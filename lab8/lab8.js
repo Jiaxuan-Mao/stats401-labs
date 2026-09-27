@@ -7,6 +7,7 @@
         status.classList.add("error");
         return;
     }
+    const { neighborPreview } = Lab8NeighborPreview;
     Promise.all([
         d3.csv("../data/lab8_embedding_map.csv", d => ({...d, x: +d.x, y: +d.y,
             cluster: +d.cluster, word_count: +d.word_count, page: +d.page, page_end: +d.page_end})),
@@ -71,7 +72,7 @@
         const barWidth = 600, barLeft = 305, barRight = 40;
         const barScale = d3.scaleLinear().domain([0, d3.max(sections, d => d.count)]).nice()
             .range([barLeft, barWidth - barRight]);
-        const rankedSections = sections.slice().sort((a, b) => d3.descending(a.count, b.count));
+        const rankedSections = sections.slice().sort((a, b) => d3.descending(a.count, b.count)).slice(0, 15);
         const barContainer = d3.select("#section-summary");
         const barHeader = barContainer.append("svg").attr("class", "lab8-bar-axis")
             .attr("width", barWidth).attr("height", 52);
@@ -237,12 +238,12 @@
             panel.append("p").attr("class","lab8-original").text(d.text);
             panel.append("a").attr("href",`${corpus.source}#page=${d.page}`).attr("target","_blank").attr("rel","noopener").text(`Read original PDF, page ${d.page}`);
             panel.append("h4").text("Five nearest semantic passages");
-            panel.append("p").attr("class","lab8-hint").text("Ranked by cosine similarity in the original 384-dimensional space, excluding the selected passage. Choosing a neighbor clears filters and resets the map view to reveal it. Similarity is not a probability.");
+            panel.append("p").attr("class","lab8-hint").text("Five nearest passages by cosine similarity in the original embedding space. Click one to explore it.");
             const items=panel.append("ol").attr("class","lab8-neighbors").selectAll("li").data(neighbors[selected]).join("li");
             items.append("button").attr("data-neighbor",n=>n.passage_id).text(n=>{
-                const p=byId.get(n.passage_id);return `${n.passage_id} · cosine ${n.score.toFixed(3)} · p. ${p.page} · ${p.section}${p.section===d.section?" (same section)":" (different section)"}`;
+                const p=byId.get(n.passage_id);return `${n.passage_id} · cosine ${n.score.toFixed(3)} · p. ${p.page} · ${p.section}${sectionKey(p)===sectionKey(d)?" (same section)":" (different section)"}`;
             }).on("click",(event,n)=>jumpToPassage(n.passage_id));
-            items.append("p").text(n=>byId.get(n.passage_id).text);
+            items.append("p").attr("class","lab8-neighbor-preview").text(n=>neighborPreview(byId.get(n.passage_id).text));
             refresh();
             // Scroll only within the matrix, leaving the reader at the chosen passage.
             const active=cells.filter(c=>cellKey(c)===cellKey(d)).node();
@@ -267,7 +268,9 @@
         articles.append("h3").text(d=>`${d.name} (${d.count} passages)`);
         articles.append("p").text(d=>`Characteristic terms: ${d.terms.join(", ")}.`);
         articles.append("p").text(d=>d.rationale);
-        articles.each(function(d){for(const id of d.representative_ids)d3.select(this).append("button").style("margin-right","8px").text(id).on("click",()=>jumpToPassage(id));});
+        const passageRows=articles.append("div").attr("class","lab8-topic-passages");
+        passageRows.append("strong").text("Representative passages:");
+        passageRows.each(function(d){for(const id of d.representative_ids)d3.select(this).append("button").text(id).on("click",()=>jumpToPassage(id));});
         d3.select("#design-description").selectAll("p").data(narrative.design).join("p").text(d=>d);
         d3.select("#model-note").text(`Model: ${model.model}; ${model.dimensions} dimensions; normalized vectors. UMAP: n_neighbors=15, min_dist=0.15, metric=cosine, n_components=2, random_state=401. KMeans: 8 clusters, n_init=auto, random_state=401, fitted to original embeddings. ${model.embedding_chunks.long_passages_chunked} long passages use normalized, token-weighted mean chunk embeddings; max_seq_length=256. TF-IDF: English stop words, 1–2 grams, min_df=3, max_df=0.8. Design description: ${narrative.design.join(" ").split(/\s+/).length} words.`);
         refresh();

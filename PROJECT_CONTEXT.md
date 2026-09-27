@@ -1,5 +1,43 @@
 # Project Context
 
+- 2026-09-27: Limited only Lab 8 Part B's “Passages by formal section” horizontal bar chart to the 15 formal sections with the highest retained-passage counts. Preserved descending order, full chapter/section hover details, the 12-row TF-IDF terms table, and all 127 rows in the Topic × bulletin section matrix. Updated the overview description and accessibility label to state the Top 15 scope. Browser verification confirmed 15 descending bars, 127 matrix rows, 12 term rows, and no warnings or errors.
+
+- 2026-09-27: Simplified only Lab 8's “Five nearest semantic passages” display. The selected passage still shows its full metadata and source text; each of the five existing cosine neighbors now keeps its ID, score, page, formal section relationship, and click-through behavior while showing a whitespace-normalized preview capped near 150 characters. Neighbor calculation and data files were not changed. Added a focused Node regression test for preview behavior and verified the rendered p00480 → p00475 interaction locally with no browser warnings or errors.
+
+- 2026-09-27: Simplified only Lab 8's “How the eight topics were labeled” details section. The eight existing topic labels and counts remain unchanged; each topic now shows four or five selected characteristic terms, one direct first-person explanation, and three clearly labeled, spaced representative-passage buttons. The analysis script preserves these curated display terms on future reuse exports. The main visualizations and semantic findings were not changed by this update.
+
+- 2026-09-27: Revised Lab 8 semantic findings into concise, direct student-style English. Formal-section counts and cross-section comparisons now consistently use the `(chapter, section)` pair, correcting University & student life from 50 to 51 formal sections; the neighbor UI uses the same definition. Q3 keeps Shannon entropy and explains that the 10-passage threshold avoids unstable diversity comparisons based on very little text. No visualization, preprocessing, embedding, clustering, or unrelated page behavior was changed.
+
+- 2026-09-27: Added the concrete data-coverage limitation to the Original vs. Redesign section. It now explains that the public prototype uses openly reusable Eurostat data because IEA World Energy Balances data could not be freely redistributed, so it covers 2019–2023, the EU-27 aggregate, and eight European countries rather than the original IEA tool's 150+ countries/regions and longer time series. Per user direction, report length and the one-page PDF remain unchanged for now.
+
+- 2026-09-27: Removed the Major flows / All flows switch and now always displays all 114 links. Revised Redesign Rationale for exact behavior: hover emphasizes one ribbon and shows its tooltip; clicking a flow/node/legend item persistently focuses a carrier and fades unrelated links; previous-year comparison reports the focused carrier's absolute/percentage change and largest destination changes. Added the geography selector to the comparison summary and refreshed the redesign screenshot. Browser QA confirmed hover opacity 0.50 to 0.95, selected gas 0.82 versus unrelated oil 0.08, a 2022 comparison delta, and no flow-mode buttons.
+
+- 2026-09-27: Added a final Figures and References section containing current screenshots of the original IEA World 2023 Sankey and the current D3 Europe 2023 redesign. Added four APA-style references covering the Eurostat dataset/metadata and IEA visualization/context article, removed the earlier duplicate inline reference paragraph, and refreshed assets/energy-redesign.png from the rendered app. Browser QA confirmed two figures, four references, no method-note, 114 links, 32 nodes, and no console errors.
+
+- 2026-09-27: Removed the three-item method-note strip (width, color, adjustments) and its unused CSS because the same information is already conveyed by the chart, legend, interactions, and surrounding rationale.
+
+- 2026-09-27: Removed only the duplicate eyebrow labels above Redesign Rationale and Original vs. Redesign, leaving one large heading for each. The original-link button was intentionally left unchanged.
+
+- 2026-09-27: Kept only one visible Critique title by removing its duplicate eyebrow label. Changed the original-IEA link to a light button with dark text and an explicit high-specificity color so the label remains readable.
+
+- 2026-09-27: Added a separate Original vs. Redesign section below the interactive chart and Redesign Rationale. Removed the duplicate comparison paragraph from Critique and clarified the trade-off as the added detail panel and comparison controls increasing space and learning cost.
+
+- 2026-09-27: Restored the large Critique heading while keeping the report label and word count removed. Fixed the original IEA button text color so it renders white on the dark teal button instead of inheriting the dark body-link color.
+
+- 2026-09-27: Moved the Redesign Rationale section with the three user-supplied decisions from the critique block to directly below the interactive D3 redesign workspace, before the method note.
+
+- 2026-09-27: Removed the standalone visible Critique heading block and replaced the old redesign-rationale paragraph with the user's three Decision sections under a new Redesign Rationale module. Strength/Weakness critique content remains above, while the redesign decisions now describe filtering/highlighting, quantitative comparison, and temporal comparison.
+
+- 2026-09-27: Simplified the critique module per user request: removed the visible 500–800-word label and word count, changed the heading to Critique, removed per-strength/weakness divider lines, and retained only the single divider separating Original Visualization and Context from Critique.
+
+- 2026-09-27: Reorganized the critique page so the full-width Original Visualization and Context module begins directly below the original screenshot, with horizontal module dividers. Replaced the critique prose with the user's two strengths and three weaknesses (585 report words total), added matching subsection styling, and lightened Sankey carrier colors via D3 color brightening for better readability.
+
+- 2026-09-27: Replaced the page's original-visualization context prose with the user's supplied IEA description, intended message, audience, and task list. Removed the duplicate original-context paragraph from the 500–800 word report; added a concise critique paragraph so the report remains 521 words. Added scoped styling for the new subheadings and list.
+
+- 2026-09-26: Changed the redesign's initial Sankey state from Natural gas focus to no carrier focus, so opening the page shows all carrier colors at once. Carrier highlighting remains available through clicks or the legend; JavaScript syntax and project tests pass.
+
+- 2026-09-26: Updated the visualization critique page's original-context block: removed the PDF download and redesign data note, and replaced them with a prominent button linking to the live IEA Energy Sankey. The real IEA World 2023 screenshot remains the original figure. Page tests passed before publication.
+
 - 2026-09-03: Removed the redundant visible `Details URL` column from the Lab 3 table because each show name already links to the same TVmaze page. The CSV and parsed `show_url` field remain unchanged so the name links continue to work. Updated the page instructions to describe 11 displayed columns.
 - 2026-09-03: Verified `data/lab3_data.csv` contains exactly 2,000 rows and 2,000 unique show IDs. Its ID range is 1–2084 with 84 gaps, so the largest ID is not the record count; the acquisition script intentionally stops when `DEFAULT_TARGET = 2_000` unique records have been collected.
 - 2026-09-03: Split the Lab 3 dataset field description into three visible lines using HTML `<br>` elements, with four fields per line for readability.

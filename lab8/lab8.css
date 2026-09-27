@@ -64,6 +64,8 @@
 .lab8-page .lab8-findings strong { display: block; }
 .lab8-page #topic-evidence article { margin: 22px 0; }
 .lab8-page #topic-evidence p { margin: 6px 0; }
+.lab8-page .lab8-topic-passages { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; }
+.lab8-page .lab8-topic-passages button { padding: 6px 10px; }
 .lab8-page .error { color: #a51c32; font-weight: bold; }
 @media(max-width:700px) {
  .lab8-page .lab8-overview, .lab8-page .lab8-controls, .lab8-page .lab8-encoding { grid-template-columns: 1fr; }
@@ -72,7 +74,7 @@
  .lab8-page .lab8-details dd { margin-bottom: 8px; }
 }
 
-/* Corpus overview: all sections remain available in a scrollable bar chart. */
+/* Corpus overview: the top sections remain readable in a scrollable bar chart. */
 .lab8-page .lab8-bars-scroll { max-height: 390px; overflow: auto; border: 1px solid #e6dfe3; }
 .lab8-page .lab8-bars-scroll svg { display: block; }
 .lab8-page .lab8-bar-axis { position: sticky; top: 0; z-index: 1; background: #fff7fa; font-size: 12px; }

@@ -6,19 +6,12 @@
       "count": 98,
       "terms": [
         "data",
-        "course",
-        "covers",
-        "course covers",
         "theory",
         "models",
-        "science",
-        "model",
         "algorithms",
-        "analysis",
-        "programming",
-        "computer"
+        "programming"
       ],
-      "rationale": "Centroid-near passages describe computer organization, discrete mathematics and numerical analysis; characteristic terms include data, algorithms, models and programming. This cluster also includes quantitative methods outside computing departments.",
+      "rationale": "I used this label because the closest passages focus on computer science, mathematics, algorithms, and other quantitative methods.",
       "representative_ids": [
         "p00472",
         "p00470",
@@ -33,44 +26,30 @@
       "terms": [
         "students",
         "university",
-        "duke",
-        "student",
-        "academic",
-        "kunshan",
-        "dku",
-        "duke kunshan",
-        "kunshan university",
+        "DKU",
         "programs",
-        "activities",
-        "opportunities"
+        "activities"
       ],
-      "rationale": "Representative passages discuss the university mission, campus programs, international student services and student clubs. University, students, activities and opportunities characterize this broad institutional and community theme.",
+      "rationale": "I used this label because the representative passages discuss DKU programs, student services, campus activities, and university life.",
       "representative_ids": [
         "p00303",
         "p00004",
         "p00315"
       ],
-      "section_count": 50
+      "section_count": 51
     },
     {
       "cluster": 2,
       "name": "Language, writing & practice",
       "count": 163,
       "terms": [
-        "students",
-        "course",
         "skills",
-        "media",
         "writing",
-        "chinese",
+        "Chinese",
         "language",
-        "learn",
-        "seminar",
-        "develop",
-        "ability",
-        "knowledge"
+        "media"
       ],
-      "rationale": "Chinese language, academic writing and communication courses dominate the representative passages. Terms such as skills, writing, language and learn reflect skill-building; the cluster also contains practical arts, media and physical-education courses.",
+      "rationale": "I used this label because many passages focus on Chinese, writing, communication, and other skills learned through practice.",
       "representative_ids": [
         "p00446",
         "p00958",
@@ -83,20 +62,13 @@
       "name": "Academic status & conduct",
       "count": 112,
       "terms": [
-        "student",
-        "term",
         "academic",
         "grade",
-        "students",
         "absence",
         "leave",
-        "university",
-        "leave absence",
-        "course",
-        "probation",
-        "dean"
+        "probation"
       ],
-      "rationale": "Representatives concern withdrawal, incomplete grades, academic probation and student status. Academic, grade, leave and probation support a policy label; disciplinary procedures and conduct are also included.",
+      "rationale": "I used this label because the passages mainly cover grades, leave, probation, withdrawal, and other rules about academic standing and conduct.",
       "representative_ids": [
         "p00218",
         "p00134",
@@ -109,20 +81,13 @@
       "name": "History, culture & politics",
       "count": 170,
       "terms": [
-        "china",
-        "world",
-        "course",
+        "China",
         "political",
-        "american",
         "history",
-        "historical",
         "cultural",
-        "chinese",
-        "global",
-        "social",
         "war"
       ],
-      "rationale": "Representative texts discuss world history, empire, modern China and global cultural studies. Characteristic terms include China, history, political, cultural and war, spanning several humanities and social-science subjects.",
+      "rationale": "I used this label because the passages center on China, world history, politics, culture, and war.",
       "representative_ids": [
         "p00621",
         "p00566",
@@ -136,19 +101,12 @@
       "count": 138,
       "terms": [
         "health",
-        "course",
         "social",
         "policy",
-        "human",
-        "political",
         "environmental",
-        "economic",
-        "science",
-        "research",
-        "public",
-        "global"
+        "public"
       ],
-      "rationale": "Representative passages describe policy analysis, social research, governance, ethics and environmental regulation. Health, social, policy, human and environmental indicate a mixed applied social and public-policy theme.",
+      "rationale": "I used this label because the passages connect health, social issues, public policy, research, and the environment.",
       "representative_ids": [
         "p00864",
         "p00908",
@@ -164,17 +122,10 @@
         "molecular",
         "chemistry",
         "materials",
-        "chemical",
-        "topics",
-        "systems",
-        "include",
         "biological",
-        "properties",
-        "biology",
-        "structure",
         "physics"
       ],
-      "rationale": "Representatives cover biophysics, physical chemistry, molecular structures and biogeochemistry. Chemistry, molecular, materials, biological and physics distinguish this scientific cluster from the quantitative-computing cluster.",
+      "rationale": "I used this label because the passages discuss chemistry, molecules, materials, biology, and physics.",
       "representative_ids": [
         "p00377",
         "p00431",
@@ -187,20 +138,12 @@
       "name": "Credits & degree requirements",
       "count": 118,
       "terms": [
-        "duke",
-        "courses",
         "credit",
-        "credits",
-        "university",
-        "duke kunshan",
-        "kunshan",
-        "kunshan university",
-        "students",
         "requirements",
-        "taken",
-        "course"
+        "courses",
+        "taken"
       ],
-      "rationale": "Representative paragraphs explain precollege credit, transfer rules and graduation credit limits. Credits, requirements, courses and taken characterize degree planning and credit eligibility.",
+      "rationale": "I used this label because the representative passages explain transfer credit, graduation requirements, and which courses can count toward a degree.",
       "representative_ids": [
         "p00112",
         "p00122",
