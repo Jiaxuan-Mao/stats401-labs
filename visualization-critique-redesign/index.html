@@ -114,10 +114,6 @@
             <p class="eyebrow">Complete energy balance · <span id="chart-year">2023</span></p>
             <h2 id="chart-title">Where energy comes from—and where it goes</h2>
           </div>
-          <div class="segmented" role="group" aria-label="Flow visibility">
-            <button class="is-active" data-flow-mode="major" type="button">Major flows</button>
-            <button data-flow-mode="all" type="button">All flows</button>
-          </div>
         </div>
         <div class="stage-headings" aria-hidden="true">
           <span>Supply</span><span>Primary carriers</span><span>Conversion</span><span>Delivered energy</span><span>Uses & exports</span>
@@ -166,7 +162,7 @@
       <h2 id="rationale-title">Redesign Rationale</h2>
       <div class="rationale-block">
         <h3>Decision 1 — Stronger filtering and highlighting</h3>
-        <p>To improve path tracing, the redesign adds Major Flows and All Flows modes and strengthens the visual emphasis of selected nodes, links, and energy carriers. Colors are brighter and more saturated, while node opacity is increased for better visibility. Hovering over a flow immediately highlights the related pathway while unrelated flows fade into the background. Transformation labels are also made clearer, reducing clutter and making individual energy paths easier to follow.</p>
+        <p>To improve path tracing, the redesign uses clear carrier colors, full-opacity nodes, and stronger interactive emphasis. Hovering over a ribbon highlights that individual flow and reveals its source, destination, and exact value. Clicking a flow, node, or legend item keeps the related carrier pathway highlighted while unrelated paths fade into the background. White outlines around labels improve readability in dense transformation areas.</p>
       </div>
       <div class="rationale-block">
         <h3>Decision 2 — More direct quantitative comparison</h3>
@@ -174,13 +170,13 @@
       </div>
       <div class="rationale-block">
         <h3>Decision 3 — Better temporal comparison</h3>
-        <p>The redesign adds a 2019–2023 year slider, playback controls, a Compare with previous year option, and a same-scale-across-years setting. Users can move through the timeline continuously instead of relying on memory. When comparison is enabled, the right-side panel shows current and previous-year values for either the overall system or a selected carrier. These features make temporal increases and decreases easier to identify.</p>
+        <p>The redesign adds a 2019–2023 year slider, playback controls, a Compare with previous year option, and a same-scale-across-years setting. Users can move through the timeline continuously instead of relying on memory. When comparison is enabled, the right-side panel reports the focused carrier’s absolute and percentage change from the previous year and lists its largest destination changes. These features make temporal increases and decreases easier to identify.</p>
       </div>
     </section>
 
     <section class="comparison-section" aria-labelledby="comparison-title">
       <h2 id="comparison-title">Original vs. Redesign</h2>
-      <p>Compared with the original, the redesign shifts the emphasis from simply viewing the overall energy system to supporting more focused comparison and exploration. Users can more easily distinguish individual pathways, compare where energy comes from and where it goes, and recognize changes over time without relying as much on visual memory.</p>
+      <p>Compared with the original, the redesign shifts the emphasis from simply viewing the overall energy system to supporting more focused comparison and exploration. Users can more easily distinguish individual pathways, compare where energy comes from and where it goes, and recognize changes over time without relying as much on visual memory. A geography selector also supports exploration of the EU-27 aggregate and eight European countries.</p>
       <p>The main trade-off is increased interface complexity. The additional detail panel and comparison controls require more screen space and may take longer for first-time users to learn. The redesign therefore improves analytical tasks, but is slightly less simple than the original overview-oriented design.</p>
     </section>
 

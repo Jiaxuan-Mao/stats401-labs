@@ -1,6 +1,6 @@
 import { compareCarrier, flowOpacity, formatEnergy, isDestinationKind, nextYear, playbackYears, selectCountry, yearsForCountry } from './model.mjs';
 
-const state = { data: null, country: 'EU27_2020', year: 2023, selectedCarrier: null, majorOnly: true, playing: false };
+const state = { data: null, country: 'EU27_2020', year: 2023, selectedCarrier: null, playing: false };
 const labels = new Map();
 let playTimer = null;
 
@@ -46,11 +46,6 @@ function configureControls() {
   el('stable-scale').addEventListener('change', render);
   el('compare-years').addEventListener('change', renderDetails);
   el('clear-focus').addEventListener('click', () => selectCarrier(null));
-  document.querySelectorAll('[data-flow-mode]').forEach((button) => button.addEventListener('click', () => {
-    state.majorOnly = button.dataset.flowMode === 'major';
-    document.querySelectorAll('[data-flow-mode]').forEach((item) => item.classList.toggle('is-active', item === button));
-    updateLinkStyles();
-  }));
 }
 
 function setCountry(countryId) {
@@ -190,7 +185,7 @@ function renderSankey() {
 function updateLinkStyles() {
   svg.selectAll('.link').style('opacity', function() {
     const link = { carrier: this.dataset.carrier, value: Number(this.dataset.value) };
-    return flowOpacity(link, state.selectedCarrier, state.majorOnly);
+    return flowOpacity(link, state.selectedCarrier, false);
   });
 }
 
