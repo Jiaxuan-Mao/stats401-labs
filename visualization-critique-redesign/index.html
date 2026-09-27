@@ -77,7 +77,6 @@
         <h3>Weakness 3 — Difficult temporal comparison</h3>
         <p>Users can select different years and keep a consistent scale, but only one year is shown at a time. When the year changes, the previous state disappears, forcing users to remember earlier widths and positions. Side-by-side comparison, change indicators, or animated playback could make temporal differences easier to identify.</p>
       </div>
-      <p class="report-reference"><strong>References:</strong> International Energy Agency, <a href="https://www.iea.org/data-and-statistics/data-tools/energy-sankey" target="_blank" rel="noopener">Energy Sankey</a>; IEA, <a href="https://www.iea.org/commentaries/understanding-and-using-the-energy-balance" target="_blank" rel="noopener">Understanding and using the Energy Balance</a>; Eurostat, <a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c/default/table" target="_blank" rel="noopener">Complete energy balances, nrg_bal_c</a>.</p>
     </section>
 
     <section class="redesign-heading" aria-labelledby="redesign-title">
@@ -185,11 +184,27 @@
       <p>The main trade-off is increased interface complexity. The additional detail panel and comparison controls require more screen space and may take longer for first-time users to learn. The redesign therefore improves analytical tasks, but is slightly less simple than the original overview-oriented design.</p>
     </section>
 
-    <section class="method-note" aria-label="Data and method note">
-      <div><span class="method-note__index">01</span><p><strong>Width means quantity.</strong> Every ribbon is proportional to terajoules; hover for its exact value.</p></div>
-      <div><span class="method-note__index">02</span><p><strong>Color means carrier.</strong> Selection preserves the carrier color while unrelated paths recede.</p></div>
-      <div><span class="method-note__index">03</span><p><strong>Adjustments stay visible.</strong> Statistical and balancing differences are disclosed rather than hidden.</p></div>
+    <section class="figures-references" aria-labelledby="figures-references-title">
+      <h2 id="figures-references-title">Figures and References</h2>
+      <div class="figure-grid">
+        <figure>
+          <img src="assets/iea-original-world-2023.png" alt="IEA Energy Sankey for the World regional total in 2023">
+          <figcaption><strong>Figure 1.</strong> Original IEA Energy Sankey, World regional total, 2023. Screenshot from International Energy Agency (2026).</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/energy-redesign.png" alt="Redesigned Europe energy-flow Sankey with interactive controls and a linked detail panel">
+          <figcaption><strong>Figure 2.</strong> Redesigned D3.js energy-flow visualization, Europe, 2023. Data: Eurostat complete energy balances (<code>nrg_bal_c</code>).</figcaption>
+        </figure>
+      </div>
+      <h3>References</h3>
+      <ol class="reference-list">
+        <li>Eurostat. (2025, February 3). <em>Energy balances (nrg_bal)</em> [Reference metadata]. European Commission. <a href="https://ec.europa.eu/eurostat/cache/metadata/en/nrg_bal_esms.htm" target="_blank" rel="noopener">https://ec.europa.eu/eurostat/cache/metadata/en/nrg_bal_esms.htm</a></li>
+        <li>Eurostat. (n.d.). <em>Complete energy balances (nrg_bal_c)</em> [Data set]. European Commission. Retrieved September 27, 2026, from <a href="https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c/default/table" target="_blank" rel="noopener">https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c/default/table</a></li>
+        <li>International Energy Agency. (2026, February 9). <em>Energy Sankey</em>. <a href="https://www.iea.org/data-and-statistics/data-tools/energy-sankey" target="_blank" rel="noopener">https://www.iea.org/data-and-statistics/data-tools/energy-sankey</a></li>
+        <li>Millard, D., &amp; Quadrelli, R. (2017, September 3). <em>Understanding and using the energy balance</em>. International Energy Agency. <a href="https://www.iea.org/commentaries/understanding-and-using-the-energy-balance" target="_blank" rel="noopener">https://www.iea.org/commentaries/understanding-and-using-the-energy-balance</a></li>
+      </ol>
     </section>
+
   </main>
 
   <footer>

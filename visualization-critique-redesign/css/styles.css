@@ -124,11 +124,6 @@ select { width: 100%; height: 38px; padding: 0 34px 0 11px; border: 1px solid va
 .change-item b.up { color: #237b55; }.change-item b.down { color: #b34a4a; }
 .panel-note { margin: 25px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 
-.method-note { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--line); }
-.method-note > div { display: flex; gap: 13px; padding: 17px 19px; background: rgba(255,255,255,.72); }
-.method-note__index { color: var(--accent); font: 700 11px Manrope, sans-serif; }
-.method-note p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
-.method-note strong { color: var(--ink); }
 footer { display: flex; justify-content: space-between; gap: 20px; max-width: 1600px; margin: 0 auto; padding: 20px clamp(20px, 4vw, 68px) 35px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
 footer p { max-width: 620px; margin: 0; }
 
@@ -151,7 +146,6 @@ footer p { max-width: 620px; margin: 0; }
   #sankey { min-width: 880px; }
   .stage-headings { min-width: 880px; }
   .detail-panel { display: block; }
-  .method-note { grid-template-columns: 1fr; }
   footer { display: grid; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -180,7 +174,6 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .section-heading .eyebrow { margin-bottom: 6px; }
 .critique-page .section-heading h2 { margin-bottom: 0; }
 .critique-page .word-count { color: var(--muted); font-size: 10px; white-space: nowrap; }
-.critique-page .report > p:not(.report-reference) { max-width: 1080px; margin: 0 0 13px; color: #46535c; font-size: 12px; line-height: 1.58; }
 .critique-page .critique-block { max-width: 1080px; margin-bottom: 20px; }
 .critique-page .critique-block h3 { margin: 0 0 7px; color: var(--ink); font-size: 14px; line-height: 1.35; }
 .critique-page .critique-block p { margin: 0; color: #46535c; font-size: 12px; line-height: 1.58; }
@@ -194,8 +187,20 @@ footer p { max-width: 620px; margin: 0; }
 .critique-page .comparison-section h2 { margin: 0 0 14px; font-size: 24px; letter-spacing: -.03em; }
 .critique-page .comparison-section .eyebrow { margin-bottom: 6px; }
 .critique-page .comparison-section p:not(.eyebrow) { max-width: 1080px; margin: 0 0 14px; color: #46535c; font-size: 12px; line-height: 1.58; }
+.critique-page .figures-references { margin-top: 24px; padding: 30px 4px 10px; border-top: 1px solid var(--line); }
+.critique-page .figures-references h2 { margin: 0 0 20px; font-size: 24px; letter-spacing: -.03em; }
+.critique-page .figures-references h3 { margin: 28px 0 12px; font-size: 16px; }
+.critique-page .figure-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.critique-page .figure-grid figure { margin: 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.critique-page .figure-grid img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: contain; border-radius: 7px; background: #f7f8f8; }
+.critique-page .figure-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.critique-page .reference-list { max-width: 1120px; margin: 0; padding-left: 22px; color: #46535c; font-size: 11px; line-height: 1.55; }
+.critique-page .reference-list li { margin-bottom: 9px; padding-left: 4px; }
+.critique-page .reference-list a { color: var(--accent-dark); overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .critique-page .figure-grid { grid-template-columns: 1fr; }
+}
 .critique-page .report > p strong { color: var(--ink); }
-.critique-page .report-reference { margin: 17px 0 0; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.45; }
 .critique-page .redesign-heading { padding: 42px 0 17px; }
 .critique-page .redesign-heading h2 { margin-bottom: 8px; }
 .critique-page .redesign-heading > p:last-child { margin: 0; color: var(--muted); font-size: 14px; }
