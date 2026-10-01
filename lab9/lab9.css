@@ -1,0 +1,86 @@
+.lab9-page .lab9-chart {
+    width: 100%;
+    overflow-x: auto;
+    margin: 0.75rem 0 0.5rem;
+    border: 1px solid #d8ced4;
+    background: #fbfafb;
+}
+
+.lab9-page .lab9-chart svg {
+    display: block;
+    min-width: 760px;
+    width: 100%;
+    height: auto;
+}
+
+.lab9-page .lab9-country {
+    vector-effect: non-scaling-stroke;
+}
+
+.lab9-page [data-iso] {
+    transition: opacity 120ms ease, stroke-width 120ms ease;
+}
+
+.lab9-page [data-iso].is-dimmed {
+    opacity: 0.2;
+}
+
+.lab9-page [data-iso].is-highlighted {
+    stroke: #171117;
+    stroke-width: 2.5px;
+    opacity: 1;
+}
+
+.lab9-page [data-iso]:focus {
+    outline: none;
+    stroke: #171117;
+    stroke-width: 3px;
+}
+
+.lab9-page .lab9-label {
+    font: 600 11px Arial, sans-serif;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.lab9-page .lab9-legend {
+    margin-bottom: 1.5rem;
+}
+
+.lab9-page .lab9-legend svg {
+    display: block;
+    max-width: 100%;
+}
+
+.lab9-page .lab9-hint {
+    color: #5d535a;
+    font-size: 0.95rem;
+}
+
+.lab9-page #lab9-tooltip {
+    position: absolute;
+    z-index: 10;
+    max-width: 240px;
+    padding: 0.55rem 0.7rem;
+    border-radius: 4px;
+    color: #fff;
+    background: rgba(35, 28, 34, 0.94);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.lab9-page #lab9-tooltip[hidden] {
+    display: none;
+}
+
+.lab9-page #lab9-status.error {
+    color: #9b1c31;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .lab9-page .lab9-chart {
+        -webkit-overflow-scrolling: touch;
+    }
+}

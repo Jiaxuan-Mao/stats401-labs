@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 9</title>
+    <title>Lab 9 — Geospatial Visualization</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="lab9.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+    <script src="lab9.js" defer></script>
 </head>
+<body class="lab9-page">
+    <h1>Lab 9: Geospatial Visualization</h1>
+    <p>This page compares two views of the 50 largest economies by 2025 nominal GDP.</p>
 
-<body>
-    <h1>Lab 9</h1>
+    <h2>Dataset Description</h2>
+    <p>The <a href="../data/lab9_gdp_2025_top50.csv">course dataset</a> is based on the IMF World Economic Outlook, October 2025. GDP is measured in billions of current U.S. dollars. Country boundaries come from <a href="https://www.naturalearthdata.com/">Natural Earth</a>. The files are joined with ISO-3 identifiers.</p>
+    <p id="lab9-status" role="status">Loading GDP and geographic data…</p>
 
-    <p>
-        Lab 9 will be added here.
-    </p>
+    <h2>2025 GDP Choropleth</h2>
+    <p>Country color represents GDP on a logarithmic scale. Countries outside the top 50 are gray because they are missing from the provided dataset, not because their GDP is zero. Drag to pan and scroll to zoom.</p>
+    <div id="choropleth" class="lab9-chart" tabindex="0" aria-label="World choropleth of 2025 nominal GDP; scroll horizontally on a narrow screen"></div>
+    <div id="choropleth-legend" class="lab9-legend" aria-label="GDP color legend"></div>
 
-    <a href="../index.html">
-        Back to home
-    </a>
+    <h2>2025 GDP Cartogram</h2>
+    <p>This is a Dorling cartogram. Each circle represents one economy, and circle area is proportional to GDP. The circles begin near their projected geographic centers and move only enough to reduce overlap.</p>
+    <div id="cartogram" class="lab9-chart" tabindex="0" aria-label="Dorling cartogram of 2025 nominal GDP; scroll horizontally on a narrow screen"></div>
+    <p class="lab9-hint">Hover, tap, or use Tab to inspect a country. Selecting a country highlights it in both views.</p>
+
+    <section id="comparison">
+        <h2>Design and Comparison</h2>
+        <p>I used a logarithmic color scale for the choropleth because GDP is highly skewed. A linear scale would make most countries look too similar. The United States and China are the darkest countries, while they also have the largest circles in the cartogram. Germany, Japan, India, and the United Kingdom form the next visible group in both views.</p>
+        <p>The choropleth keeps country shape, location, borders, and geographic neighbors, so it is better for asking where high-GDP economies are located and whether regional patterns exist. However, color is less direct for comparing exact economic size, and large land areas can attract attention even when GDP is lower. The cartogram changes this emphasis by making circle area proportional to GDP. Japan, Germany, the United Kingdom, South Korea, the Netherlands, and Singapore become much larger relative to their land area. Russia, Canada, and Australia become smaller.</p>
+        <p>The cartogram makes global economic magnitude and rank easier to compare, but it distorts shape, distance, borders, and adjacency. Changing from color to area makes the gap between the two largest economies and the rest feel more immediate. Linked highlighting helps match a distorted circle to its country, so the two views support different tasks rather than showing that one map is always better.</p>
+    </section>
+
+    <div id="lab9-tooltip" role="tooltip" hidden></div>
+    <a class="back-home" href="../index.html">Back to home</a>
 </body>
 </html>
