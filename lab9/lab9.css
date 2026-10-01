@@ -8,8 +8,8 @@
 
 .lab9-page .lab9-chart svg {
     display: block;
-    min-width: 760px;
     width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -50,6 +50,7 @@
 .lab9-page .lab9-legend svg {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 .lab9-page .lab9-hint {

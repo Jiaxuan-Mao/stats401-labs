@@ -104,14 +104,16 @@
     }
 
     function drawColorLegend(colorScale, gdpData) {
-        const legendWidth = 340;
+        const legendWidth = 390;
         const legendHeight = 55;
         const barWidth = 250;
+        const barStart = 30;
         const extent = d3.extent(gdpData, d => d.gdp);
-        const legendScale = d3.scaleLog().domain(extent).range([0, barWidth]);
+        const legendScale = d3.scaleLog().domain(extent).range([barStart, barStart + barWidth]);
         const svg = d3.select("#choropleth-legend").append("svg")
             .attr("width", legendWidth)
             .attr("height", legendHeight)
+            .attr("viewBox", `0 0 ${legendWidth} ${legendHeight}`)
             .attr("role", "img")
             .attr("aria-label", "GDP color legend from 300 billion to 30.6 trillion U.S. dollars");
 
@@ -119,7 +121,7 @@
             .data(d3.range(barWidth))
             .join("rect")
             .attr("class", "scale")
-            .attr("x", d => d)
+            .attr("x", d => d + barStart)
             .attr("y", 4)
             .attr("width", 1)
             .attr("height", 12)
@@ -128,8 +130,8 @@
             .attr("transform", "translate(0,16)")
             .call(d3.axisBottom(legendScale).tickValues([300, 1000, 10000, 30000])
                 .tickFormat(d => d < 1000 ? `$${d}B` : `$${d / 1000}T`));
-        svg.append("rect").attr("x", 270).attr("y", 4).attr("width", 14).attr("height", 12).attr("fill", "#dedade");
-        svg.append("text").attr("x", 290).attr("y", 15).attr("font-size", 12).text("No data");
+        svg.append("rect").attr("x", 310).attr("y", 4).attr("width", 14).attr("height", 12).attr("fill", "#dedade");
+        svg.append("text").attr("x", 330).attr("y", 15).attr("font-size", 12).text("No data");
     }
 
     function drawCartogram(geoData, gdpData, projection, colorScale) {
