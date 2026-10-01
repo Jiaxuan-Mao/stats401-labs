@@ -125,7 +125,7 @@
             .attr("y", 4)
             .attr("width", 1)
             .attr("height", 12)
-            .attr("fill", d => colorScale(legendScale.invert(d)));
+            .attr("fill", d => colorScale(legendScale.invert(d + barStart)));
         svg.append("g")
             .attr("transform", "translate(0,16)")
             .call(d3.axisBottom(legendScale).tickValues([300, 1000, 10000, 30000])
